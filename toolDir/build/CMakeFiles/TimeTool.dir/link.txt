@@ -1,0 +1,1 @@
+/usr/bin/clang++  -g -Werror -std=gnu++14 -Wno-invalid-source-encoding -fdiagnostics-format=vi   CMakeFiles/TimeTool.dir/TimeTool.cpp.o  -o TimeTool 
