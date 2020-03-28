@@ -1,6 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include <string.h>
+#include <unistd.h>
 
 class TimeTool
 {
@@ -68,12 +69,41 @@ class TimeTool
 
 long TimeTool::timeZone = 0;
 
+// timespec ÄÉÃë
+// timeval Î¢Ãë
+struct BlockExecTime
+{
+	private:
+		struct timespec tsp1;
+		struct timespec tsp2;
+		const uint64_t logInterval;
+	public:
+		BlockExecTime(const uint64_t interval): logInterval(interval)
+		{
+			clock_gettime(CLOCK_REALTIME, &tsp1);
+		}
+		~BlockExecTime(){}
+		void elapse()
+		{
+			clock_gettime(CLOCK_REALTIME, &tsp2);
+			uint64_t begin = tsp1.tv_sec * 1000 + tsp1.tv_nsec / 1000000;
+			uint64_t end = tsp2.tv_sec * 1000 + tsp2.tv_nsec / 1000000;
+			if(end - begin > logInterval)
+			{
+				std::cout << end - begin << std::endl;
+			}
+		}
+};
 
 int main()
 {
 	TimeTool::setTimeZone();
 	auto ret = TimeTool::timeToStr(time(0));
 	std::cout << ret << std::endl;
+
+	BlockExecTime bet(3000);
+	sleep(4);
+	bet.elapse();
 	
 	return 0;
 }
