@@ -1,0 +1,1 @@
+/usr/bin/clang++  -g -Werror -std=gnu++14 -Wno-invalid-source-encoding -fdiagnostics-format=vi   CMakeFiles/TestRedis.dir/TestRedis.cpp.o  -o TestRedis -lhiredis 
