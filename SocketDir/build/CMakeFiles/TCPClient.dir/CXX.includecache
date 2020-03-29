@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/epollDir/TCPClient.cpp
+/home/ubuntu/MyRep/SocketDir/TCPClient.cpp
 string
 -
 iostream

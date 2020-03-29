@@ -1,4 +1,4 @@
-/home/ubuntu/epollDir/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/epollDir/build/CMakeFiles/TCPServer.dir
-/home/ubuntu/epollDir/build/CMakeFiles/edit_cache.dir
-/home/ubuntu/epollDir/build/CMakeFiles/TCPClient.dir
+/home/ubuntu/MyRep/SocketDir/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/MyRep/SocketDir/build/CMakeFiles/TCPServer.dir
+/home/ubuntu/MyRep/SocketDir/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/MyRep/SocketDir/build/CMakeFiles/TCPClient.dir

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/epollDir/TCPServer.cpp" "/home/ubuntu/epollDir/build/CMakeFiles/TCPServer.dir/TCPServer.cpp.o"
+  "/home/ubuntu/MyRep/SocketDir/TCPServer.cpp" "/home/ubuntu/MyRep/SocketDir/build/CMakeFiles/TCPServer.dir/TCPServer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

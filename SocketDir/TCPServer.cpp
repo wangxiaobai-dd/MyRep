@@ -12,16 +12,19 @@
 #include <sys/epoll.h>
 #include <string.h>
 #include <fcntl.h>
+#include <netinet/tcp.h>
 
 static int setNonBlocking(int fd)
 {
 	int flags, s;
-	flags = fcntl(fd, F_GETFL, 0);
+	int nodelay = 1; // ½ûÖ¹TCP NagelËã·¨
+	if(::setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, (void*)&nodelay, sizeof(nodelay)))
+		return -1;
+	flags = ::fcntl(fd, F_GETFL, 0);
 	if (-1 == flags) 
 		return -1;
 	flags |= O_NONBLOCK;
-	s = fcntl(fd, F_SETFL, flags);
-	if (-1 == s) 
+	if(-1 == ::fcntl(fd, F_SETFL, flags))
 		return -1;
 	return 0;
 }

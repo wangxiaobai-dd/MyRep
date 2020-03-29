@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/epollDir/TCPClient.cpp" "/home/ubuntu/epollDir/build/CMakeFiles/TCPClient.dir/TCPClient.cpp.o"
+  "/home/ubuntu/MyRep/SocketDir/TCPClient.cpp" "/home/ubuntu/MyRep/SocketDir/build/CMakeFiles/TCPClient.dir/TCPClient.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
