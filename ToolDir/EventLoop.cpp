@@ -39,7 +39,7 @@ void EventLoop::stop()
 {
 	if(!evLoop)
 		return;
-	ev_break(evLoop, EVBREAK_ONE);
+	ev_break(evLoop, EVBREAK_ALL);
 }
 
 // test
@@ -48,7 +48,7 @@ int main()
 	// 可以做一个线程池，后台处理数据
 	// 主线程处理结果
 	TimerEvent event;
-	EventLoop::instance()->regTimer(&event, 1, 5);
+	EventLoop::instance()->regTimer(&event, 2, 0);
 	EventLoop::instance()->loop();
 	return 0;
 }
