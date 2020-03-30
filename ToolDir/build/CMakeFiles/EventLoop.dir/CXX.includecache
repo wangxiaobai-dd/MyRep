@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/MyRep/ToolDir/EventLoop.cpp
+EventLoop.h
+/home/ubuntu/MyRep/ToolDir/EventLoop.h
+
+/home/ubuntu/MyRep/ToolDir/EventLoop.h
+ev.h
+-
+iostream
+-
+

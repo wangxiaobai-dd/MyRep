@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/MyRep/toolDir
+CMAKE_SOURCE_DIR = /home/ubuntu/MyRep/ToolDir
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/MyRep/toolDir/build
+CMAKE_BINARY_DIR = /home/ubuntu/MyRep/ToolDir/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/toolDir/build/CMakeFiles /home/ubuntu/MyRep/toolDir/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/ToolDir/build/CMakeFiles /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/toolDir/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/ToolDir/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TimeTool
+# Target rules for targets named EventLoop
 
 # Build rule for target.
-TimeTool: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TimeTool
-.PHONY : TimeTool
+EventLoop: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 EventLoop
+.PHONY : EventLoop
 
 # fast build rule for target.
-TimeTool/fast:
-	$(MAKE) -f CMakeFiles/TimeTool.dir/build.make CMakeFiles/TimeTool.dir/build
-.PHONY : TimeTool/fast
+EventLoop/fast:
+	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/build
+.PHONY : EventLoop/fast
 
-TimeTool.o: TimeTool.cpp.o
+EventLoop.o: EventLoop.cpp.o
 
-.PHONY : TimeTool.o
+.PHONY : EventLoop.o
 
 # target to build an object file
-TimeTool.cpp.o:
-	$(MAKE) -f CMakeFiles/TimeTool.dir/build.make CMakeFiles/TimeTool.dir/TimeTool.cpp.o
-.PHONY : TimeTool.cpp.o
+EventLoop.cpp.o:
+	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/EventLoop.cpp.o
+.PHONY : EventLoop.cpp.o
 
-TimeTool.i: TimeTool.cpp.i
+EventLoop.i: EventLoop.cpp.i
 
-.PHONY : TimeTool.i
+.PHONY : EventLoop.i
 
 # target to preprocess a source file
-TimeTool.cpp.i:
-	$(MAKE) -f CMakeFiles/TimeTool.dir/build.make CMakeFiles/TimeTool.dir/TimeTool.cpp.i
-.PHONY : TimeTool.cpp.i
+EventLoop.cpp.i:
+	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/EventLoop.cpp.i
+.PHONY : EventLoop.cpp.i
 
-TimeTool.s: TimeTool.cpp.s
+EventLoop.s: EventLoop.cpp.s
 
-.PHONY : TimeTool.s
+.PHONY : EventLoop.s
 
 # target to generate assembly for a file
-TimeTool.cpp.s:
-	$(MAKE) -f CMakeFiles/TimeTool.dir/build.make CMakeFiles/TimeTool.dir/TimeTool.cpp.s
-.PHONY : TimeTool.cpp.s
+EventLoop.cpp.s:
+	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/EventLoop.cpp.s
+.PHONY : EventLoop.cpp.s
 
 # Help Target
 help:
@@ -157,11 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... TimeTool"
+	@echo "... EventLoop"
 	@echo "... edit_cache"
-	@echo "... TimeTool.o"
-	@echo "... TimeTool.i"
-	@echo "... TimeTool.s"
+	@echo "... EventLoop.o"
+	@echo "... EventLoop.i"
+	@echo "... EventLoop.s"
 .PHONY : help
 
 

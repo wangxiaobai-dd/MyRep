@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/MyRep/toolDir
+CMAKE_SOURCE_DIR = /home/ubuntu/MyRep/ToolDir
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/MyRep/toolDir/build
+CMAKE_BINARY_DIR = /home/ubuntu/MyRep/ToolDir/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/TimeTool.dir
+# Target rules for target CMakeFiles/EventLoop.dir
 
 # All Build rule for target.
-CMakeFiles/TimeTool.dir/all:
-	$(MAKE) -f CMakeFiles/TimeTool.dir/build.make CMakeFiles/TimeTool.dir/depend
-	$(MAKE) -f CMakeFiles/TimeTool.dir/build.make CMakeFiles/TimeTool.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/toolDir/build/CMakeFiles --progress-num=1,2 "Built target TimeTool"
-.PHONY : CMakeFiles/TimeTool.dir/all
+CMakeFiles/EventLoop.dir/all:
+	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/depend
+	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/ToolDir/build/CMakeFiles --progress-num=1,2 "Built target EventLoop"
+.PHONY : CMakeFiles/EventLoop.dir/all
 
 # Include target in all.
-all: CMakeFiles/TimeTool.dir/all
+all: CMakeFiles/EventLoop.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TimeTool.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/toolDir/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TimeTool.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/toolDir/build/CMakeFiles 0
-.PHONY : CMakeFiles/TimeTool.dir/rule
+CMakeFiles/EventLoop.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/ToolDir/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/EventLoop.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/ToolDir/build/CMakeFiles 0
+.PHONY : CMakeFiles/EventLoop.dir/rule
 
 # Convenience name for target.
-TimeTool: CMakeFiles/TimeTool.dir/rule
+EventLoop: CMakeFiles/EventLoop.dir/rule
 
-.PHONY : TimeTool
-
-# clean rule for target.
-CMakeFiles/TimeTool.dir/clean:
-	$(MAKE) -f CMakeFiles/TimeTool.dir/build.make CMakeFiles/TimeTool.dir/clean
-.PHONY : CMakeFiles/TimeTool.dir/clean
+.PHONY : EventLoop
 
 # clean rule for target.
-clean: CMakeFiles/TimeTool.dir/clean
+CMakeFiles/EventLoop.dir/clean:
+	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/clean
+.PHONY : CMakeFiles/EventLoop.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/EventLoop.dir/clean
 
 .PHONY : clean
 
