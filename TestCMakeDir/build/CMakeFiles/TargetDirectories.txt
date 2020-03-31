@@ -1,0 +1,7 @@
+/home/ubuntu/MyRep/TestCMakeDir/build/CMakeFiles/install/strip.dir
+/home/ubuntu/MyRep/TestCMakeDir/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/MyRep/TestCMakeDir/build/CMakeFiles/demo9_lib.dir
+/home/ubuntu/MyRep/TestCMakeDir/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/MyRep/TestCMakeDir/build/CMakeFiles/list_install_components.dir
+/home/ubuntu/MyRep/TestCMakeDir/build/CMakeFiles/install/local.dir
+/home/ubuntu/MyRep/TestCMakeDir/build/CMakeFiles/install.dir

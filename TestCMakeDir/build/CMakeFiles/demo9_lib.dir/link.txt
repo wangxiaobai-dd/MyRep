@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdemo9_lib.a  CMakeFiles/demo9_lib.dir/TestCMake.cpp.o
+/usr/bin/ranlib libdemo9_lib.a
