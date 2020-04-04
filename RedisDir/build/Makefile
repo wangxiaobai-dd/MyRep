@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/redisDir
+CMAKE_SOURCE_DIR = /home/ubuntu/MyRep/RedisDir
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/redisDir/build
+CMAKE_BINARY_DIR = /home/ubuntu/MyRep/RedisDir/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/redisDir/build/CMakeFiles /home/ubuntu/redisDir/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles /home/ubuntu/MyRep/RedisDir/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/redisDir/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestRedis
+# Target rules for targets named TestASyncRedis
 
 # Build rule for target.
-TestRedis: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestRedis
-.PHONY : TestRedis
+TestASyncRedis: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestASyncRedis
+.PHONY : TestASyncRedis
 
 # fast build rule for target.
-TestRedis/fast:
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/build
-.PHONY : TestRedis/fast
+TestASyncRedis/fast:
+	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/build
+.PHONY : TestASyncRedis/fast
 
-TestRedis.o: TestRedis.cpp.o
+TestASyncRedis.o: TestASyncRedis.cpp.o
 
-.PHONY : TestRedis.o
+.PHONY : TestASyncRedis.o
 
 # target to build an object file
-TestRedis.cpp.o:
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/TestRedis.cpp.o
-.PHONY : TestRedis.cpp.o
+TestASyncRedis.cpp.o:
+	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/TestASyncRedis.cpp.o
+.PHONY : TestASyncRedis.cpp.o
 
-TestRedis.i: TestRedis.cpp.i
+TestASyncRedis.i: TestASyncRedis.cpp.i
 
-.PHONY : TestRedis.i
+.PHONY : TestASyncRedis.i
 
 # target to preprocess a source file
-TestRedis.cpp.i:
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/TestRedis.cpp.i
-.PHONY : TestRedis.cpp.i
+TestASyncRedis.cpp.i:
+	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/TestASyncRedis.cpp.i
+.PHONY : TestASyncRedis.cpp.i
 
-TestRedis.s: TestRedis.cpp.s
+TestASyncRedis.s: TestASyncRedis.cpp.s
 
-.PHONY : TestRedis.s
+.PHONY : TestASyncRedis.s
 
 # target to generate assembly for a file
-TestRedis.cpp.s:
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/TestRedis.cpp.s
-.PHONY : TestRedis.cpp.s
+TestASyncRedis.cpp.s:
+	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/TestASyncRedis.cpp.s
+.PHONY : TestASyncRedis.cpp.s
 
 # Help Target
 help:
@@ -157,11 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... TestRedis"
+	@echo "... TestASyncRedis"
 	@echo "... edit_cache"
-	@echo "... TestRedis.o"
-	@echo "... TestRedis.i"
-	@echo "... TestRedis.s"
+	@echo "... TestASyncRedis.o"
+	@echo "... TestASyncRedis.i"
+	@echo "... TestASyncRedis.s"
 .PHONY : help
 
 

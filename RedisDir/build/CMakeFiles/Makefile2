@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/redisDir
+CMAKE_SOURCE_DIR = /home/ubuntu/MyRep/RedisDir
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/redisDir/build
+CMAKE_BINARY_DIR = /home/ubuntu/MyRep/RedisDir/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestRedis.dir
+# Target rules for target CMakeFiles/TestASyncRedis.dir
 
 # All Build rule for target.
-CMakeFiles/TestRedis.dir/all:
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/depend
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/redisDir/build/CMakeFiles --progress-num=1,2 "Built target TestRedis"
-.PHONY : CMakeFiles/TestRedis.dir/all
+CMakeFiles/TestASyncRedis.dir/all:
+	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/depend
+	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/RedisDir/build/CMakeFiles --progress-num=1,2 "Built target TestASyncRedis"
+.PHONY : CMakeFiles/TestASyncRedis.dir/all
 
 # Include target in all.
-all: CMakeFiles/TestRedis.dir/all
+all: CMakeFiles/TestASyncRedis.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestRedis.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/redisDir/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestRedis.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/redisDir/build/CMakeFiles 0
-.PHONY : CMakeFiles/TestRedis.dir/rule
+CMakeFiles/TestASyncRedis.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestASyncRedis.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 0
+.PHONY : CMakeFiles/TestASyncRedis.dir/rule
 
 # Convenience name for target.
-TestRedis: CMakeFiles/TestRedis.dir/rule
+TestASyncRedis: CMakeFiles/TestASyncRedis.dir/rule
 
-.PHONY : TestRedis
-
-# clean rule for target.
-CMakeFiles/TestRedis.dir/clean:
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/clean
-.PHONY : CMakeFiles/TestRedis.dir/clean
+.PHONY : TestASyncRedis
 
 # clean rule for target.
-clean: CMakeFiles/TestRedis.dir/clean
+CMakeFiles/TestASyncRedis.dir/clean:
+	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/clean
+.PHONY : CMakeFiles/TestASyncRedis.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/TestASyncRedis.dir/clean
 
 .PHONY : clean
 

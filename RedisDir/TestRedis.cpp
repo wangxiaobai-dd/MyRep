@@ -4,6 +4,14 @@
 #include <time.h>
 #include <unistd.h>
 
+/**
+#define REDIS_REPLY_STRING 1    //字符串
+#define REDIS_REPLY_ARRAY 2     //数组，例如mget返回值
+#define REDIS_REPLY_INTEGER 3   //数字类型
+#define REDIS_REPLY_NIL 4       //空
+#define REDIS_REPLY_STATUS 5    //状态，例如set成功返回的‘OK’
+#define REDIS_REPLY_ERROR 6     //执行失败
+*/
 void command(redisContext* context, const char* format, ...)
 {
 	va_list ap;
