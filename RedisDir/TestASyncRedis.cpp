@@ -46,12 +46,11 @@ struct EventRunner : TimerEvent
 		redisAsyncContext* _context;
 };
 
+/*
+ * Òì²½redis
+ */
 int main(int agrc, char** argv)
 {
-
-	// evloop	
-	// struct ev_loop* evLoop = ev_default_loop(0);	
-	// evLoop = ev_loop_new(EVFLAG_AUTO);
 	EventRunner event;
 	EventLoop::instance()->regTimer(&event, 2, 0);	
 
