@@ -1,1 +1,2 @@
-/usr/bin/clang++  -g -Werror -std=gnu++14 -Wno-invalid-source-encoding -fdiagnostics-format=vi   CMakeFiles/EventLoop.dir/EventLoop.cpp.o  -o EventLoop  -L/usr/local/lib 
+/usr/bin/ar qc libEventLoop.a  CMakeFiles/EventLoop.dir/EventLoop.cpp.o
+/usr/bin/ranlib libEventLoop.a

@@ -43,7 +43,7 @@ void EventLoop::stop()
 }
 
 // test
-int main()
+/*int main()
 {
 	// 可以做一个线程池，后台处理数据
 	// 主线程处理结果
@@ -51,4 +51,4 @@ int main()
 	EventLoop::instance()->regTimer(&event, 2, 0);
 	EventLoop::instance()->loop();
 	return 0;
-}
+}*/

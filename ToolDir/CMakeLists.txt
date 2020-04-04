@@ -14,7 +14,8 @@ link_directories(/usr/local/lib)
 
 #对所有目标进行链接 相当于g++ -l 完整的库路径
 #link_libraries(/usr/local/lib/libev.so.4)
-add_executable(EventLoop EventLoop.cpp)
+#add_executable(EventLoop EventLoop.cpp)
+add_library(EventLoop STATIC EventLoop.cpp)
 
 #targetlink 对目标进行链接
 target_link_libraries(EventLoop ev)

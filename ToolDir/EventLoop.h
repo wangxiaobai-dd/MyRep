@@ -52,6 +52,5 @@ class EventLoop
 		void regSignal(SignalEvent* ev, int sig = SIGINT);
 		void loop();
 		void stop();
-	private:
 		struct ev_loop* evLoop;
 };
