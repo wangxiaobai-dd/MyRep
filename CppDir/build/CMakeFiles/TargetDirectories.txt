@@ -1,4 +1,5 @@
 /home/ubuntu/MyRep/CppDir/build/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/MyRep/CppDir/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestCPP3.dir
 /home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestCPP.dir
 /home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestCPP2.dir

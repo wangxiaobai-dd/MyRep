@@ -8,6 +8,7 @@
 #include <functional>
 #include <stdexcept>
 #include <chrono>
+#include <iostream>
 
 class ThreadPool {
 	public:
@@ -74,7 +75,7 @@ auto ThreadPool::enqueue(F&& f, Args&&... args)
 }
 
 int sum(int a, int b) {
-	std::this_thread::sleep_for(seconds(10));
+	std::this_thread::sleep_for(std::chrono::seconds(10));
 	return a + b;
 }
 
@@ -109,7 +110,11 @@ int main()
 	ThreadPool pool(3);
 	auto future = pool.enqueue(sum, 1, 2);
 
-	std::thread t1([&future]{cout << future.get() << endl;});
+	std::thread t1([&future]{ std::cout << future.get() << std::endl;});
+	//t1.join();
+	t1.detach();
+	
+	std::this_thread::sleep_for(std::chrono::seconds(20));
 	// 可以把future 放入队列， EventLoop回调取结果
 }
 	     

@@ -57,38 +57,38 @@ include CMakeFiles/TestCPP2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TestCPP2.dir/flags.make
 
-CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o: CMakeFiles/TestCPP2.dir/flags.make
-CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o: ../TestCpp11.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o -c /home/ubuntu/MyRep/CppDir/TestCpp11.cpp
+CMakeFiles/TestCPP2.dir/Test2.cpp.o: CMakeFiles/TestCPP2.dir/flags.make
+CMakeFiles/TestCPP2.dir/Test2.cpp.o: ../Test2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestCPP2.dir/Test2.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestCPP2.dir/Test2.cpp.o -c /home/ubuntu/MyRep/CppDir/Test2.cpp
 
-CMakeFiles/TestCPP2.dir/TestCpp11.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestCPP2.dir/TestCpp11.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/MyRep/CppDir/TestCpp11.cpp > CMakeFiles/TestCPP2.dir/TestCpp11.cpp.i
+CMakeFiles/TestCPP2.dir/Test2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestCPP2.dir/Test2.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/MyRep/CppDir/Test2.cpp > CMakeFiles/TestCPP2.dir/Test2.cpp.i
 
-CMakeFiles/TestCPP2.dir/TestCpp11.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestCPP2.dir/TestCpp11.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/MyRep/CppDir/TestCpp11.cpp -o CMakeFiles/TestCPP2.dir/TestCpp11.cpp.s
+CMakeFiles/TestCPP2.dir/Test2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestCPP2.dir/Test2.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/MyRep/CppDir/Test2.cpp -o CMakeFiles/TestCPP2.dir/Test2.cpp.s
 
-CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o.requires:
+CMakeFiles/TestCPP2.dir/Test2.cpp.o.requires:
 
-.PHONY : CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o.requires
+.PHONY : CMakeFiles/TestCPP2.dir/Test2.cpp.o.requires
 
-CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o.provides: CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o.requires
-	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o.provides.build
-.PHONY : CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o.provides
+CMakeFiles/TestCPP2.dir/Test2.cpp.o.provides: CMakeFiles/TestCPP2.dir/Test2.cpp.o.requires
+	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/Test2.cpp.o.provides.build
+.PHONY : CMakeFiles/TestCPP2.dir/Test2.cpp.o.provides
 
-CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o.provides.build: CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o
+CMakeFiles/TestCPP2.dir/Test2.cpp.o.provides.build: CMakeFiles/TestCPP2.dir/Test2.cpp.o
 
 
 # Object files for target TestCPP2
 TestCPP2_OBJECTS = \
-"CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o"
+"CMakeFiles/TestCPP2.dir/Test2.cpp.o"
 
 # External object files for target TestCPP2
 TestCPP2_EXTERNAL_OBJECTS =
 
-TestCPP2: CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o
+TestCPP2: CMakeFiles/TestCPP2.dir/Test2.cpp.o
 TestCPP2: CMakeFiles/TestCPP2.dir/build.make
 TestCPP2: CMakeFiles/TestCPP2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TestCPP2"
@@ -99,7 +99,7 @@ CMakeFiles/TestCPP2.dir/build: TestCPP2
 
 .PHONY : CMakeFiles/TestCPP2.dir/build
 
-CMakeFiles/TestCPP2.dir/requires: CMakeFiles/TestCPP2.dir/TestCpp11.cpp.o.requires
+CMakeFiles/TestCPP2.dir/requires: CMakeFiles/TestCPP2.dir/Test2.cpp.o.requires
 
 .PHONY : CMakeFiles/TestCPP2.dir/requires
 

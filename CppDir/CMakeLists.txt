@@ -14,4 +14,7 @@ set(CMAKE_CXX_FLAGS ${DEBUG_FLAG})
 #link_directories(/usr/include/hiredis/)
 add_executable(TestCPP Test.cpp)
 add_executable(TestCPP2 Test2.cpp)
+add_executable(TestCPP3 TestThreadPool.cpp)
+
+target_link_libraries(TestCPP3 pthread)
 

@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Werror -std=gnu++14   CMakeFiles/TestCPP3.dir/TestThreadPool.cpp.o  -o TestCPP3 -lpthread 
