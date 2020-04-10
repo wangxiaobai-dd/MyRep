@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Werror -std=gnu++14   CMakeFiles/TestCPP.dir/Test.cpp.o  -o TestCPP 

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/MyRep/CppDir/Test.cpp
+iostream
+-
+set
+-
+algorithm
+-
+iterator
+-
+typeinfo
+-
+map
+-
+vector
+-
+
