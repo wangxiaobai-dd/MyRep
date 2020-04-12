@@ -6,5 +6,5 @@ CXX_FLAGS = -g -Werror -std=gnu++14 -Wno-invalid-source-encoding -fdiagnostics-f
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/ubuntu/MyRep/RedisDir/../ToolDir -I/home/ubuntu/MyRep/RedisDir/proto 
 

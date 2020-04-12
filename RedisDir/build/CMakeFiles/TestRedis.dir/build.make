@@ -90,6 +90,7 @@ TestRedis_EXTERNAL_OBJECTS =
 
 TestRedis: CMakeFiles/TestRedis.dir/TestRedis.cpp.o
 TestRedis: CMakeFiles/TestRedis.dir/build.make
+TestRedis: libredisProto.a
 TestRedis: CMakeFiles/TestRedis.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/MyRep/RedisDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TestRedis"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TestRedis.dir/link.txt --verbose=$(VERBOSE)

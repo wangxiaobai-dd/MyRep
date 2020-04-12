@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../libredisProto.a  CMakeFiles/redisProto.dir/message.pb.cc.o
+/usr/bin/ranlib ../libredisProto.a

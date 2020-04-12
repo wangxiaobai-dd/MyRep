@@ -1,3 +1,7 @@
 /home/ubuntu/MyRep/RedisDir/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/MyRep/RedisDir/build/CMakeFiles/TestASyncRedis.dir
 /home/ubuntu/MyRep/RedisDir/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/MyRep/RedisDir/build/CMakeFiles/TestRedis.dir
+/home/ubuntu/MyRep/RedisDir/build/CMakeFiles/TestASyncRedis.dir
+/home/ubuntu/MyRep/RedisDir/build/proto/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/MyRep/RedisDir/build/proto/CMakeFiles/redisProto.dir
+/home/ubuntu/MyRep/RedisDir/build/proto/CMakeFiles/edit_cache.dir

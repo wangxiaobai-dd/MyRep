@@ -4,6 +4,7 @@
 #include <time.h>
 #include <unistd.h>
 
+#include "message.pb.h"
 /**
 #define REDIS_REPLY_STRING 1    //字符串
 #define REDIS_REPLY_ARRAY 2     //数组，例如mget返回值
@@ -18,9 +19,16 @@ void command(redisContext* context, const char* format, ...)
 	va_start(ap, format);
 	redisReply* reply = (redisReply*)redisvCommand(context, format, ap);
 	if(reply && reply->type == REDIS_REPLY_INTEGER)
-		std::cout << "command result: " << reply->integer << std::endl;
+		std::cout << "command int result: " << reply->integer << std::endl;
 	if(reply && (reply->type == REDIS_REPLY_STRING || reply->type == REDIS_REPLY_ERROR || reply->type == REDIS_REPLY_STATUS))
-		std::cout << "command result: " << reply->str << std::endl;
+	{
+		// std::cout << "command str result: " << reply->str << std::endl;
+		// 怎样区分protobuf
+		test::User u2;
+		u2.ParseFromArray(reply->str, reply->len);
+		std::cout << u2.id() << std::endl;
+		std::cout << u2.username() << std::endl;
+	}
 	va_end(ap);
 	freeReplyObject(reply);
 }
@@ -79,7 +87,7 @@ int main(int agrc, char** argv)
 	std::string value = "white";
 
 	// set
-	redisCommand(context, "SET %s %s", key.c_str(), value.c_str());	
+	/*redisCommand(context, "SET %s %s", key.c_str(), value.c_str());	
 
 	// get
 	redisReply* reply = (redisReply*)redisCommand(context, "GET %s", key.c_str());
@@ -89,10 +97,21 @@ int main(int agrc, char** argv)
 		std::cout << "value: " << ret << std::endl;
 		freeReplyObject(reply);
 	}
+	*/
 
 	// pipline
-	commandPip(context, "INCRBY counter 50");
-	getReplyPip(context);
+	//commandPip(context, "INCRBY counter 50");
+	//getReplyPip(context);
+
+	test::User u;
+	u.set_id(1);
+	u.set_username("white");
+	const int byteSize = u.ByteSizeLong();
+	char buf[byteSize];
+	bzero(buf, byteSize);
+	u.SerializeToArray(buf, byteSize);
+	command(context, "SET %b %b", u.username().c_str(), (int)u.username().length(), buf, byteSize);
+	command(context, "GET white");
 
 	// sub
 	// command(context, "SUBSCRIBE %b", "chat", 4);

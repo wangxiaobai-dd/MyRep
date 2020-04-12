@@ -6,13 +6,25 @@
 
 #IncludeRegexTransform: 
 
-../../ToolDir/EventLoop.h
-ev.h
+/home/ubuntu/MyRep/RedisDir/proto/message.pb.cc
+message.pb.h
+/home/ubuntu/MyRep/RedisDir/proto/message.pb.h
+algorithm
 -
-iostream
+google/protobuf/io/coded_stream.h
+-
+google/protobuf/extension_set.h
+-
+google/protobuf/wire_format_lite.h
+-
+google/protobuf/io/zero_copy_stream_impl_lite.h
+-
+google/protobuf/port_def.inc
+-
+google/protobuf/port_undef.inc
 -
 
-../proto/message.pb.h
+/home/ubuntu/MyRep/RedisDir/proto/message.pb.h
 limits
 -
 string
@@ -47,28 +59,4 @@ google/protobuf/port_def.inc
 -
 google/protobuf/port_undef.inc
 -
-
-/home/ubuntu/MyRep/RedisDir/TestASyncRedis.cpp
-iostream
--
-string
--
-queue
--
-hiredis/hiredis.h
--
-time.h
--
-unistd.h
--
-ev.h
--
-hiredis/async.h
--
-hiredis/adapters/libev.h
--
-EventLoop.h
-/home/ubuntu/MyRep/RedisDir/EventLoop.h
-message.pb.h
-/home/ubuntu/MyRep/RedisDir/message.pb.h
 

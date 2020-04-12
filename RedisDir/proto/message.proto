@@ -1,0 +1,36 @@
+syntax = "proto2";
+package test;
+option optimize_for = LITE_RUNTIME;
+
+/*
+SPEED: 表示生成的代码运行效率高，但是由此生成的代码编译后会占用更多的空间。 
+CODE_SIZE: 和SPEED恰恰相反，代码运行效率较低，但是由此生成的代码编译后会占用更少的空间，通常用于资源有限的平台，如Mobile。
+LITE_RUNTIME: 生成的代码执行效率高，同时生成代码编译后的所占用的空间也是非常少。这是以牺牲Protocol Buffer提供的反射功能为代价的
+*/
+
+message User {
+	required int32 id = 1; // 主键,唯一
+	required string username = 2; // 帐号
+	optional string password = 3; // 密码
+	optional string email = 4; // 邮箱(可选)
+	repeated Person person = 5; // 账户拥有的角色(可以重复)
+}
+
+message Person { 
+	required int32 id = 1; // 主键,唯一
+	required string name = 2; // 角色名字
+	repeated PhoneNumber phone = 3; // 电话号码(可以重复)
+} 
+
+// 枚举类型
+enum PhoneType { 
+	MOBILE = 0; 
+	HOME = 1; 
+	WORK = 2; 
+} 
+
+message PhoneNumber { 
+	required string number = 1; 
+	optional PhoneType type = 2 [default = HOME]; 
+} 
+

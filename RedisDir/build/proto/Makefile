@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles /home/ubuntu/MyRep/RedisDir/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/ubuntu/MyRep/RedisDir/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles /home/ubuntu/MyRep/RedisDir/build/proto/CMakeFiles/progress.marks
+	cd /home/ubuntu/MyRep/RedisDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/ubuntu/MyRep/RedisDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,111 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ubuntu/MyRep/RedisDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ubuntu/MyRep/RedisDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu/MyRep/RedisDir/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named TestRedis
+# Convenience name for target.
+proto/CMakeFiles/redisProto.dir/rule:
+	cd /home/ubuntu/MyRep/RedisDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/CMakeFiles/redisProto.dir/rule
+.PHONY : proto/CMakeFiles/redisProto.dir/rule
 
-# Build rule for target.
-TestRedis: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestRedis
-.PHONY : TestRedis
+# Convenience name for target.
+redisProto: proto/CMakeFiles/redisProto.dir/rule
 
-# fast build rule for target.
-TestRedis/fast:
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/build
-.PHONY : TestRedis/fast
-
-#=============================================================================
-# Target rules for targets named TestASyncRedis
-
-# Build rule for target.
-TestASyncRedis: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestASyncRedis
-.PHONY : TestASyncRedis
-
-# fast build rule for target.
-TestASyncRedis/fast:
-	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/build
-.PHONY : TestASyncRedis/fast
-
-#=============================================================================
-# Target rules for targets named redisProto
-
-# Build rule for target.
-redisProto: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 redisProto
 .PHONY : redisProto
 
 # fast build rule for target.
 redisProto/fast:
-	$(MAKE) -f proto/CMakeFiles/redisProto.dir/build.make proto/CMakeFiles/redisProto.dir/build
+	cd /home/ubuntu/MyRep/RedisDir/build && $(MAKE) -f proto/CMakeFiles/redisProto.dir/build.make proto/CMakeFiles/redisProto.dir/build
 .PHONY : redisProto/fast
 
-TestASyncRedis.o: TestASyncRedis.cpp.o
+message.pb.o: message.pb.cc.o
 
-.PHONY : TestASyncRedis.o
-
-# target to build an object file
-TestASyncRedis.cpp.o:
-	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/TestASyncRedis.cpp.o
-.PHONY : TestASyncRedis.cpp.o
-
-TestASyncRedis.i: TestASyncRedis.cpp.i
-
-.PHONY : TestASyncRedis.i
-
-# target to preprocess a source file
-TestASyncRedis.cpp.i:
-	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/TestASyncRedis.cpp.i
-.PHONY : TestASyncRedis.cpp.i
-
-TestASyncRedis.s: TestASyncRedis.cpp.s
-
-.PHONY : TestASyncRedis.s
-
-# target to generate assembly for a file
-TestASyncRedis.cpp.s:
-	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/TestASyncRedis.cpp.s
-.PHONY : TestASyncRedis.cpp.s
-
-TestRedis.o: TestRedis.cpp.o
-
-.PHONY : TestRedis.o
+.PHONY : message.pb.o
 
 # target to build an object file
-TestRedis.cpp.o:
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/TestRedis.cpp.o
-.PHONY : TestRedis.cpp.o
+message.pb.cc.o:
+	cd /home/ubuntu/MyRep/RedisDir/build && $(MAKE) -f proto/CMakeFiles/redisProto.dir/build.make proto/CMakeFiles/redisProto.dir/message.pb.cc.o
+.PHONY : message.pb.cc.o
 
-TestRedis.i: TestRedis.cpp.i
+message.pb.i: message.pb.cc.i
 
-.PHONY : TestRedis.i
+.PHONY : message.pb.i
 
 # target to preprocess a source file
-TestRedis.cpp.i:
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/TestRedis.cpp.i
-.PHONY : TestRedis.cpp.i
+message.pb.cc.i:
+	cd /home/ubuntu/MyRep/RedisDir/build && $(MAKE) -f proto/CMakeFiles/redisProto.dir/build.make proto/CMakeFiles/redisProto.dir/message.pb.cc.i
+.PHONY : message.pb.cc.i
 
-TestRedis.s: TestRedis.cpp.s
+message.pb.s: message.pb.cc.s
 
-.PHONY : TestRedis.s
+.PHONY : message.pb.s
 
 # target to generate assembly for a file
-TestRedis.cpp.s:
-	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/TestRedis.cpp.s
-.PHONY : TestRedis.cpp.s
+message.pb.cc.s:
+	cd /home/ubuntu/MyRep/RedisDir/build && $(MAKE) -f proto/CMakeFiles/redisProto.dir/build.make proto/CMakeFiles/redisProto.dir/message.pb.cc.s
+.PHONY : message.pb.cc.s
 
 # Help Target
 help:
@@ -210,16 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... TestRedis"
-	@echo "... TestASyncRedis"
 	@echo "... redisProto"
-	@echo "... TestASyncRedis.o"
-	@echo "... TestASyncRedis.i"
-	@echo "... TestASyncRedis.s"
-	@echo "... TestRedis.o"
-	@echo "... TestRedis.i"
-	@echo "... TestRedis.s"
+	@echo "... edit_cache"
+	@echo "... message.pb.o"
+	@echo "... message.pb.i"
+	@echo "... message.pb.s"
 .PHONY : help
 
 
@@ -231,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu/MyRep/RedisDir/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -9,6 +9,7 @@
 #include <hiredis/adapters/libev.h>
 
 #include "EventLoop.h"
+#include "message.pb.h"
 
 static void asyncCallback(redisAsyncContext* c, void* r, void* privdata)
 {
@@ -71,13 +72,22 @@ int main(int agrc, char** argv)
 	redisAsyncSetDisconnectCallback(context, [](const redisAsyncContext* c, int status){ if(status == REDIS_OK)
 			std::cout << "disconnect success" << std::endl;});
 
+	// Ö¸Áî²âÊÔ
 	std::string key = "asynckey";
 	std::string value = "asyncvalue";
 	std::string cmd1 = "SET " + key + " " + value;
 	std::string cmd2 = "GET " + key;
 
-	event.cmdQueue.push(cmd1);
-	event.cmdQueue.push(cmd2);
+	//event.cmdQueue.push(cmd1);
+	//event.cmdQueue.push(cmd2);
+	// protobuf ²âÊÔ
+	test::User u;
+	u.set_id(1);
+	u.set_username("white");
+	const int byteSize = u.ByteSizeLong();
+	char buf[byteSize];
+	bzero(buf, byteSize);
+	u.SerializeToArray(buf, byteSize);
 
 	EventLoop::instance()->loop();
 

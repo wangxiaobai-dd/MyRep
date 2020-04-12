@@ -60,10 +60,47 @@ CMAKE_SOURCE_DIR = /home/ubuntu/MyRep/RedisDir
 CMAKE_BINARY_DIR = /home/ubuntu/MyRep/RedisDir/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/TestRedis.dir
+
+# All Build rule for target.
+CMakeFiles/TestRedis.dir/all: proto/CMakeFiles/redisProto.dir/all
+	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/depend
+	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/RedisDir/build/CMakeFiles --progress-num=3,4 "Built target TestRedis"
+.PHONY : CMakeFiles/TestRedis.dir/all
+
+# Include target in all.
+all: CMakeFiles/TestRedis.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TestRedis.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestRedis.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 0
+.PHONY : CMakeFiles/TestRedis.dir/rule
+
+# Convenience name for target.
+TestRedis: CMakeFiles/TestRedis.dir/rule
+
+.PHONY : TestRedis
+
+# clean rule for target.
+CMakeFiles/TestRedis.dir/clean:
+	$(MAKE) -f CMakeFiles/TestRedis.dir/build.make CMakeFiles/TestRedis.dir/clean
+.PHONY : CMakeFiles/TestRedis.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/TestRedis.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/TestASyncRedis.dir
 
 # All Build rule for target.
-CMakeFiles/TestASyncRedis.dir/all:
+CMakeFiles/TestASyncRedis.dir/all: proto/CMakeFiles/redisProto.dir/all
 	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/depend
 	$(MAKE) -f CMakeFiles/TestASyncRedis.dir/build.make CMakeFiles/TestASyncRedis.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/RedisDir/build/CMakeFiles --progress-num=1,2 "Built target TestASyncRedis"
@@ -76,7 +113,7 @@ all: CMakeFiles/TestASyncRedis.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TestASyncRedis.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestASyncRedis.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 0
 .PHONY : CMakeFiles/TestASyncRedis.dir/rule
@@ -93,6 +130,61 @@ CMakeFiles/TestASyncRedis.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/TestASyncRedis.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory proto
+
+# Convenience name for "all" pass in the directory.
+proto/all: proto/CMakeFiles/redisProto.dir/all
+
+.PHONY : proto/all
+
+# Convenience name for "clean" pass in the directory.
+proto/clean: proto/CMakeFiles/redisProto.dir/clean
+
+.PHONY : proto/clean
+
+# Convenience name for "preinstall" pass in the directory.
+proto/preinstall:
+
+.PHONY : proto/preinstall
+
+#=============================================================================
+# Target rules for target proto/CMakeFiles/redisProto.dir
+
+# All Build rule for target.
+proto/CMakeFiles/redisProto.dir/all:
+	$(MAKE) -f proto/CMakeFiles/redisProto.dir/build.make proto/CMakeFiles/redisProto.dir/depend
+	$(MAKE) -f proto/CMakeFiles/redisProto.dir/build.make proto/CMakeFiles/redisProto.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/RedisDir/build/CMakeFiles --progress-num=5,6,7 "Built target redisProto"
+.PHONY : proto/CMakeFiles/redisProto.dir/all
+
+# Include target in all.
+all: proto/CMakeFiles/redisProto.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+proto/CMakeFiles/redisProto.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 proto/CMakeFiles/redisProto.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/RedisDir/build/CMakeFiles 0
+.PHONY : proto/CMakeFiles/redisProto.dir/rule
+
+# Convenience name for target.
+redisProto: proto/CMakeFiles/redisProto.dir/rule
+
+.PHONY : redisProto
+
+# clean rule for target.
+proto/CMakeFiles/redisProto.dir/clean:
+	$(MAKE) -f proto/CMakeFiles/redisProto.dir/build.make proto/CMakeFiles/redisProto.dir/clean
+.PHONY : proto/CMakeFiles/redisProto.dir/clean
+
+# clean rule for target.
+clean: proto/CMakeFiles/redisProto.dir/clean
 
 .PHONY : clean
 

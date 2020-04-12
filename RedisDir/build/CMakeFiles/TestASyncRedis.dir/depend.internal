@@ -3,4 +3,5 @@
 
 CMakeFiles/TestASyncRedis.dir/TestASyncRedis.cpp.o
  ../../ToolDir/EventLoop.h
+ ../proto/message.pb.h
  /home/ubuntu/MyRep/RedisDir/TestASyncRedis.cpp

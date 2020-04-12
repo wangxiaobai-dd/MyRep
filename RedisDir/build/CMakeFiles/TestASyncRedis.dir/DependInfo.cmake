@@ -11,10 +11,12 @@ set(CMAKE_CXX_COMPILER_ID "Clang")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../../ToolDir"
+  "../proto"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/ubuntu/MyRep/RedisDir/build/proto/CMakeFiles/redisProto.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

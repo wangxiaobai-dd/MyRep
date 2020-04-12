@@ -91,6 +91,7 @@ TestASyncRedis_EXTERNAL_OBJECTS =
 TestASyncRedis: CMakeFiles/TestASyncRedis.dir/TestASyncRedis.cpp.o
 TestASyncRedis: CMakeFiles/TestASyncRedis.dir/build.make
 TestASyncRedis: ../libEventLoop.a
+TestASyncRedis: libredisProto.a
 TestASyncRedis: CMakeFiles/TestASyncRedis.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/MyRep/RedisDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TestASyncRedis"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TestASyncRedis.dir/link.txt --verbose=$(VERBOSE)
