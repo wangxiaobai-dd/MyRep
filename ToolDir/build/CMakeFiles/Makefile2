@@ -97,6 +97,61 @@ clean: CMakeFiles/EventLoop.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory proto
+
+# Convenience name for "all" pass in the directory.
+proto/all: proto/CMakeFiles/testProto.dir/all
+
+.PHONY : proto/all
+
+# Convenience name for "clean" pass in the directory.
+proto/clean: proto/CMakeFiles/testProto.dir/clean
+
+.PHONY : proto/clean
+
+# Convenience name for "preinstall" pass in the directory.
+proto/preinstall:
+
+.PHONY : proto/preinstall
+
+#=============================================================================
+# Target rules for target proto/CMakeFiles/testProto.dir
+
+# All Build rule for target.
+proto/CMakeFiles/testProto.dir/all:
+	$(MAKE) -f proto/CMakeFiles/testProto.dir/build.make proto/CMakeFiles/testProto.dir/depend
+	$(MAKE) -f proto/CMakeFiles/testProto.dir/build.make proto/CMakeFiles/testProto.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/ToolDir/build/CMakeFiles --progress-num=3,4,5 "Built target testProto"
+.PHONY : proto/CMakeFiles/testProto.dir/all
+
+# Include target in all.
+all: proto/CMakeFiles/testProto.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+proto/CMakeFiles/testProto.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/ToolDir/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 proto/CMakeFiles/testProto.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/ToolDir/build/CMakeFiles 0
+.PHONY : proto/CMakeFiles/testProto.dir/rule
+
+# Convenience name for target.
+testProto: proto/CMakeFiles/testProto.dir/rule
+
+.PHONY : testProto
+
+# clean rule for target.
+proto/CMakeFiles/testProto.dir/clean:
+	$(MAKE) -f proto/CMakeFiles/testProto.dir/build.make proto/CMakeFiles/testProto.dir/clean
+.PHONY : proto/CMakeFiles/testProto.dir/clean
+
+# clean rule for target.
+clean: proto/CMakeFiles/testProto.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

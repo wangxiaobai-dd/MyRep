@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/ToolDir/build/CMakeFiles /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/ubuntu/MyRep/ToolDir/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/ToolDir/build/CMakeFiles /home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/progress.marks
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/ToolDir/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,71 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu/MyRep/ToolDir/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named EventLoop
+# Convenience name for target.
+proto/CMakeFiles/testProto.dir/rule:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/CMakeFiles/testProto.dir/rule
+.PHONY : proto/CMakeFiles/testProto.dir/rule
 
-# Build rule for target.
-EventLoop: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 EventLoop
-.PHONY : EventLoop
+# Convenience name for target.
+testProto: proto/CMakeFiles/testProto.dir/rule
 
-# fast build rule for target.
-EventLoop/fast:
-	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/build
-.PHONY : EventLoop/fast
-
-#=============================================================================
-# Target rules for targets named testProto
-
-# Build rule for target.
-testProto: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testProto
 .PHONY : testProto
 
 # fast build rule for target.
 testProto/fast:
-	$(MAKE) -f proto/CMakeFiles/testProto.dir/build.make proto/CMakeFiles/testProto.dir/build
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/testProto.dir/build.make proto/CMakeFiles/testProto.dir/build
 .PHONY : testProto/fast
 
-EventLoop.o: EventLoop.cpp.o
+message.pb.o: message.pb.cc.o
 
-.PHONY : EventLoop.o
+.PHONY : message.pb.o
 
 # target to build an object file
-EventLoop.cpp.o:
-	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/EventLoop.cpp.o
-.PHONY : EventLoop.cpp.o
+message.pb.cc.o:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/testProto.dir/build.make proto/CMakeFiles/testProto.dir/message.pb.cc.o
+.PHONY : message.pb.cc.o
 
-EventLoop.i: EventLoop.cpp.i
+message.pb.i: message.pb.cc.i
 
-.PHONY : EventLoop.i
+.PHONY : message.pb.i
 
 # target to preprocess a source file
-EventLoop.cpp.i:
-	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/EventLoop.cpp.i
-.PHONY : EventLoop.cpp.i
+message.pb.cc.i:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/testProto.dir/build.make proto/CMakeFiles/testProto.dir/message.pb.cc.i
+.PHONY : message.pb.cc.i
 
-EventLoop.s: EventLoop.cpp.s
+message.pb.s: message.pb.cc.s
 
-.PHONY : EventLoop.s
+.PHONY : message.pb.s
 
 # target to generate assembly for a file
-EventLoop.cpp.s:
-	$(MAKE) -f CMakeFiles/EventLoop.dir/build.make CMakeFiles/EventLoop.dir/EventLoop.cpp.s
-.PHONY : EventLoop.cpp.s
+message.pb.cc.s:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/testProto.dir/build.make proto/CMakeFiles/testProto.dir/message.pb.cc.s
+.PHONY : message.pb.cc.s
 
 # Help Target
 help:
@@ -170,12 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... EventLoop"
-	@echo "... edit_cache"
 	@echo "... testProto"
-	@echo "... EventLoop.o"
-	@echo "... EventLoop.i"
-	@echo "... EventLoop.s"
+	@echo "... edit_cache"
+	@echo "... message.pb.o"
+	@echo "... message.pb.i"
+	@echo "... message.pb.s"
 .PHONY : help
 
 
@@ -187,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu/MyRep/ToolDir/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

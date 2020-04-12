@@ -1,3 +1,6 @@
 /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/EventLoop.dir
 /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/testProto.dir
+/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/edit_cache.dir

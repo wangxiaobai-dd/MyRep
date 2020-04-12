@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../libtestProto.a  CMakeFiles/testProto.dir/message.pb.cc.o
+/usr/bin/ranlib ../libtestProto.a
