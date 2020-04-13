@@ -43,6 +43,7 @@ struct EventRunner : TimerEvent
 			}
 		}
 		// 简化一层调度器 直接写个队列 线程不安全
+		// 可以给cmd一个id  放在异步redis 执行回调的参数里 根据cmdid通知用户
 		std::queue<std::string> cmdQueue;
 		redisAsyncContext* _context;
 };

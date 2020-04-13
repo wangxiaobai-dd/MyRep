@@ -1,0 +1,680 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dd77e/fast"
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_dd77e.dir/build.make CMakeFiles/cmTC_dd77e.dir/build
+make[2]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dd77e.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_dd77e.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_dd77e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd77e.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_dd77e.dir/CheckSymbolExists.c.o  -o cmTC_dd77e 
+CMakeFiles/cmTC_dd77e.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_dd77e.dir/build.make:97: recipe for target 'cmTC_dd77e' failed
+make[2]: *** [cmTC_dd77e] Error 1
+make[2]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_dd77e/fast' failed
+make[1]: *** [cmTC_dd77e/fast] Error 2
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_15bac/fast"
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_15bac.dir/build.make CMakeFiles/cmTC_15bac.dir/build
+make[2]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_15bac.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_15bac.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_15bac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15bac.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_15bac.dir/CheckFunctionExists.c.o  -o cmTC_15bac -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_15bac.dir/build.make:97: recipe for target 'cmTC_15bac' failed
+make[2]: *** [cmTC_15bac] Error 1
+make[2]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_15bac/fast' failed
+make[1]: *** [cmTC_15bac/fast] Error 2
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e3719/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e3719.dir/build.make CMakeFiles/cmTC_e3719.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e3719.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_e3719.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_e3719
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3719.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_e3719.dir/CheckSymbolExists.c.o  -o cmTC_e3719 
+CMakeFiles/cmTC_e3719.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_e3719.dir/build.make:97: recipe for target 'cmTC_e3719' failed
+make[1]: *** [cmTC_e3719] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e3719/fast' failed
+make: *** [cmTC_e3719/fast] Error 2
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_803e0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_803e0.dir/build.make CMakeFiles/cmTC_803e0.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_803e0.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_803e0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_803e0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_803e0.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_803e0.dir/CheckFunctionExists.c.o  -o cmTC_803e0 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_803e0.dir/build.make:97: recipe for target 'cmTC_803e0' failed
+make[1]: *** [cmTC_803e0] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_803e0/fast' failed
+make: *** [cmTC_803e0/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1e36b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1e36b.dir/build.make CMakeFiles/cmTC_1e36b.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1e36b.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_1e36b.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1e36b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e36b.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_1e36b.dir/CheckSymbolExists.c.o  -o cmTC_1e36b 
+CMakeFiles/cmTC_1e36b.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_1e36b.dir/build.make:97: recipe for target 'cmTC_1e36b' failed
+make[1]: *** [cmTC_1e36b] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1e36b/fast' failed
+make: *** [cmTC_1e36b/fast] Error 2
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9d9b6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d9b6.dir/build.make CMakeFiles/cmTC_9d9b6.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9d9b6.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9d9b6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9d9b6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d9b6.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_9d9b6.dir/CheckFunctionExists.c.o  -o cmTC_9d9b6 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_9d9b6.dir/build.make:97: recipe for target 'cmTC_9d9b6' failed
+make[1]: *** [cmTC_9d9b6] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9d9b6/fast' failed
+make: *** [cmTC_9d9b6/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9aa44/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9aa44.dir/build.make CMakeFiles/cmTC_9aa44.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9aa44.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_9aa44.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9aa44
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9aa44.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_9aa44.dir/CheckSymbolExists.c.o  -o cmTC_9aa44 
+CMakeFiles/cmTC_9aa44.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_9aa44.dir/build.make:97: recipe for target 'cmTC_9aa44' failed
+make[1]: *** [cmTC_9aa44] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9aa44/fast' failed
+make: *** [cmTC_9aa44/fast] Error 2
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_69115/fast"
+/usr/bin/make -f CMakeFiles/cmTC_69115.dir/build.make CMakeFiles/cmTC_69115.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_69115.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_69115.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_69115
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69115.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_69115.dir/CheckFunctionExists.c.o  -o cmTC_69115 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_69115.dir/build.make:97: recipe for target 'cmTC_69115' failed
+make[1]: *** [cmTC_69115] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_69115/fast' failed
+make: *** [cmTC_69115/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bd7e5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bd7e5.dir/build.make CMakeFiles/cmTC_bd7e5.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bd7e5.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_bd7e5.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_bd7e5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd7e5.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_bd7e5.dir/CheckSymbolExists.c.o  -o cmTC_bd7e5 
+CMakeFiles/cmTC_bd7e5.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_bd7e5.dir/build.make:97: recipe for target 'cmTC_bd7e5' failed
+make[1]: *** [cmTC_bd7e5] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bd7e5/fast' failed
+make: *** [cmTC_bd7e5/fast] Error 2
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0928b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0928b.dir/build.make CMakeFiles/cmTC_0928b.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0928b.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0928b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0928b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0928b.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_0928b.dir/CheckFunctionExists.c.o  -o cmTC_0928b -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_0928b.dir/build.make:97: recipe for target 'cmTC_0928b' failed
+make[1]: *** [cmTC_0928b] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0928b/fast' failed
+make: *** [cmTC_0928b/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8f544/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8f544.dir/build.make CMakeFiles/cmTC_8f544.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8f544.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_8f544.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8f544
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f544.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_8f544.dir/CheckSymbolExists.c.o  -o cmTC_8f544 
+CMakeFiles/cmTC_8f544.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_8f544.dir/build.make:97: recipe for target 'cmTC_8f544' failed
+make[1]: *** [cmTC_8f544] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8f544/fast' failed
+make: *** [cmTC_8f544/fast] Error 2
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1c9ee/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1c9ee.dir/build.make CMakeFiles/cmTC_1c9ee.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1c9ee.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1c9ee.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1c9ee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c9ee.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_1c9ee.dir/CheckFunctionExists.c.o  -o cmTC_1c9ee -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_1c9ee.dir/build.make:97: recipe for target 'cmTC_1c9ee' failed
+make[1]: *** [cmTC_1c9ee] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1c9ee/fast' failed
+make: *** [cmTC_1c9ee/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eb273/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eb273.dir/build.make CMakeFiles/cmTC_eb273.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eb273.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_eb273.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_eb273
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb273.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_eb273.dir/CheckSymbolExists.c.o  -o cmTC_eb273 
+CMakeFiles/cmTC_eb273.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_eb273.dir/build.make:97: recipe for target 'cmTC_eb273' failed
+make[1]: *** [cmTC_eb273] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_eb273/fast' failed
+make: *** [cmTC_eb273/fast] Error 2
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5f915/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5f915.dir/build.make CMakeFiles/cmTC_5f915.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5f915.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5f915.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5f915
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f915.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5f915.dir/CheckFunctionExists.c.o  -o cmTC_5f915 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_5f915.dir/build.make:97: recipe for target 'cmTC_5f915' failed
+make[1]: *** [cmTC_5f915] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5f915/fast' failed
+make: *** [cmTC_5f915/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_12c33/fast"
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_12c33.dir/build.make CMakeFiles/cmTC_12c33.dir/build
+make[2]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_12c33.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_12c33.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_12c33
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12c33.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_12c33.dir/CheckSymbolExists.c.o  -o cmTC_12c33 
+CMakeFiles/cmTC_12c33.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_12c33.dir/build.make:97: recipe for target 'cmTC_12c33' failed
+make[2]: *** [cmTC_12c33] Error 1
+make[2]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_12c33/fast' failed
+make[1]: *** [cmTC_12c33/fast] Error 2
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a17fd/fast"
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a17fd.dir/build.make CMakeFiles/cmTC_a17fd.dir/build
+make[2]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a17fd.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a17fd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a17fd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a17fd.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a17fd.dir/CheckFunctionExists.c.o  -o cmTC_a17fd -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_a17fd.dir/build.make:97: recipe for target 'cmTC_a17fd' failed
+make[2]: *** [cmTC_a17fd] Error 1
+make[2]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a17fd/fast' failed
+make[1]: *** [cmTC_a17fd/fast] Error 2
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_de044/fast"
+/usr/bin/make -f CMakeFiles/cmTC_de044.dir/build.make CMakeFiles/cmTC_de044.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_de044.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_de044.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_de044
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de044.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_de044.dir/CheckSymbolExists.c.o  -o cmTC_de044 
+CMakeFiles/cmTC_de044.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_de044.dir/build.make:97: recipe for target 'cmTC_de044' failed
+make[1]: *** [cmTC_de044] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_de044/fast' failed
+make: *** [cmTC_de044/fast] Error 2
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1bda1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1bda1.dir/build.make CMakeFiles/cmTC_1bda1.dir/build
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1bda1.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1bda1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1bda1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1bda1.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_1bda1.dir/CheckFunctionExists.c.o  -o cmTC_1bda1 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_1bda1.dir/build.make:97: recipe for target 'cmTC_1bda1' failed
+make[1]: *** [cmTC_1bda1] Error 1
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1bda1/fast' failed
+make: *** [cmTC_1bda1/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9a93f/fast"
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9a93f.dir/build.make CMakeFiles/cmTC_9a93f.dir/build
+make[2]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9a93f.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_9a93f.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9a93f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a93f.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_9a93f.dir/CheckSymbolExists.c.o  -o cmTC_9a93f 
+CMakeFiles/cmTC_9a93f.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_9a93f.dir/build.make:97: recipe for target 'cmTC_9a93f' failed
+make[2]: *** [cmTC_9a93f] Error 1
+make[2]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9a93f/fast' failed
+make[1]: *** [cmTC_9a93f/fast] Error 2
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_029fe/fast"
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_029fe.dir/build.make CMakeFiles/cmTC_029fe.dir/build
+make[2]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_029fe.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_029fe.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_029fe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_029fe.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_029fe.dir/CheckFunctionExists.c.o  -o cmTC_029fe -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_029fe.dir/build.make:97: recipe for target 'cmTC_029fe' failed
+make[2]: *** [cmTC_029fe] Error 1
+make[2]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_029fe/fast' failed
+make[1]: *** [cmTC_029fe/fast] Error 2
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f4825/fast"
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f4825.dir/build.make CMakeFiles/cmTC_f4825.dir/build
+make[2]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f4825.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_f4825.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f4825
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4825.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_f4825.dir/CheckSymbolExists.c.o  -o cmTC_f4825 
+CMakeFiles/cmTC_f4825.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_f4825.dir/build.make:97: recipe for target 'cmTC_f4825' failed
+make[2]: *** [cmTC_f4825] Error 1
+make[2]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f4825/fast' failed
+make[1]: *** [cmTC_f4825/fast] Error 2
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_262f6/fast"
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_262f6.dir/build.make CMakeFiles/cmTC_262f6.dir/build
+make[2]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_262f6.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_262f6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_262f6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_262f6.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_262f6.dir/CheckFunctionExists.c.o  -o cmTC_262f6 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_262f6.dir/build.make:97: recipe for target 'cmTC_262f6' failed
+make[2]: *** [cmTC_262f6] Error 1
+make[2]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_262f6/fast' failed
+make[1]: *** [cmTC_262f6/fast] Error 2
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8f02c/fast"
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8f02c.dir/build.make CMakeFiles/cmTC_8f02c.dir/build
+make[2]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8f02c.dir/CheckSymbolExists.c.o
+/usr/bin/clang    -o CMakeFiles/cmTC_8f02c.dir/CheckSymbolExists.c.o   -c /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8f02c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f02c.dir/link.txt --verbose=1
+/usr/bin/clang      CMakeFiles/cmTC_8f02c.dir/CheckSymbolExists.c.o  -o cmTC_8f02c 
+CMakeFiles/cmTC_8f02c.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x19): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_8f02c.dir/build.make:97: recipe for target 'cmTC_8f02c' failed
+make[2]: *** [cmTC_8f02c] Error 1
+make[2]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8f02c/fast' failed
+make[1]: *** [cmTC_8f02c/fast] Error 2
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_db934/fast"
+make[1]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_db934.dir/build.make CMakeFiles/cmTC_db934.dir/build
+make[2]: Entering directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db934.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_db934.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_db934
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db934.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_db934.dir/CheckFunctionExists.c.o  -o cmTC_db934 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_db934.dir/build.make:97: recipe for target 'cmTC_db934' failed
+make[2]: *** [cmTC_db934] Error 1
+make[2]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_db934/fast' failed
+make[1]: *** [cmTC_db934/fast] Error 2
+make[1]: Leaving directory '/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/CMakeTmp'
+
+

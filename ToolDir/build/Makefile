@@ -124,17 +124,17 @@ EventLoop/fast:
 .PHONY : EventLoop/fast
 
 #=============================================================================
-# Target rules for targets named testProto
+# Target rules for targets named PBTest
 
 # Build rule for target.
-testProto: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testProto
-.PHONY : testProto
+PBTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PBTest
+.PHONY : PBTest
 
 # fast build rule for target.
-testProto/fast:
-	$(MAKE) -f proto/CMakeFiles/testProto.dir/build.make proto/CMakeFiles/testProto.dir/build
-.PHONY : testProto/fast
+PBTest/fast:
+	$(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/build
+.PHONY : PBTest/fast
 
 EventLoop.o: EventLoop.cpp.o
 
@@ -172,7 +172,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... EventLoop"
 	@echo "... edit_cache"
-	@echo "... testProto"
+	@echo "... PBTest"
 	@echo "... EventLoop.o"
 	@echo "... EventLoop.i"
 	@echo "... EventLoop.s"

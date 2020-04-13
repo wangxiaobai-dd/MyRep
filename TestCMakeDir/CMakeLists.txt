@@ -43,3 +43,12 @@ if(DEMO9LIB_FOUND)
 else()
 	message("not found DEMO9LIB_FOUND")
 endif(DEMO9LIB_FOUND)
+
+add_custom_target(dist
+	WORKING_DIRECTORY
+	${CMAKE_CURRENT_BINARY_DIR}
+	COMMAND echo "ehehehe"
+	COMMENT
+	"test target"
+	VERBATIM
+	) 

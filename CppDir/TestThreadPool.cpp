@@ -110,11 +110,13 @@ int main()
 	ThreadPool pool(3);
 	auto future = pool.enqueue(sum, 1, 2);
 
+	// future.get 一直阻塞
 	std::thread t1([&future]{ std::cout << future.get() << std::endl;});
-	//t1.join();
 	t1.detach();
 	
-	std::this_thread::sleep_for(std::chrono::seconds(20));
+	std::cout << "hehe" << std::endl;
+	//t1.join();
+	//std::this_thread::sleep_for(std::chrono::seconds(20));
 	// 可以把future 放入队列， EventLoop回调取结果
 }
 	     
