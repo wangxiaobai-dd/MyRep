@@ -13,6 +13,7 @@ message User {
 	required string pass_word = 3; // 密码
 	optional string email = 4; // 邮箱(可选)
 	repeated Person person = 5; // 账户拥有的角色(可以重复)
+	map<int32, int32> u_map = 6;
 }
 
 message Person { 

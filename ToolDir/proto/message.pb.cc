@@ -16,7 +16,12 @@
 #include <google/protobuf/port_def.inc>
 extern PROTOBUF_INTERNAL_EXPORT_message_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Person_message_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_message_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PhoneNumber_message_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_message_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_User_UMapEntry_DoNotUse_message_2eproto;
 namespace test {
+class User_UMapEntry_DoNotUseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<User_UMapEntry_DoNotUse> _instance;
+} _User_UMapEntry_DoNotUse_default_instance_;
 class UserDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<User> _instance;
@@ -70,15 +75,38 @@ static void InitDefaultsscc_info_User_message_2eproto() {
   ::test::User::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_User_message_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_User_message_2eproto}, {
-      &scc_info_Person_message_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_User_message_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_User_message_2eproto}, {
+      &scc_info_Person_message_2eproto.base,
+      &scc_info_User_UMapEntry_DoNotUse_message_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_message_2eproto[3];
+static void InitDefaultsscc_info_User_UMapEntry_DoNotUse_message_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::test::_User_UMapEntry_DoNotUse_default_instance_;
+    new (ptr) ::test::User_UMapEntry_DoNotUse();
+  }
+  ::test::User_UMapEntry_DoNotUse::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_User_UMapEntry_DoNotUse_message_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_User_UMapEntry_DoNotUse_message_2eproto}, {}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_message_2eproto[4];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_message_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_message_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  PROTOBUF_FIELD_OFFSET(::test::User_UMapEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::test::User_UMapEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::test::User_UMapEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::test::User_UMapEntry_DoNotUse, value_),
+  0,
+  1,
   PROTOBUF_FIELD_OFFSET(::test::User, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::test::User, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -89,10 +117,12 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_message_2eproto::offsets[] PRO
   PROTOBUF_FIELD_OFFSET(::test::User, pass_word_),
   PROTOBUF_FIELD_OFFSET(::test::User, email_),
   PROTOBUF_FIELD_OFFSET(::test::User, person_),
+  PROTOBUF_FIELD_OFFSET(::test::User, u_map_),
   3,
   0,
   1,
   2,
+  ~0u,
   ~0u,
   PROTOBUF_FIELD_OFFSET(::test::Person, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::test::Person, _internal_metadata_),
@@ -116,41 +146,46 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_message_2eproto::offsets[] PRO
   1,
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 10, sizeof(::test::User)},
-  { 15, 23, sizeof(::test::Person)},
-  { 26, 33, sizeof(::test::PhoneNumber)},
+  { 0, 7, sizeof(::test::User_UMapEntry_DoNotUse)},
+  { 9, 20, sizeof(::test::User)},
+  { 26, 34, sizeof(::test::Person)},
+  { 37, 44, sizeof(::test::PhoneNumber)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::test::_User_UMapEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::test::_User_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::test::_Person_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::test::_PhoneNumber_default_instance_),
 };
 
 const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rmessage.proto\022\004test\"d\n\004User\022\n\n\002id\030\001 \002("
-  "\005\022\020\n\010username\030\002 \002(\t\022\021\n\tpass_word\030\003 \002(\t\022\r"
-  "\n\005email\030\004 \001(\t\022\034\n\006person\030\005 \003(\0132\014.test.Per"
-  "son\"D\n\006Person\022\n\n\002id\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022"
-  " \n\005phone\030\003 \003(\0132\021.test.PhoneNumber\"B\n\013Pho"
-  "neNumber\022\016\n\006number\030\001 \002(\t\022#\n\004type\030\002 \001(\0162\017"
-  ".test.PhoneType:\004HOME*+\n\tPhoneType\022\n\n\006MO"
-  "BILE\020\000\022\010\n\004HOME\020\001\022\010\n\004WORK\020\002"
+  "\n\rmessage.proto\022\004test\"\266\001\n\004User\022\n\n\002id\030\001 \002"
+  "(\005\022\020\n\010username\030\002 \002(\t\022\021\n\tpass_word\030\003 \002(\t\022"
+  "\r\n\005email\030\004 \001(\t\022\034\n\006person\030\005 \003(\0132\014.test.Pe"
+  "rson\022#\n\005u_map\030\006 \003(\0132\024.test.User.UMapEntr"
+  "y\032+\n\tUMapEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001"
+  "(\005:\0028\001\"D\n\006Person\022\n\n\002id\030\001 \002(\005\022\014\n\004name\030\002 \002"
+  "(\t\022 \n\005phone\030\003 \003(\0132\021.test.PhoneNumber\"B\n\013"
+  "PhoneNumber\022\016\n\006number\030\001 \002(\t\022#\n\004type\030\002 \001("
+  "\0162\017.test.PhoneType:\004HOME*+\n\tPhoneType\022\n\n"
+  "\006MOBILE\020\000\022\010\n\004HOME\020\001\022\010\n\004WORK\020\002"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_message_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_message_2eproto_sccs[3] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_message_2eproto_sccs[4] = {
   &scc_info_Person_message_2eproto.base,
   &scc_info_PhoneNumber_message_2eproto.base,
   &scc_info_User_message_2eproto.base,
+  &scc_info_User_UMapEntry_DoNotUse_message_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_message_2eproto_once;
 static bool descriptor_table_message_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_message_2eproto = {
-  &descriptor_table_message_2eproto_initialized, descriptor_table_protodef_message_2eproto, "message.proto", 306,
-  &descriptor_table_message_2eproto_once, descriptor_table_message_2eproto_sccs, descriptor_table_message_2eproto_deps, 3, 0,
+  &descriptor_table_message_2eproto_initialized, descriptor_table_protodef_message_2eproto, "message.proto", 389,
+  &descriptor_table_message_2eproto_once, descriptor_table_message_2eproto_sccs, descriptor_table_message_2eproto_deps, 4, 0,
   schemas, file_default_instances, TableStruct_message_2eproto::offsets,
-  file_level_metadata_message_2eproto, 3, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
+  file_level_metadata_message_2eproto, 4, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -169,6 +204,23 @@ bool PhoneType_IsValid(int value) {
     default:
       return false;
   }
+}
+
+
+// ===================================================================
+
+User_UMapEntry_DoNotUse::User_UMapEntry_DoNotUse() {}
+User_UMapEntry_DoNotUse::User_UMapEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+    : SuperType(arena) {}
+void User_UMapEntry_DoNotUse::MergeFrom(const User_UMapEntry_DoNotUse& other) {
+  MergeFromInternal(other);
+}
+::PROTOBUF_NAMESPACE_ID::Metadata User_UMapEntry_DoNotUse::GetMetadata() const {
+  return GetMetadataStatic();
+}
+void User_UMapEntry_DoNotUse::MergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::Message& other) {
+  ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
 }
 
 
@@ -204,6 +256,7 @@ User::User(const User& from)
       _has_bits_(from._has_bits_),
       person_(from.person_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  u_map_.MergeFrom(from.u_map_);
   username_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (from._internal_has_username()) {
     username_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.username_);
@@ -255,6 +308,7 @@ void User::Clear() {
   (void) cached_has_bits;
 
   person_.Clear();
+  u_map_.Clear();
   cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
@@ -333,6 +387,18 @@ const char* User::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else goto handle_unusual;
         continue;
+      // map<int32, int32> u_map = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(&u_map_, ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
@@ -405,6 +471,37 @@ failure:
       InternalWriteMessage(5, this->_internal_person(i), target, stream);
   }
 
+  // map<int32, int32> u_map = 6;
+  if (!this->_internal_u_map().empty()) {
+    typedef ::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >::const_pointer
+        ConstPtr;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::SortItem< ::PROTOBUF_NAMESPACE_ID::int32, ConstPtr > SortItem;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByFirstField<SortItem> Less;
+
+    if (stream->IsSerializationDeterministic() &&
+        this->_internal_u_map().size() > 1) {
+      ::std::unique_ptr<SortItem[]> items(
+          new SortItem[this->_internal_u_map().size()]);
+      typedef ::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >::size_type size_type;
+      size_type n = 0;
+      for (::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >::const_iterator
+          it = this->_internal_u_map().begin();
+          it != this->_internal_u_map().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      for (size_type i = 0; i < n; i++) {
+        target = User_UMapEntry_DoNotUse::Funcs::InternalSerialize(6, items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second, target, stream);
+      }
+    } else {
+      for (::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >::const_iterator
+          it = this->_internal_u_map().begin();
+          it != this->_internal_u_map().end(); ++it) {
+        target = User_UMapEntry_DoNotUse::Funcs::InternalSerialize(6, it->first, it->second, target, stream);
+      }
+    }
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -474,6 +571,15 @@ size_t User::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
+  // map<int32, int32> u_map = 6;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_u_map_size());
+  for (::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >::const_iterator
+      it = this->_internal_u_map().begin();
+      it != this->_internal_u_map().end(); ++it) {
+    total_size += User_UMapEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
+  }
+
   // optional string email = 4;
   cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 0x00000004u) {
@@ -514,6 +620,7 @@ void User::MergeFrom(const User& from) {
   (void) cached_has_bits;
 
   person_.MergeFrom(from.person_);
+  u_map_.MergeFrom(from.u_map_);
   cached_has_bits = from._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
@@ -560,6 +667,7 @@ void User::InternalSwap(User* other) {
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   person_.InternalSwap(&other->person_);
+  u_map_.Swap(&other->u_map_);
   username_.Swap(&other->username_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   pass_word_.Swap(&other->pass_word_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
@@ -1135,6 +1243,9 @@ void PhoneNumber::InternalSwap(PhoneNumber* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace test
 PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::test::User_UMapEntry_DoNotUse* Arena::CreateMaybeMessage< ::test::User_UMapEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateInternal< ::test::User_UMapEntry_DoNotUse >(arena);
+}
 template<> PROTOBUF_NOINLINE ::test::User* Arena::CreateMaybeMessage< ::test::User >(Arena* arena) {
   return Arena::CreateInternal< ::test::User >(arena);
 }

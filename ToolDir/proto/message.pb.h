@@ -31,6 +31,9 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/map.h>  // IWYU pragma: export
+#include <google/protobuf/map_entry.h>
+#include <google/protobuf/map_field_inl.h>
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
@@ -48,7 +51,7 @@ struct TableStruct_message_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -65,11 +68,15 @@ extern PhoneNumberDefaultTypeInternal _PhoneNumber_default_instance_;
 class User;
 class UserDefaultTypeInternal;
 extern UserDefaultTypeInternal _User_default_instance_;
+class User_UMapEntry_DoNotUse;
+class User_UMapEntry_DoNotUseDefaultTypeInternal;
+extern User_UMapEntry_DoNotUseDefaultTypeInternal _User_UMapEntry_DoNotUse_default_instance_;
 }  // namespace test
 PROTOBUF_NAMESPACE_OPEN
 template<> ::test::Person* Arena::CreateMaybeMessage<::test::Person>(Arena*);
 template<> ::test::PhoneNumber* Arena::CreateMaybeMessage<::test::PhoneNumber>(Arena*);
 template<> ::test::User* Arena::CreateMaybeMessage<::test::User>(Arena*);
+template<> ::test::User_UMapEntry_DoNotUse* Arena::CreateMaybeMessage<::test::User_UMapEntry_DoNotUse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace test {
 
@@ -98,6 +105,36 @@ inline bool PhoneType_Parse(
     PhoneType_descriptor(), name, value);
 }
 // ===================================================================
+
+class User_UMapEntry_DoNotUse : public ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<User_UMapEntry_DoNotUse, 
+    ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
+    0 > {
+public:
+  typedef ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<User_UMapEntry_DoNotUse, 
+    ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
+    0 > SuperType;
+  User_UMapEntry_DoNotUse();
+  User_UMapEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  void MergeFrom(const User_UMapEntry_DoNotUse& other);
+  static const User_UMapEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const User_UMapEntry_DoNotUse*>(&_User_UMapEntry_DoNotUse_default_instance_); }
+  static bool ValidateKey(void*) { return true; }
+  static bool ValidateValue(void*) { return true; }
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& other) final;
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_message_2eproto);
+    return ::descriptor_table_message_2eproto.file_level_metadata[0];
+  }
+
+  public:
+};
+
+// -------------------------------------------------------------------
 
 class User :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:test.User) */ {
@@ -148,7 +185,7 @@ class User :
                &_User_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    1;
 
   friend void swap(User& a, User& b) {
     a.Swap(&b);
@@ -209,10 +246,12 @@ class User :
 
   // nested types ----------------------------------------------------
 
+
   // accessors -------------------------------------------------------
 
   enum : int {
     kPersonFieldNumber = 5,
+    kUMapFieldNumber = 6,
     kUsernameFieldNumber = 2,
     kPassWordFieldNumber = 3,
     kEmailFieldNumber = 4,
@@ -235,6 +274,23 @@ class User :
   ::test::Person* add_person();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::test::Person >&
       person() const;
+
+  // map<int32, int32> u_map = 6;
+  int u_map_size() const;
+  private:
+  int _internal_u_map_size() const;
+  public:
+  void clear_u_map();
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >&
+      _internal_u_map() const;
+  ::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >*
+      _internal_mutable_u_map();
+  public:
+  const ::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >&
+      u_map() const;
+  ::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >*
+      mutable_u_map();
 
   // required string username = 2;
   bool has_username() const;
@@ -320,6 +376,12 @@ class User :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::test::Person > person_;
+  ::PROTOBUF_NAMESPACE_ID::internal::MapField<
+      User_UMapEntry_DoNotUse,
+      ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
+      0 > u_map_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pass_word_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr email_;
@@ -377,7 +439,7 @@ class Person :
                &_Person_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   friend void swap(Person& a, Person& b) {
     a.Swap(&b);
@@ -562,7 +624,7 @@ class PhoneNumber :
                &_PhoneNumber_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   friend void swap(PhoneNumber& a, PhoneNumber& b) {
     a.Swap(&b);
@@ -682,6 +744,8 @@ class PhoneNumber :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // User
 
 // required int32 id = 1;
@@ -964,6 +1028,35 @@ User::person() const {
   return person_;
 }
 
+// map<int32, int32> u_map = 6;
+inline int User::_internal_u_map_size() const {
+  return u_map_.size();
+}
+inline int User::u_map_size() const {
+  return _internal_u_map_size();
+}
+inline void User::clear_u_map() {
+  u_map_.Clear();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >&
+User::_internal_u_map() const {
+  return u_map_.GetMap();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >&
+User::u_map() const {
+  // @@protoc_insertion_point(field_map:test.User.u_map)
+  return _internal_u_map();
+}
+inline ::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >*
+User::_internal_mutable_u_map() {
+  return u_map_.MutableMap();
+}
+inline ::PROTOBUF_NAMESPACE_ID::Map< ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::int32 >*
+User::mutable_u_map() {
+  // @@protoc_insertion_point(field_mutable_map:test.User.u_map)
+  return _internal_mutable_u_map();
+}
+
 // -------------------------------------------------------------------
 
 // Person
@@ -1213,6 +1306,8 @@ inline void PhoneNumber::set_type(::test::PhoneType value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
