@@ -125,6 +125,21 @@ PBTest/fast:
 	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/build
 .PHONY : PBTest/fast
 
+# Convenience name for target.
+proto/CMakeFiles/ctags.dir/rule:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/CMakeFiles/ctags.dir/rule
+.PHONY : proto/CMakeFiles/ctags.dir/rule
+
+# Convenience name for target.
+ctags: proto/CMakeFiles/ctags.dir/rule
+
+.PHONY : ctags
+
+# fast build rule for target.
+ctags/fast:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/ctags.dir/build.make proto/CMakeFiles/ctags.dir/build
+.PHONY : ctags/fast
+
 ProtoTest.o: ProtoTest.cpp.o
 
 .PHONY : ProtoTest.o
@@ -186,8 +201,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... PBTest"
 	@echo "... edit_cache"
+	@echo "... PBTest"
+	@echo "... ctags"
 	@echo "... ProtoTest.o"
 	@echo "... ProtoTest.i"
 	@echo "... ProtoTest.s"

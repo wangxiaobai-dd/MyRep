@@ -136,6 +136,19 @@ PBTest/fast:
 	$(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/build
 .PHONY : PBTest/fast
 
+#=============================================================================
+# Target rules for targets named ctags
+
+# Build rule for target.
+ctags: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ctags
+.PHONY : ctags
+
+# fast build rule for target.
+ctags/fast:
+	$(MAKE) -f proto/CMakeFiles/ctags.dir/build.make proto/CMakeFiles/ctags.dir/build
+.PHONY : ctags/fast
+
 EventLoop.o: EventLoop.cpp.o
 
 .PHONY : EventLoop.o
@@ -173,6 +186,7 @@ help:
 	@echo "... EventLoop"
 	@echo "... edit_cache"
 	@echo "... PBTest"
+	@echo "... ctags"
 	@echo "... EventLoop.o"
 	@echo "... EventLoop.i"
 	@echo "... EventLoop.s"

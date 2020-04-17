@@ -79,6 +79,8 @@ google/protobuf/port_undef.inc
 /home/ubuntu/MyRep/ToolDir/proto/ProtoTest.cpp
 iostream
 -
+vector
+-
 message.pb.h
 /home/ubuntu/MyRep/ToolDir/proto/message.pb.h
 google/protobuf/message.h
@@ -114,6 +116,12 @@ google/protobuf/message.h
 google/protobuf/repeated_field.h
 -
 google/protobuf/extension_set.h
+-
+google/protobuf/map.h
+-
+google/protobuf/map_entry.h
+-
+google/protobuf/map_field_inl.h
 -
 google/protobuf/generated_enum_reflection.h
 -

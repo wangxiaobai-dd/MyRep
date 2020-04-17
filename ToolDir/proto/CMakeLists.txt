@@ -1,6 +1,6 @@
 
 #遍历匹配目录和子目录
-file(GLOB_RECURSE PROTOS ${CMAKE_CURRENT_SOURCE_DIR}/*.proto)
+file(GLOB_RECURSE PROTOS message.proto)
 
 #foreach(PROTOFILE ${PROTOS})
 #get_filename_component(PB_NAME ${PROTOFILE} NAME_WE)
@@ -44,3 +44,12 @@ add_custom_command(TARGET PBTest
 	)
 target_link_libraries(PBTest ${Protobuf_LIBRARIES})
 
+add_custom_target(ctags
+	WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
+	COMMAND echo ${CMAKE_CURRENT_LIST_DIR}
+	COMMAND ctags -R -h ".cc.cpp.h.proto" --append=yes -o tags
+	#COMMAND mv tags ${CMAKE_CURRENT_LIST_DIR}
+	COMMENT
+	"ctags successful create"
+	VERBATIM
+	) 
