@@ -31,18 +31,27 @@ file(GLOB_RECURSE PROTOS message.proto)
 
 find_package(Protobuf REQUIRED)
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${PROTOS})
-#set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}) 
-
-add_executable(PBTest ProtoTest.cpp ${PROTO_SRCS})
-
 include_directories(../build/proto)
+#set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_LIST_DIR}) 
 
-add_custom_command(TARGET PBTest
-	PRE_BUILD 
-	COMMAND mv ${PROTO_SRCS} ${CMAKE_CURRENT_SOURCE_DIR}
-	COMMAND mv ${PROTO_HDRS} ${CMAKE_CURRENT_SOURCE_DIR}
-	)
-target_link_libraries(PBTest ${Protobuf_LIBRARIES})
+#PBTest
+#add_executable(PBTest ${PROTO_SRCS} ProtoTest.cpp)
+#target_link_libraries(PBTest ${Protobuf_LIBRARIES})
+
+#add_custom_command(TARGET PBTest
+#	PRE_BUILD 
+#	COMMAND mv ${PROTO_SRCS} ${CMAKE_CURRENT_SOURCE_DIR}
+#	COMMAND mv ${PROTO_HDRS} ${CMAKE_CURRENT_SOURCE_DIR}
+#	)
+#PBTest2
+#add_executable(PBTest2 ProtoTest2.cpp)
+#target_link_libraries(PBTest2 ${Protobuf_LIBRARIES})
+
+#PBTest3
+file(GLOB_RECURSE PROTOS selfMessage.proto)
+protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${PROTOS})
+add_executable(PBTest3 ${PROTO_SRCS} ProtoTest3.cpp)
+target_link_libraries(PBTest3 ${Protobuf_LIBRARIES})
 
 add_custom_target(ctags
 	WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
@@ -51,5 +60,15 @@ add_custom_target(ctags
 	#COMMAND mv tags ${CMAKE_CURRENT_LIST_DIR}
 	COMMENT
 	"ctags successful create"
+	VERBATIM
+	) 
+
+add_custom_target(desset
+	WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
+	COMMAND protoc --cpp_out=${CMAKE_CURRENT_LIST_DIR} --descriptor_set_out=des.set message.proto
+	COMMAND mv des.set ../build/proto/
+	COMMAND rm message.pb.h message.pb.cc
+	COMMENT
+	"desset successful create"
 	VERBATIM
 	) 

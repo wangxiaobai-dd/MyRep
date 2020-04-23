@@ -2,6 +2,7 @@
 #include <vector>
 #include "message.pb.h"
 #include <google/protobuf/message.h>
+#include <string>
 
 void testReflact(google::protobuf::Message& message)
 {
@@ -108,25 +109,22 @@ int main()
 	test::User u;
 	u.set_id(1);
 	u.set_username("hehe");
-	u.set_pass_word("123");
-
-	//std::cout << u.id() << std::endl;
-	//std::cout << u.username() << std::endl;
 
 	// ·´Éä
-	//testReflact(u);
-	(*u.mutable_u_map())[1] = 1;
-	(*u.mutable_u_map())[2] = 1;
+//	testReflact(u);
+//	std::cout << u.id() << std::endl;
 
-	testMapReflection(u);
+//	(*u.mutable_u_map())[1] = 1;
+//	(*u.mutable_u_map())[2] = 1;
 
-	(*u.mutable_u_map())[3] = 1;
-	(*u.mutable_u_map())[4] = 1;
-	
+	//testMapReflection(u);
+
+	/*
 	for(const auto& item : u.u_map())
 	{
 		std::cout << item.first << " : ";
 		std::cout << item.second << std::endl;
 	}
+	*/
 }
 

@@ -3,14 +3,16 @@ package test;
 
 /*
 SPEED: 表示生成的代码运行效率高，但是由此生成的代码编译后会占用更多的空间。 
-CODE_SIZE: 和SPEED恰恰相反，代码运行效率较低，但是由此生成的代码编译后会占用更少的空间，通常用于资源有限的平台，如Mobile。
+CODE_SIZE: 代码运行效率较低，但是由此生成的代码编译后会占用更少的空间。
 LITE_RUNTIME: 生成的代码执行效率高，同时生成代码编译后的所占用的空间也是非常少。这是以牺牲Protocol Buffer提供的反射功能为代价的
 */
 
+//option optimize_for = LITE_RUNTIME;
+
 message User {
-	required int32 id = 1; // 主键,唯一
-	required string username = 2; // 帐号
-	required string pass_word = 3; // 密码
+	optional int32 id = 1; // 主键,唯一
+	optional string username = 2; // 帐号
+	optional string pass_word = 3; // 密码
 	optional string email = 4; // 邮箱(可选)
 	repeated Person person = 5; // 账户拥有的角色(可以重复)
 	map<int32, int32> u_map = 6;
