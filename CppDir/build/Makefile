@@ -137,6 +137,19 @@ TestCPP/fast:
 .PHONY : TestCPP/fast
 
 #=============================================================================
+# Target rules for targets named TestMorden
+
+# Build rule for target.
+TestMorden: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestMorden
+.PHONY : TestMorden
+
+# fast build rule for target.
+TestMorden/fast:
+	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/build
+.PHONY : TestMorden/fast
+
+#=============================================================================
 # Target rules for targets named TestCPP2
 
 # Build rule for target.
@@ -203,6 +216,33 @@ Test2.cpp.s:
 	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/Test2.cpp.s
 .PHONY : Test2.cpp.s
 
+TestMorden.o: TestMorden.cpp.o
+
+.PHONY : TestMorden.o
+
+# target to build an object file
+TestMorden.cpp.o:
+	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/TestMorden.cpp.o
+.PHONY : TestMorden.cpp.o
+
+TestMorden.i: TestMorden.cpp.i
+
+.PHONY : TestMorden.i
+
+# target to preprocess a source file
+TestMorden.cpp.i:
+	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/TestMorden.cpp.i
+.PHONY : TestMorden.cpp.i
+
+TestMorden.s: TestMorden.cpp.s
+
+.PHONY : TestMorden.s
+
+# target to generate assembly for a file
+TestMorden.cpp.s:
+	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/TestMorden.cpp.s
+.PHONY : TestMorden.cpp.s
+
 TestThreadPool.o: TestThreadPool.cpp.o
 
 .PHONY : TestThreadPool.o
@@ -240,6 +280,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... TestCPP3"
 	@echo "... TestCPP"
+	@echo "... TestMorden"
 	@echo "... TestCPP2"
 	@echo "... Test.o"
 	@echo "... Test.i"
@@ -247,6 +288,9 @@ help:
 	@echo "... Test2.o"
 	@echo "... Test2.i"
 	@echo "... Test2.s"
+	@echo "... TestMorden.o"
+	@echo "... TestMorden.i"
+	@echo "... TestMorden.s"
 	@echo "... TestThreadPool.o"
 	@echo "... TestThreadPool.i"
 	@echo "... TestThreadPool.s"

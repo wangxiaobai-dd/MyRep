@@ -6,23 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/CppDir/Test2.cpp
-string
+/home/ubuntu/MyRep/CppDir/TestMorden.cpp
+type_traits
 -
-stdio.h
-/home/ubuntu/MyRep/CppDir/stdio.h
 iostream
--
-sstream
--
-vector
--
-set
--
-algorithm
--
-string.h
--
-map
 -
 
