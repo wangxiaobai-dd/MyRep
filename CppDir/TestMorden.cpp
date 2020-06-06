@@ -1,5 +1,8 @@
 #include <type_traits> 
 #include <iostream>
+#include <map>
+#include <set>
+#include <unordered_map>
 
 template <class T, T v>
 struct integral_constant {
@@ -44,8 +47,97 @@ struct Sum {
   typedef SumLoop<0, n> type;
 };
 
+
+template <typename T>
+struct has_reserve
+{
+	struct good { char dummy; };
+	struct bad { char dummy[2]; };
+	template <class U, void (U::*)(size_t)> struct SFINAE{}; // 第二个参数是第一个参数的成员函数指针 参数类型是size_t
+	template <class U> static good reserve(SFINAE<U, &U::reserve>* ); 
+
+	template <class U> static bad reserve(...);
+        static const bool value = sizeof(reserve<T>(nullptr) == sizeof(good));	
+};
+
+template <typename Container> 
+	typename std::enable_if_t<std::is_same<Container, std::map<typename Container::key_type, typename Container::mapped_type>>::value>
+test(Container& cont)
+{
+	cont[2] = 1;
+}
+
+template <typename Container>  
+	std::enable_if_t<std::is_same<Container, std::set<typename Container::value_type> >::value>
+test(Container& cont)
+{
+	//cont.insert(1);
+}
+
+/*
+template<class Container, class = std::enable_if_t<
+	std::is_same<Container, std::map<typename Container::key_type, typename Container::mapped_type> >::value ||
+	std::is_same<Container, std::unordered_map<typename Container::key_type, typename Container::mapped_type> >::value>>
+void FC(Container& fc)
+{
+	test(fc[2]);
+}
+*/
+
+template<class Container> std::enable_if_t<
+	std::is_same<Container, std::map<typename Container::key_type, typename Container::mapped_type> >::value ||
+	std::is_same<Container, std::unordered_map<typename Container::key_type, typename Container::mapped_type> >::value>
+FC(Container& fc)
+{
+	typename Container::key_type tmp = 1;
+	std::cout << tmp << std::endl;
+	test(fc[2]);
+}
+
+template <typename T, class Container>
+void FC(Container& fc)
+{
+
+}
+
+template <typename Container>
+auto append(Container& cont)->decltype(std::declval<Container&>().insert(typename Container::value_type(typename Container::key_type(), typename Container::mapped_type())), void())
+{
+	test(cont[1]);
+	cont[1][1] = 2;
+}
+
+template <typename Container>
+auto append(Container& cont)->decltype(std::declval<Container&>().insert(typename Container::key_type()), void())
+{
+	cont.insert(100);
+}
+
+struct MM
+{};
+
 int main()
 {
-	std::cout << While<Sum<10>::type>::type::value;
+	//std::map<int, int> mmm;
+	std::unordered_map<int, int> mmm2;
+	std::set<int> sss;
+	std::set<MM> sss2;
+	//test(mmm);
+	//test(mmm2);
+	//test(sss);
+//	test(sss2);
+	std::map<int, std::map<int, int>> mmm;
+	std::map<int, std::set<int>> sss3;
+	FC(mmm);
+	FC(sss3);
+	
+	append(mmm);
+	//append(mmm2);
+//	append2(mmm);
+	append(sss);
+
+	std::cout << mmm[1][1] << std::endl;
+	std::cout << *sss.begin() << std::endl;
+
 	return 0;
 }

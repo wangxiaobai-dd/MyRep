@@ -159,5 +159,8 @@ int main()
 	if(iter == sss2.end())
 		std::cout << "no" << std::endl;
 	std::cout << place << std::endl;
+
+	if(int ddd = 3 && place)
+	{}
 }
 	     
