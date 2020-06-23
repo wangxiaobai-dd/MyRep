@@ -8,6 +8,7 @@ project(TestRedis)
 #set(DEBUG_FLAG "-g -Werror -std=gnu++14 -Wno-invalid-source-encoding -fdiagnostics-format=vi")
 set(DEBUG_FLAG "-g -Werror -std=gnu++17")
 include_directories(SYSTEM /usr/include)
+include_directories(nvwa)
 
 set(CMAKE_CXX_FLAGS ${DEBUG_FLAG})
 
@@ -16,6 +17,8 @@ add_executable(TestCPP Test.cpp)
 add_executable(TestCPP2 Test2.cpp)
 add_executable(TestCPP3 TestThreadPool.cpp)
 add_executable(TestMorden TestMorden.cpp)
+add_executable(TestMorden2 TestMorden2.cpp)
+add_executable(TestMorden3 TestMorden3.cpp)
 
 target_link_libraries(TestCPP3 pthread)
 

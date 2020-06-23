@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named TestCPP2
+
+# Build rule for target.
+TestCPP2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestCPP2
+.PHONY : TestCPP2
+
+# fast build rule for target.
+TestCPP2/fast:
+	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/build
+.PHONY : TestCPP2/fast
+
+#=============================================================================
+# Target rules for targets named TestMorden
+
+# Build rule for target.
+TestMorden: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestMorden
+.PHONY : TestMorden
+
+# fast build rule for target.
+TestMorden/fast:
+	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/build
+.PHONY : TestMorden/fast
+
+#=============================================================================
+# Target rules for targets named TestMorden2
+
+# Build rule for target.
+TestMorden2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestMorden2
+.PHONY : TestMorden2
+
+# fast build rule for target.
+TestMorden2/fast:
+	$(MAKE) -f CMakeFiles/TestMorden2.dir/build.make CMakeFiles/TestMorden2.dir/build
+.PHONY : TestMorden2/fast
+
+#=============================================================================
 # Target rules for targets named TestCPP3
 
 # Build rule for target.
@@ -137,30 +176,17 @@ TestCPP/fast:
 .PHONY : TestCPP/fast
 
 #=============================================================================
-# Target rules for targets named TestMorden
+# Target rules for targets named TestMorden3
 
 # Build rule for target.
-TestMorden: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestMorden
-.PHONY : TestMorden
+TestMorden3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestMorden3
+.PHONY : TestMorden3
 
 # fast build rule for target.
-TestMorden/fast:
-	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/build
-.PHONY : TestMorden/fast
-
-#=============================================================================
-# Target rules for targets named TestCPP2
-
-# Build rule for target.
-TestCPP2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestCPP2
-.PHONY : TestCPP2
-
-# fast build rule for target.
-TestCPP2/fast:
-	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/build
-.PHONY : TestCPP2/fast
+TestMorden3/fast:
+	$(MAKE) -f CMakeFiles/TestMorden3.dir/build.make CMakeFiles/TestMorden3.dir/build
+.PHONY : TestMorden3/fast
 
 Test.o: Test.cpp.o
 
@@ -243,6 +269,60 @@ TestMorden.cpp.s:
 	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/TestMorden.cpp.s
 .PHONY : TestMorden.cpp.s
 
+TestMorden2.o: TestMorden2.cpp.o
+
+.PHONY : TestMorden2.o
+
+# target to build an object file
+TestMorden2.cpp.o:
+	$(MAKE) -f CMakeFiles/TestMorden2.dir/build.make CMakeFiles/TestMorden2.dir/TestMorden2.cpp.o
+.PHONY : TestMorden2.cpp.o
+
+TestMorden2.i: TestMorden2.cpp.i
+
+.PHONY : TestMorden2.i
+
+# target to preprocess a source file
+TestMorden2.cpp.i:
+	$(MAKE) -f CMakeFiles/TestMorden2.dir/build.make CMakeFiles/TestMorden2.dir/TestMorden2.cpp.i
+.PHONY : TestMorden2.cpp.i
+
+TestMorden2.s: TestMorden2.cpp.s
+
+.PHONY : TestMorden2.s
+
+# target to generate assembly for a file
+TestMorden2.cpp.s:
+	$(MAKE) -f CMakeFiles/TestMorden2.dir/build.make CMakeFiles/TestMorden2.dir/TestMorden2.cpp.s
+.PHONY : TestMorden2.cpp.s
+
+TestMorden3.o: TestMorden3.cpp.o
+
+.PHONY : TestMorden3.o
+
+# target to build an object file
+TestMorden3.cpp.o:
+	$(MAKE) -f CMakeFiles/TestMorden3.dir/build.make CMakeFiles/TestMorden3.dir/TestMorden3.cpp.o
+.PHONY : TestMorden3.cpp.o
+
+TestMorden3.i: TestMorden3.cpp.i
+
+.PHONY : TestMorden3.i
+
+# target to preprocess a source file
+TestMorden3.cpp.i:
+	$(MAKE) -f CMakeFiles/TestMorden3.dir/build.make CMakeFiles/TestMorden3.dir/TestMorden3.cpp.i
+.PHONY : TestMorden3.cpp.i
+
+TestMorden3.s: TestMorden3.cpp.s
+
+.PHONY : TestMorden3.s
+
+# target to generate assembly for a file
+TestMorden3.cpp.s:
+	$(MAKE) -f CMakeFiles/TestMorden3.dir/build.make CMakeFiles/TestMorden3.dir/TestMorden3.cpp.s
+.PHONY : TestMorden3.cpp.s
+
 TestThreadPool.o: TestThreadPool.cpp.o
 
 .PHONY : TestThreadPool.o
@@ -278,10 +358,12 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... TestCPP2"
+	@echo "... TestMorden"
+	@echo "... TestMorden2"
 	@echo "... TestCPP3"
 	@echo "... TestCPP"
-	@echo "... TestMorden"
-	@echo "... TestCPP2"
+	@echo "... TestMorden3"
 	@echo "... Test.o"
 	@echo "... Test.i"
 	@echo "... Test.s"
@@ -291,6 +373,12 @@ help:
 	@echo "... TestMorden.o"
 	@echo "... TestMorden.i"
 	@echo "... TestMorden.s"
+	@echo "... TestMorden2.o"
+	@echo "... TestMorden2.i"
+	@echo "... TestMorden2.s"
+	@echo "... TestMorden3.o"
+	@echo "... TestMorden3.i"
+	@echo "... TestMorden3.s"
 	@echo "... TestThreadPool.o"
 	@echo "... TestThreadPool.i"
 	@echo "... TestThreadPool.s"

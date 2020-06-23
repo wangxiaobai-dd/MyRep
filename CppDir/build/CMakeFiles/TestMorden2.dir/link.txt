@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Werror -std=gnu++17   CMakeFiles/TestMorden2.dir/TestMorden2.cpp.o  -o TestMorden2 
