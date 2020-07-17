@@ -3,5 +3,6 @@
 /home/ubuntu/MyRep/ToolDir/build/CMakeFiles/edit_cache.dir
 /home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/edit_cache.dir
-/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/PBTest.dir
+/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/desset.dir
+/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/PBTest3.dir
 /home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/ctags.dir

@@ -124,17 +124,30 @@ EventLoop/fast:
 .PHONY : EventLoop/fast
 
 #=============================================================================
-# Target rules for targets named PBTest
+# Target rules for targets named desset
 
 # Build rule for target.
-PBTest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 PBTest
-.PHONY : PBTest
+desset: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 desset
+.PHONY : desset
 
 # fast build rule for target.
-PBTest/fast:
-	$(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/build
-.PHONY : PBTest/fast
+desset/fast:
+	$(MAKE) -f proto/CMakeFiles/desset.dir/build.make proto/CMakeFiles/desset.dir/build
+.PHONY : desset/fast
+
+#=============================================================================
+# Target rules for targets named PBTest3
+
+# Build rule for target.
+PBTest3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PBTest3
+.PHONY : PBTest3
+
+# fast build rule for target.
+PBTest3/fast:
+	$(MAKE) -f proto/CMakeFiles/PBTest3.dir/build.make proto/CMakeFiles/PBTest3.dir/build
+.PHONY : PBTest3/fast
 
 #=============================================================================
 # Target rules for targets named ctags
@@ -185,7 +198,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... EventLoop"
 	@echo "... edit_cache"
-	@echo "... PBTest"
+	@echo "... desset"
+	@echo "... PBTest3"
 	@echo "... ctags"
 	@echo "... EventLoop.o"
 	@echo "... EventLoop.i"

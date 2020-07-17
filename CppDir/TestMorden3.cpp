@@ -86,9 +86,10 @@ int main()
 		cMap[1] = c;
 	}
 	cout << *(*cMap[1].mMap[1])[1]->myInt << endl;
-	delete ia;
-	cout << *ia << endl;
-
+//	delete ia;
+	//cout << *ia << endl;
 	getchar();
+	int *a = new int();
+
 	return 0;
 }

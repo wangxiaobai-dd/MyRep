@@ -4,6 +4,7 @@
 #include <google/protobuf/dynamic_message.h>
 
 
+// ¶¯Ì¬ÏûÏ¢
 int main()
 {
 	using namespace google::protobuf;
@@ -41,5 +42,6 @@ int main()
 	reflection->SetString(pair, field, "my key");
 	field = descriptor->FindFieldByName("value");
 	reflection->SetUInt32(pair, field, 1234);
+
 }
 

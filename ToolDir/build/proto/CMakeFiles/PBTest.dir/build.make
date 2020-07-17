@@ -65,33 +65,9 @@ proto/message.pb.cc: /usr/local/bin/protoc
 proto/message.pb.h: proto/message.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate proto/message.pb.h
 
-proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o: proto/CMakeFiles/PBTest.dir/flags.make
-proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o: ../proto/ProtoTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/MyRep/ToolDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o"
-	cd /home/ubuntu/MyRep/ToolDir/build/proto && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PBTest.dir/ProtoTest.cpp.o -c /home/ubuntu/MyRep/ToolDir/proto/ProtoTest.cpp
-
-proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PBTest.dir/ProtoTest.cpp.i"
-	cd /home/ubuntu/MyRep/ToolDir/build/proto && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/MyRep/ToolDir/proto/ProtoTest.cpp > CMakeFiles/PBTest.dir/ProtoTest.cpp.i
-
-proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PBTest.dir/ProtoTest.cpp.s"
-	cd /home/ubuntu/MyRep/ToolDir/build/proto && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/MyRep/ToolDir/proto/ProtoTest.cpp -o CMakeFiles/PBTest.dir/ProtoTest.cpp.s
-
-proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.requires:
-
-.PHONY : proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.requires
-
-proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.provides: proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.requires
-	$(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.provides.build
-.PHONY : proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.provides
-
-proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.provides.build: proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o
-
-
 proto/CMakeFiles/PBTest.dir/message.pb.cc.o: proto/CMakeFiles/PBTest.dir/flags.make
 proto/CMakeFiles/PBTest.dir/message.pb.cc.o: proto/message.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/MyRep/ToolDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object proto/CMakeFiles/PBTest.dir/message.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/MyRep/ToolDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object proto/CMakeFiles/PBTest.dir/message.pb.cc.o"
 	cd /home/ubuntu/MyRep/ToolDir/build/proto && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PBTest.dir/message.pb.cc.o -c /home/ubuntu/MyRep/ToolDir/build/proto/message.pb.cc
 
 proto/CMakeFiles/PBTest.dir/message.pb.cc.i: cmake_force
@@ -113,22 +89,44 @@ proto/CMakeFiles/PBTest.dir/message.pb.cc.o.provides: proto/CMakeFiles/PBTest.di
 proto/CMakeFiles/PBTest.dir/message.pb.cc.o.provides.build: proto/CMakeFiles/PBTest.dir/message.pb.cc.o
 
 
+proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o: proto/CMakeFiles/PBTest.dir/flags.make
+proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o: ../proto/ProtoTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/MyRep/ToolDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o"
+	cd /home/ubuntu/MyRep/ToolDir/build/proto && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PBTest.dir/ProtoTest.cpp.o -c /home/ubuntu/MyRep/ToolDir/proto/ProtoTest.cpp
+
+proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PBTest.dir/ProtoTest.cpp.i"
+	cd /home/ubuntu/MyRep/ToolDir/build/proto && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/MyRep/ToolDir/proto/ProtoTest.cpp > CMakeFiles/PBTest.dir/ProtoTest.cpp.i
+
+proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PBTest.dir/ProtoTest.cpp.s"
+	cd /home/ubuntu/MyRep/ToolDir/build/proto && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/MyRep/ToolDir/proto/ProtoTest.cpp -o CMakeFiles/PBTest.dir/ProtoTest.cpp.s
+
+proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.requires:
+
+.PHONY : proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.requires
+
+proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.provides: proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.requires
+	$(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.provides.build
+.PHONY : proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.provides
+
+proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.provides.build: proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o
+
+
 # Object files for target PBTest
 PBTest_OBJECTS = \
-"CMakeFiles/PBTest.dir/ProtoTest.cpp.o" \
-"CMakeFiles/PBTest.dir/message.pb.cc.o"
+"CMakeFiles/PBTest.dir/message.pb.cc.o" \
+"CMakeFiles/PBTest.dir/ProtoTest.cpp.o"
 
 # External object files for target PBTest
 PBTest_EXTERNAL_OBJECTS =
 
-proto/PBTest: proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o
 proto/PBTest: proto/CMakeFiles/PBTest.dir/message.pb.cc.o
+proto/PBTest: proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o
 proto/PBTest: proto/CMakeFiles/PBTest.dir/build.make
 proto/PBTest: /usr/local/lib/libprotobuf.so
 proto/PBTest: proto/CMakeFiles/PBTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/MyRep/ToolDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable PBTest"
-	cd /home/ubuntu/MyRep/ToolDir/build/proto && mv /home/ubuntu/MyRep/ToolDir/build/proto/message.pb.cc /home/ubuntu/MyRep/ToolDir/proto
-	cd /home/ubuntu/MyRep/ToolDir/build/proto && mv /home/ubuntu/MyRep/ToolDir/build/proto/message.pb.h /home/ubuntu/MyRep/ToolDir/proto
 	cd /home/ubuntu/MyRep/ToolDir/build/proto && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PBTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -136,8 +134,8 @@ proto/CMakeFiles/PBTest.dir/build: proto/PBTest
 
 .PHONY : proto/CMakeFiles/PBTest.dir/build
 
-proto/CMakeFiles/PBTest.dir/requires: proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.requires
 proto/CMakeFiles/PBTest.dir/requires: proto/CMakeFiles/PBTest.dir/message.pb.cc.o.requires
+proto/CMakeFiles/PBTest.dir/requires: proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o.requires
 
 .PHONY : proto/CMakeFiles/PBTest.dir/requires
 

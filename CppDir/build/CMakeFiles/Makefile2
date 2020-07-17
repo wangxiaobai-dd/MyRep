@@ -60,13 +60,50 @@ CMAKE_SOURCE_DIR = /home/ubuntu/MyRep/CppDir
 CMAKE_BINARY_DIR = /home/ubuntu/MyRep/CppDir/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/TestBoost.dir
+
+# All Build rule for target.
+CMakeFiles/TestBoost.dir/all:
+	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/depend
+	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=1,2 "Built target TestBoost"
+.PHONY : CMakeFiles/TestBoost.dir/all
+
+# Include target in all.
+all: CMakeFiles/TestBoost.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TestBoost.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/CppDir/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestBoost.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/CppDir/build/CMakeFiles 0
+.PHONY : CMakeFiles/TestBoost.dir/rule
+
+# Convenience name for target.
+TestBoost: CMakeFiles/TestBoost.dir/rule
+
+.PHONY : TestBoost
+
+# clean rule for target.
+CMakeFiles/TestBoost.dir/clean:
+	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/clean
+.PHONY : CMakeFiles/TestBoost.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/TestBoost.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/TestCPP2.dir
 
 # All Build rule for target.
 CMakeFiles/TestCPP2.dir/all:
 	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/depend
 	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=3,4 "Built target TestCPP2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=5,6 "Built target TestCPP2"
 .PHONY : CMakeFiles/TestCPP2.dir/all
 
 # Include target in all.
@@ -103,7 +140,7 @@ clean: CMakeFiles/TestCPP2.dir/clean
 CMakeFiles/TestMorden.dir/all:
 	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/depend
 	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=7,8 "Built target TestMorden"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=9,10 "Built target TestMorden"
 .PHONY : CMakeFiles/TestMorden.dir/all
 
 # Include target in all.
@@ -140,7 +177,7 @@ clean: CMakeFiles/TestMorden.dir/clean
 CMakeFiles/TestMorden2.dir/all:
 	$(MAKE) -f CMakeFiles/TestMorden2.dir/build.make CMakeFiles/TestMorden2.dir/depend
 	$(MAKE) -f CMakeFiles/TestMorden2.dir/build.make CMakeFiles/TestMorden2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=9,10 "Built target TestMorden2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=11,12 "Built target TestMorden2"
 .PHONY : CMakeFiles/TestMorden2.dir/all
 
 # Include target in all.
@@ -177,7 +214,7 @@ clean: CMakeFiles/TestMorden2.dir/clean
 CMakeFiles/TestCPP3.dir/all:
 	$(MAKE) -f CMakeFiles/TestCPP3.dir/build.make CMakeFiles/TestCPP3.dir/depend
 	$(MAKE) -f CMakeFiles/TestCPP3.dir/build.make CMakeFiles/TestCPP3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=5,6 "Built target TestCPP3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=7,8 "Built target TestCPP3"
 .PHONY : CMakeFiles/TestCPP3.dir/all
 
 # Include target in all.
@@ -214,7 +251,7 @@ clean: CMakeFiles/TestCPP3.dir/clean
 CMakeFiles/TestCPP.dir/all:
 	$(MAKE) -f CMakeFiles/TestCPP.dir/build.make CMakeFiles/TestCPP.dir/depend
 	$(MAKE) -f CMakeFiles/TestCPP.dir/build.make CMakeFiles/TestCPP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=1,2 "Built target TestCPP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=3,4 "Built target TestCPP"
 .PHONY : CMakeFiles/TestCPP.dir/all
 
 # Include target in all.
@@ -251,7 +288,7 @@ clean: CMakeFiles/TestCPP.dir/clean
 CMakeFiles/TestMorden3.dir/all:
 	$(MAKE) -f CMakeFiles/TestMorden3.dir/build.make CMakeFiles/TestMorden3.dir/depend
 	$(MAKE) -f CMakeFiles/TestMorden3.dir/build.make CMakeFiles/TestMorden3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=11,12 "Built target TestMorden3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/CppDir/build/CMakeFiles --progress-num=13,14 "Built target TestMorden3"
 .PHONY : CMakeFiles/TestMorden3.dir/all
 
 # Include target in all.

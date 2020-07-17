@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "message.pb.cc"
   "message.pb.h"
-  "CMakeFiles/PBTest.dir/ProtoTest.cpp.o"
   "CMakeFiles/PBTest.dir/message.pb.cc.o"
+  "CMakeFiles/PBTest.dir/ProtoTest.cpp.o"
   "PBTest.pdb"
   "PBTest"
 )

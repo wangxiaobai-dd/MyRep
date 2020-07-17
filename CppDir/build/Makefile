@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/ubuntu/MyRep/CppDir/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named TestBoost
+
+# Build rule for target.
+TestBoost: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestBoost
+.PHONY : TestBoost
+
+# fast build rule for target.
+TestBoost/fast:
+	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/build
+.PHONY : TestBoost/fast
 
 #=============================================================================
 # Target rules for targets named TestCPP2
@@ -242,6 +255,33 @@ Test2.cpp.s:
 	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/Test2.cpp.s
 .PHONY : Test2.cpp.s
 
+TestBoost.o: TestBoost.cpp.o
+
+.PHONY : TestBoost.o
+
+# target to build an object file
+TestBoost.cpp.o:
+	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/TestBoost.cpp.o
+.PHONY : TestBoost.cpp.o
+
+TestBoost.i: TestBoost.cpp.i
+
+.PHONY : TestBoost.i
+
+# target to preprocess a source file
+TestBoost.cpp.i:
+	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/TestBoost.cpp.i
+.PHONY : TestBoost.cpp.i
+
+TestBoost.s: TestBoost.cpp.s
+
+.PHONY : TestBoost.s
+
+# target to generate assembly for a file
+TestBoost.cpp.s:
+	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/TestBoost.cpp.s
+.PHONY : TestBoost.cpp.s
+
 TestMorden.o: TestMorden.cpp.o
 
 .PHONY : TestMorden.o
@@ -356,8 +396,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... TestBoost"
 	@echo "... TestCPP2"
 	@echo "... TestMorden"
 	@echo "... TestMorden2"
@@ -370,6 +411,9 @@ help:
 	@echo "... Test2.o"
 	@echo "... Test2.i"
 	@echo "... Test2.s"
+	@echo "... TestBoost.o"
+	@echo "... TestBoost.i"
+	@echo "... TestBoost.s"
 	@echo "... TestMorden.o"
 	@echo "... TestMorden.i"
 	@echo "... TestMorden.s"

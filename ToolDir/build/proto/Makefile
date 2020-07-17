@@ -111,19 +111,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-proto/CMakeFiles/PBTest.dir/rule:
-	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/CMakeFiles/PBTest.dir/rule
-.PHONY : proto/CMakeFiles/PBTest.dir/rule
+proto/CMakeFiles/desset.dir/rule:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/CMakeFiles/desset.dir/rule
+.PHONY : proto/CMakeFiles/desset.dir/rule
 
 # Convenience name for target.
-PBTest: proto/CMakeFiles/PBTest.dir/rule
+desset: proto/CMakeFiles/desset.dir/rule
 
-.PHONY : PBTest
+.PHONY : desset
 
 # fast build rule for target.
-PBTest/fast:
-	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/build
-.PHONY : PBTest/fast
+desset/fast:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/desset.dir/build.make proto/CMakeFiles/desset.dir/build
+.PHONY : desset/fast
+
+# Convenience name for target.
+proto/CMakeFiles/PBTest3.dir/rule:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f CMakeFiles/Makefile2 proto/CMakeFiles/PBTest3.dir/rule
+.PHONY : proto/CMakeFiles/PBTest3.dir/rule
+
+# Convenience name for target.
+PBTest3: proto/CMakeFiles/PBTest3.dir/rule
+
+.PHONY : PBTest3
+
+# fast build rule for target.
+PBTest3/fast:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest3.dir/build.make proto/CMakeFiles/PBTest3.dir/build
+.PHONY : PBTest3/fast
 
 # Convenience name for target.
 proto/CMakeFiles/ctags.dir/rule:
@@ -140,59 +155,59 @@ ctags/fast:
 	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/ctags.dir/build.make proto/CMakeFiles/ctags.dir/build
 .PHONY : ctags/fast
 
-ProtoTest.o: ProtoTest.cpp.o
+ProtoTest3.o: ProtoTest3.cpp.o
 
-.PHONY : ProtoTest.o
-
-# target to build an object file
-ProtoTest.cpp.o:
-	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.o
-.PHONY : ProtoTest.cpp.o
-
-ProtoTest.i: ProtoTest.cpp.i
-
-.PHONY : ProtoTest.i
-
-# target to preprocess a source file
-ProtoTest.cpp.i:
-	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.i
-.PHONY : ProtoTest.cpp.i
-
-ProtoTest.s: ProtoTest.cpp.s
-
-.PHONY : ProtoTest.s
-
-# target to generate assembly for a file
-ProtoTest.cpp.s:
-	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/ProtoTest.cpp.s
-.PHONY : ProtoTest.cpp.s
-
-message.pb.o: message.pb.cc.o
-
-.PHONY : message.pb.o
+.PHONY : ProtoTest3.o
 
 # target to build an object file
-message.pb.cc.o:
-	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/message.pb.cc.o
-.PHONY : message.pb.cc.o
+ProtoTest3.cpp.o:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest3.dir/build.make proto/CMakeFiles/PBTest3.dir/ProtoTest3.cpp.o
+.PHONY : ProtoTest3.cpp.o
 
-message.pb.i: message.pb.cc.i
+ProtoTest3.i: ProtoTest3.cpp.i
 
-.PHONY : message.pb.i
+.PHONY : ProtoTest3.i
 
 # target to preprocess a source file
-message.pb.cc.i:
-	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/message.pb.cc.i
-.PHONY : message.pb.cc.i
+ProtoTest3.cpp.i:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest3.dir/build.make proto/CMakeFiles/PBTest3.dir/ProtoTest3.cpp.i
+.PHONY : ProtoTest3.cpp.i
 
-message.pb.s: message.pb.cc.s
+ProtoTest3.s: ProtoTest3.cpp.s
 
-.PHONY : message.pb.s
+.PHONY : ProtoTest3.s
 
 # target to generate assembly for a file
-message.pb.cc.s:
-	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest.dir/build.make proto/CMakeFiles/PBTest.dir/message.pb.cc.s
-.PHONY : message.pb.cc.s
+ProtoTest3.cpp.s:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest3.dir/build.make proto/CMakeFiles/PBTest3.dir/ProtoTest3.cpp.s
+.PHONY : ProtoTest3.cpp.s
+
+selfMessage.pb.o: selfMessage.pb.cc.o
+
+.PHONY : selfMessage.pb.o
+
+# target to build an object file
+selfMessage.pb.cc.o:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest3.dir/build.make proto/CMakeFiles/PBTest3.dir/selfMessage.pb.cc.o
+.PHONY : selfMessage.pb.cc.o
+
+selfMessage.pb.i: selfMessage.pb.cc.i
+
+.PHONY : selfMessage.pb.i
+
+# target to preprocess a source file
+selfMessage.pb.cc.i:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest3.dir/build.make proto/CMakeFiles/PBTest3.dir/selfMessage.pb.cc.i
+.PHONY : selfMessage.pb.cc.i
+
+selfMessage.pb.s: selfMessage.pb.cc.s
+
+.PHONY : selfMessage.pb.s
+
+# target to generate assembly for a file
+selfMessage.pb.cc.s:
+	cd /home/ubuntu/MyRep/ToolDir/build && $(MAKE) -f proto/CMakeFiles/PBTest3.dir/build.make proto/CMakeFiles/PBTest3.dir/selfMessage.pb.cc.s
+.PHONY : selfMessage.pb.cc.s
 
 # Help Target
 help:
@@ -202,14 +217,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... PBTest"
+	@echo "... desset"
+	@echo "... PBTest3"
 	@echo "... ctags"
-	@echo "... ProtoTest.o"
-	@echo "... ProtoTest.i"
-	@echo "... ProtoTest.s"
-	@echo "... message.pb.o"
-	@echo "... message.pb.i"
-	@echo "... message.pb.s"
+	@echo "... ProtoTest3.o"
+	@echo "... ProtoTest3.i"
+	@echo "... ProtoTest3.s"
+	@echo "... selfMessage.pb.o"
+	@echo "... selfMessage.pb.i"
+	@echo "... selfMessage.pb.s"
 .PHONY : help
 
 
