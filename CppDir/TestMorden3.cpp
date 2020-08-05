@@ -8,7 +8,12 @@
 //#include "nv.h"
 #include <tuple>
 #include <string>
-
+#include <memory>
+#include <pthread.h>
+#include <thread>
+#include <sys/types.h>
+#include <sys/syscall.h>
+#include <unistd.h>
 // ÕûÊý¡¢×Ö·û´®¡¢×Ö·û´®µÄÈýÔª×é
 using namespace std;
 using num_tuple = tuple<int, string, string>;
@@ -55,6 +60,7 @@ struct B
 
 struct C
 {
+	int a = 1;	
 	map<int, map<int, B*>*  > mMap;
 	~C()
 	{
@@ -70,8 +76,29 @@ struct C
 	}
 };
 
+std::shared_ptr<C> init()
+{
+    auto p = std::make_shared<C>();
+    std::cout << "init" << p.use_count() << std::endl;
+    return p;
+}
+
+std::unique_ptr<C> initU()
+{
+    auto p = std::make_unique<C>();
+    return p;
+}
+
+void testInitU(const std::shared_ptr<C>& pu)
+{
+    std::cout << "testUI before : " << pu->a << std::endl; 
+    auto p = pu;
+    std::cout << "testIU: " << p.use_count() << std::endl;
+}
+
 int main()
 {
+    /*
 	int* ia = new int(100);
 	std::map<int, C> cMap;
 	{
@@ -90,6 +117,20 @@ int main()
 	//cout << *ia << endl;
 	getchar();
 	int *a = new int();
+	*/
+	std::vector<std::shared_ptr<C>> vec;
+	auto pc = init();
+	vec.push_back(pc);
+	std::cout << "after push " << pc.use_count() << std::endl;
+	vec.clear();
+	std::cout << "after clear" << pc.use_count() << std::endl;
+
+	testInitU(pc);
+
+	std::vector<int> v1 = {1,2,3};
+	std::vector<int> v2;
+	v2.reserve(3);
+	v2.assign(v1.begin(), v1.end());
 
 	return 0;
 }

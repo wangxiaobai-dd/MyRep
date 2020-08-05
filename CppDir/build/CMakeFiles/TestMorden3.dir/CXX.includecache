@@ -23,4 +23,16 @@ tuple
 -
 string
 -
+memory
+-
+pthread.h
+-
+thread
+-
+sys/types.h
+-
+sys/syscall.h
+-
+unistd.h
+-
 
