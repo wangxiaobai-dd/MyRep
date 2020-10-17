@@ -13,8 +13,6 @@ iostream
 -
 memory
 -
-csignal
--
 functional
 -
 sys/types.h
@@ -29,8 +27,8 @@ unistd.h
 -
 sys/epoll.h
 -
-strings.h
--
 string.h
+-
+fcntl.h
 -
 

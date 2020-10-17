@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/ubuntu/MyRep/CppDir/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,284 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestBoost
+# Target rules for targets named TestMemoryOrder
 
 # Build rule for target.
-TestBoost: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestBoost
-.PHONY : TestBoost
+TestMemoryOrder: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestMemoryOrder
+.PHONY : TestMemoryOrder
 
 # fast build rule for target.
-TestBoost/fast:
-	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/build
-.PHONY : TestBoost/fast
+TestMemoryOrder/fast:
+	$(MAKE) -f CMakeFiles/TestMemoryOrder.dir/build.make CMakeFiles/TestMemoryOrder.dir/build
+.PHONY : TestMemoryOrder/fast
 
-#=============================================================================
-# Target rules for targets named TestCPP2
+TestMemoryOrder.o: TestMemoryOrder.cpp.o
 
-# Build rule for target.
-TestCPP2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestCPP2
-.PHONY : TestCPP2
-
-# fast build rule for target.
-TestCPP2/fast:
-	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/build
-.PHONY : TestCPP2/fast
-
-#=============================================================================
-# Target rules for targets named TestMorden
-
-# Build rule for target.
-TestMorden: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestMorden
-.PHONY : TestMorden
-
-# fast build rule for target.
-TestMorden/fast:
-	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/build
-.PHONY : TestMorden/fast
-
-#=============================================================================
-# Target rules for targets named TestMorden2
-
-# Build rule for target.
-TestMorden2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestMorden2
-.PHONY : TestMorden2
-
-# fast build rule for target.
-TestMorden2/fast:
-	$(MAKE) -f CMakeFiles/TestMorden2.dir/build.make CMakeFiles/TestMorden2.dir/build
-.PHONY : TestMorden2/fast
-
-#=============================================================================
-# Target rules for targets named TestCPP3
-
-# Build rule for target.
-TestCPP3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestCPP3
-.PHONY : TestCPP3
-
-# fast build rule for target.
-TestCPP3/fast:
-	$(MAKE) -f CMakeFiles/TestCPP3.dir/build.make CMakeFiles/TestCPP3.dir/build
-.PHONY : TestCPP3/fast
-
-#=============================================================================
-# Target rules for targets named TestCPP
-
-# Build rule for target.
-TestCPP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestCPP
-.PHONY : TestCPP
-
-# fast build rule for target.
-TestCPP/fast:
-	$(MAKE) -f CMakeFiles/TestCPP.dir/build.make CMakeFiles/TestCPP.dir/build
-.PHONY : TestCPP/fast
-
-#=============================================================================
-# Target rules for targets named TestMorden3
-
-# Build rule for target.
-TestMorden3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestMorden3
-.PHONY : TestMorden3
-
-# fast build rule for target.
-TestMorden3/fast:
-	$(MAKE) -f CMakeFiles/TestMorden3.dir/build.make CMakeFiles/TestMorden3.dir/build
-.PHONY : TestMorden3/fast
-
-Test.o: Test.cpp.o
-
-.PHONY : Test.o
+.PHONY : TestMemoryOrder.o
 
 # target to build an object file
-Test.cpp.o:
-	$(MAKE) -f CMakeFiles/TestCPP.dir/build.make CMakeFiles/TestCPP.dir/Test.cpp.o
-.PHONY : Test.cpp.o
+TestMemoryOrder.cpp.o:
+	$(MAKE) -f CMakeFiles/TestMemoryOrder.dir/build.make CMakeFiles/TestMemoryOrder.dir/TestMemoryOrder.cpp.o
+.PHONY : TestMemoryOrder.cpp.o
 
-Test.i: Test.cpp.i
+TestMemoryOrder.i: TestMemoryOrder.cpp.i
 
-.PHONY : Test.i
-
-# target to preprocess a source file
-Test.cpp.i:
-	$(MAKE) -f CMakeFiles/TestCPP.dir/build.make CMakeFiles/TestCPP.dir/Test.cpp.i
-.PHONY : Test.cpp.i
-
-Test.s: Test.cpp.s
-
-.PHONY : Test.s
-
-# target to generate assembly for a file
-Test.cpp.s:
-	$(MAKE) -f CMakeFiles/TestCPP.dir/build.make CMakeFiles/TestCPP.dir/Test.cpp.s
-.PHONY : Test.cpp.s
-
-Test2.o: Test2.cpp.o
-
-.PHONY : Test2.o
-
-# target to build an object file
-Test2.cpp.o:
-	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/Test2.cpp.o
-.PHONY : Test2.cpp.o
-
-Test2.i: Test2.cpp.i
-
-.PHONY : Test2.i
+.PHONY : TestMemoryOrder.i
 
 # target to preprocess a source file
-Test2.cpp.i:
-	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/Test2.cpp.i
-.PHONY : Test2.cpp.i
+TestMemoryOrder.cpp.i:
+	$(MAKE) -f CMakeFiles/TestMemoryOrder.dir/build.make CMakeFiles/TestMemoryOrder.dir/TestMemoryOrder.cpp.i
+.PHONY : TestMemoryOrder.cpp.i
 
-Test2.s: Test2.cpp.s
+TestMemoryOrder.s: TestMemoryOrder.cpp.s
 
-.PHONY : Test2.s
-
-# target to generate assembly for a file
-Test2.cpp.s:
-	$(MAKE) -f CMakeFiles/TestCPP2.dir/build.make CMakeFiles/TestCPP2.dir/Test2.cpp.s
-.PHONY : Test2.cpp.s
-
-TestBoost.o: TestBoost.cpp.o
-
-.PHONY : TestBoost.o
-
-# target to build an object file
-TestBoost.cpp.o:
-	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/TestBoost.cpp.o
-.PHONY : TestBoost.cpp.o
-
-TestBoost.i: TestBoost.cpp.i
-
-.PHONY : TestBoost.i
-
-# target to preprocess a source file
-TestBoost.cpp.i:
-	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/TestBoost.cpp.i
-.PHONY : TestBoost.cpp.i
-
-TestBoost.s: TestBoost.cpp.s
-
-.PHONY : TestBoost.s
+.PHONY : TestMemoryOrder.s
 
 # target to generate assembly for a file
-TestBoost.cpp.s:
-	$(MAKE) -f CMakeFiles/TestBoost.dir/build.make CMakeFiles/TestBoost.dir/TestBoost.cpp.s
-.PHONY : TestBoost.cpp.s
-
-TestMorden.o: TestMorden.cpp.o
-
-.PHONY : TestMorden.o
-
-# target to build an object file
-TestMorden.cpp.o:
-	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/TestMorden.cpp.o
-.PHONY : TestMorden.cpp.o
-
-TestMorden.i: TestMorden.cpp.i
-
-.PHONY : TestMorden.i
-
-# target to preprocess a source file
-TestMorden.cpp.i:
-	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/TestMorden.cpp.i
-.PHONY : TestMorden.cpp.i
-
-TestMorden.s: TestMorden.cpp.s
-
-.PHONY : TestMorden.s
-
-# target to generate assembly for a file
-TestMorden.cpp.s:
-	$(MAKE) -f CMakeFiles/TestMorden.dir/build.make CMakeFiles/TestMorden.dir/TestMorden.cpp.s
-.PHONY : TestMorden.cpp.s
-
-TestMorden2.o: TestMorden2.cpp.o
-
-.PHONY : TestMorden2.o
-
-# target to build an object file
-TestMorden2.cpp.o:
-	$(MAKE) -f CMakeFiles/TestMorden2.dir/build.make CMakeFiles/TestMorden2.dir/TestMorden2.cpp.o
-.PHONY : TestMorden2.cpp.o
-
-TestMorden2.i: TestMorden2.cpp.i
-
-.PHONY : TestMorden2.i
-
-# target to preprocess a source file
-TestMorden2.cpp.i:
-	$(MAKE) -f CMakeFiles/TestMorden2.dir/build.make CMakeFiles/TestMorden2.dir/TestMorden2.cpp.i
-.PHONY : TestMorden2.cpp.i
-
-TestMorden2.s: TestMorden2.cpp.s
-
-.PHONY : TestMorden2.s
-
-# target to generate assembly for a file
-TestMorden2.cpp.s:
-	$(MAKE) -f CMakeFiles/TestMorden2.dir/build.make CMakeFiles/TestMorden2.dir/TestMorden2.cpp.s
-.PHONY : TestMorden2.cpp.s
-
-TestMorden3.o: TestMorden3.cpp.o
-
-.PHONY : TestMorden3.o
-
-# target to build an object file
-TestMorden3.cpp.o:
-	$(MAKE) -f CMakeFiles/TestMorden3.dir/build.make CMakeFiles/TestMorden3.dir/TestMorden3.cpp.o
-.PHONY : TestMorden3.cpp.o
-
-TestMorden3.i: TestMorden3.cpp.i
-
-.PHONY : TestMorden3.i
-
-# target to preprocess a source file
-TestMorden3.cpp.i:
-	$(MAKE) -f CMakeFiles/TestMorden3.dir/build.make CMakeFiles/TestMorden3.dir/TestMorden3.cpp.i
-.PHONY : TestMorden3.cpp.i
-
-TestMorden3.s: TestMorden3.cpp.s
-
-.PHONY : TestMorden3.s
-
-# target to generate assembly for a file
-TestMorden3.cpp.s:
-	$(MAKE) -f CMakeFiles/TestMorden3.dir/build.make CMakeFiles/TestMorden3.dir/TestMorden3.cpp.s
-.PHONY : TestMorden3.cpp.s
-
-TestThreadPool.o: TestThreadPool.cpp.o
-
-.PHONY : TestThreadPool.o
-
-# target to build an object file
-TestThreadPool.cpp.o:
-	$(MAKE) -f CMakeFiles/TestCPP3.dir/build.make CMakeFiles/TestCPP3.dir/TestThreadPool.cpp.o
-.PHONY : TestThreadPool.cpp.o
-
-TestThreadPool.i: TestThreadPool.cpp.i
-
-.PHONY : TestThreadPool.i
-
-# target to preprocess a source file
-TestThreadPool.cpp.i:
-	$(MAKE) -f CMakeFiles/TestCPP3.dir/build.make CMakeFiles/TestCPP3.dir/TestThreadPool.cpp.i
-.PHONY : TestThreadPool.cpp.i
-
-TestThreadPool.s: TestThreadPool.cpp.s
-
-.PHONY : TestThreadPool.s
-
-# target to generate assembly for a file
-TestThreadPool.cpp.s:
-	$(MAKE) -f CMakeFiles/TestCPP3.dir/build.make CMakeFiles/TestCPP3.dir/TestThreadPool.cpp.s
-.PHONY : TestThreadPool.cpp.s
+TestMemoryOrder.cpp.s:
+	$(MAKE) -f CMakeFiles/TestMemoryOrder.dir/build.make CMakeFiles/TestMemoryOrder.dir/TestMemoryOrder.cpp.s
+.PHONY : TestMemoryOrder.cpp.s
 
 # Help Target
 help:
@@ -396,36 +156,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TestBoost"
-	@echo "... TestCPP2"
-	@echo "... TestMorden"
-	@echo "... TestMorden2"
-	@echo "... TestCPP3"
-	@echo "... TestCPP"
-	@echo "... TestMorden3"
-	@echo "... Test.o"
-	@echo "... Test.i"
-	@echo "... Test.s"
-	@echo "... Test2.o"
-	@echo "... Test2.i"
-	@echo "... Test2.s"
-	@echo "... TestBoost.o"
-	@echo "... TestBoost.i"
-	@echo "... TestBoost.s"
-	@echo "... TestMorden.o"
-	@echo "... TestMorden.i"
-	@echo "... TestMorden.s"
-	@echo "... TestMorden2.o"
-	@echo "... TestMorden2.i"
-	@echo "... TestMorden2.s"
-	@echo "... TestMorden3.o"
-	@echo "... TestMorden3.i"
-	@echo "... TestMorden3.s"
-	@echo "... TestThreadPool.o"
-	@echo "... TestThreadPool.i"
-	@echo "... TestThreadPool.s"
+	@echo "... TestMemoryOrder"
+	@echo "... edit_cache"
+	@echo "... TestMemoryOrder.o"
+	@echo "... TestMemoryOrder.i"
+	@echo "... TestMemoryOrder.s"
 .PHONY : help
 
 

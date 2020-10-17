@@ -35,4 +35,12 @@ sys/syscall.h
 -
 unistd.h
 -
+algorithm
+-
+iostream
+-
+vector
+-
+cmath
+-
 

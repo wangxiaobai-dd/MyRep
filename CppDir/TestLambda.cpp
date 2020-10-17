@@ -14,6 +14,10 @@
 #include <sys/types.h>
 #include <sys/syscall.h>
 #include <unistd.h>
+#include <algorithm>
+#include <iostream>
+#include <vector>
+#include <cmath>
 // ÕûÊý¡¢×Ö·û´®¡¢×Ö·û´®µÄÈýÔª×é
 using namespace std;
 using num_tuple = tuple<int, string, string>;
@@ -96,6 +100,16 @@ void testInitU(const std::shared_ptr<C>& pu)
     std::cout << "testIU: " << p.use_count() << std::endl;
 }
 
+void test(int*& a)
+{
+    a = nullptr;
+}
+
+void testCallback(const std::function<void(void)>& exec)
+{
+    exec();
+}
+
 int main()
 {
     /*
@@ -132,5 +146,28 @@ int main()
 	v2.reserve(3);
 	v2.assign(v1.begin(), v1.end());
 
+	int* a = new int;
+	test(a);
+	if(a)
+	{
+	    std::cout << "aaaaaaaaaaa" << std::endl;
+	}
+
+	auto comp = [](auto a, auto b){ return a.second.second < b.second.second; };
+	std::unordered_map<int, std::pair<int, int>> tm;
+	tm[0] = {0,1};
+	tm[1] = {0,3};
+	tm[2] = {0,2};
+	auto maxIter = std::max_element(tm.begin(), tm.end(), comp);
+	std::cout << "max" << maxIter->first << std::endl;
+
+	int aaa = 3;
+	const auto callback = [&aaa](){ std::cout << "callback" << aaa << std::endl;};
+
+	testCallback(callback);
+	aaa = 4;
+	testCallback(callback);
+	
 	return 0;
 }
+

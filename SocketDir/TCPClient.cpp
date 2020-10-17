@@ -1,7 +1,6 @@
 #include <string>
 #include <iostream>
 #include <memory>
-#include <csignal>
 #include <functional>
 
 #include <sys/types.h>
@@ -10,8 +9,8 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <sys/epoll.h>
-#include <strings.h>
 #include <string.h>
+#include <fcntl.h>
 
 class TCPClient
 {
@@ -36,7 +35,7 @@ class TCPClient
 			addr.sin_addr.s_addr = inet_addr(ip.c_str());
 			addr.sin_port = htons(port);
 
-			int ret = TEMP_FAILURE_RETRY(::connect(sockfd, (struct sockaddr *)&addr, sizeof(addr)));
+			int ret = ::connect(sockfd, (struct sockaddr *)&addr, sizeof(addr));
 			if(ret == -1)
 			{
 				std::cout << "CONNECT FAIL" << std::endl;
@@ -44,10 +43,11 @@ class TCPClient
 				return false;
 			}
 			
+			::fcntl(STDIN_FILENO, F_SETFL, O_NONBLOCK);
 			struct epoll_event ev;
 			ev.events = EPOLLIN;
-			ev.data.ptr = nullptr;
-			epoll_ctl(epfd_1, EPOLL_CTL_ADD, sockfd, &ev);
+			ev.data.fd = STDIN_FILENO;
+			epoll_ctl(epfd_1, EPOLL_CTL_ADD, STDIN_FILENO, &ev);
 
 			struct epoll_event ev2;
 			ev2.events = EPOLLIN;
@@ -63,40 +63,38 @@ class TCPClient
 			struct epoll_event ev2;
 			while(true)
 			{
-				if(TEMP_FAILURE_RETRY(::epoll_wait(epfd_1, &ev, 1, 0)) > 0)
+				if(::epoll_wait(epfd_1, &ev, 1, 0) > 0)
 				{
 					if(ev.events & EPOLLIN)
 					{
-						char buf[200];
+						char buf[100];
 						bzero(buf, sizeof(buf));
-						TEMP_FAILURE_RETRY(::recv(sockfd, buf, sizeof(buf), MSG_NOSIGNAL));
-						std::cout << "ep1" << std::endl;
-						printf("%s\n", buf);
+						::read(STDIN_FILENO, buf, sizeof(buf));
+						::write(sockfd, buf, sizeof(buf));
 					}
 				}
-				if(TEMP_FAILURE_RETRY(::epoll_wait(epfd_2, &ev2, 1, 0)) > 0)
+				if(::epoll_wait(epfd_2, &ev2, 1, 0) > 0)
 				{
 					if(ev2.events & EPOLLIN)
 					{
 						char buf[200];
 						bzero(buf, sizeof(buf));
-						TEMP_FAILURE_RETRY(::recv(sockfd, buf, sizeof(buf), MSG_NOSIGNAL));
-						std::cout << "ep2" << std::endl;
-						printf("%s\n", buf);
+						::recv(sockfd, buf, sizeof(buf), MSG_NOSIGNAL);
+						printf("%s", buf);
 					}
 				}
 			}
 		}
 		void shutdown()
 		{
-			TEMP_FAILURE_RETRY(::close(epfd_1));
-			TEMP_FAILURE_RETRY(::close(epfd_2));
+			::close(epfd_1);
+			::close(epfd_2);
 			epfd_1 = -1;
 			epfd_2 = -1;
 			if(-1 != sockfd)
 			{
 				::shutdown(sockfd, SHUT_RDWR);
-				TEMP_FAILURE_RETRY(::close(sockfd));
+				::close(sockfd);
 				sockfd = -1;
 			}
 		}
@@ -105,17 +103,15 @@ class TCPClient
 		int sockfd = -1;
 		int epfd_1 = -1;
 		int epfd_2 = -1;
-		
 };
 
 int main(int agrc, char** argv)
 {
-	std::unique_ptr<TCPClient> client = std::make_unique<TCPClient>("小白客户端");
+	std::unique_ptr<TCPClient> client = std::make_unique<TCPClient>("BowClient");
 	if(!client)
 		return 0;
-	if(!client->connect("127.0.0.1", 43211))
+	if(!client->connect("127.0.0.1", 8800))
 	{
-		std::cout << "连接失败" << std::endl;
 		std::cout << strerror(errno) << std::endl;
 		return 0;
 	}

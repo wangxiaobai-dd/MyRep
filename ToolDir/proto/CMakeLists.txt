@@ -1,6 +1,6 @@
 
 #遍历匹配目录和子目录
-file(GLOB_RECURSE PROTOS message.proto)
+#file(GLOB_RECURSE PROTOS message2.proto)
 
 #foreach(PROTOFILE ${PROTOS})
 #get_filename_component(PB_NAME ${PROTOFILE} NAME_WE)
@@ -30,8 +30,8 @@ file(GLOB_RECURSE PROTOS message.proto)
 #	OUTPUT_VARIABLE PROTOBUF_LIB)
 
 find_package(Protobuf REQUIRED)
-protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${PROTOS})
-include_directories(../build/proto)
+#protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${PROTOS})
+include_directories(build)
 #set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_LIST_DIR}) 
 
 #PBTest
@@ -52,6 +52,11 @@ file(GLOB_RECURSE PROTOS selfMessage.proto)
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${PROTOS})
 add_executable(PBTest3 ${PROTO_SRCS} ProtoTest3.cpp)
 target_link_libraries(PBTest3 ${Protobuf_LIBRARIES})
+
+file(GLOB_RECURSE PROTOS2 message2.proto)
+protobuf_generate_cpp(PROTO_SRCS2 PROTO_HDRS2 ${PROTOS2})
+add_executable(PBTest4 ${PROTO_SRCS2} ProtoTest4.cpp)
+target_link_libraries(PBTest4 ${Protobuf_LIBRARIES})
 
 add_custom_target(ctags
 	WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}

@@ -1,9 +1,3 @@
-/home/ubuntu/MyRep/CppDir/build/CMakeFiles/edit_cache.dir
 /home/ubuntu/MyRep/CppDir/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestBoost.dir
-/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestCPP2.dir
-/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestMorden.dir
-/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestMorden2.dir
-/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestCPP3.dir
-/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestCPP.dir
-/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestMorden3.dir
+/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestMemoryOrder.dir
+/home/ubuntu/MyRep/CppDir/build/CMakeFiles/edit_cache.dir

@@ -1,0 +1,20 @@
+syntax = "proto2";
+package muduo;
+
+message Query {
+    optional int64 id = 1;
+    optional string questioner = 2;
+    optional string question = 3;
+}
+
+message Answer {
+    optional int64 id = 1;
+    optional string questioner = 2;
+    optional string answerer = 3;
+
+    optional string solution = 4;
+}
+
+message Empty {
+    optional int32 id = 1;
+}

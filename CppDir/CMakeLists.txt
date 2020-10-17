@@ -17,14 +17,8 @@ include_directories(${Boost_INCLUDE_DIRS})
 set(CMAKE_CXX_FLAGS ${DEBUG_FLAG})
 
 #link_directories(/usr/include/hiredis/)
-add_executable(TestCPP Test.cpp)
-add_executable(TestCPP2 Test2.cpp)
-add_executable(TestCPP3 TestThreadPool.cpp)
-add_executable(TestMorden TestMorden.cpp)
-add_executable(TestMorden2 TestMorden2.cpp)
-add_executable(TestMorden3 TestMorden3.cpp)
-add_executable(TestBoost TestBoost.cpp)
+add_executable(TestMemoryOrder TestMemoryOrder.cpp)
 
-target_link_libraries(TestCPP3 pthread)
-target_link_libraries(TestBoost PRIVATE Boost::program_options)
+target_link_libraries(TestMemoryOrder pthread)
+#target_link_libraries(TestBoost PRIVATE Boost::program_options)
 
