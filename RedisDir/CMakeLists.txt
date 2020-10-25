@@ -4,13 +4,13 @@ cmake_minimum_required(VERSION 3.8)
 project(TestRedis)
 
 set(DEBUG_FLAG "-g -Werror -std=gnu++14 -Wno-invalid-source-encoding -fdiagnostics-format=vi")
-include_directories(SYSTEM /usr/include)
+#include_directories(SYSTEM /usr/include)
 include_directories(../ToolDir)
 include_directories(proto)
 
 set(CMAKE_CXX_FLAGS ${DEBUG_FLAG})
 
-link_directories(/usr/local/lib)
+#link_directories(/usr/local/lib)
 #Í¬²½redis
 add_executable(TestRedis TestRedis.cpp)
 target_link_libraries(TestRedis hiredis protobuf redisProto)
