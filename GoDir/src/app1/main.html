@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>菜鸟教程(runoob.com)</title>
-</head>
-<body>
-    <h1>我的第一个标题</h1>
-    <p>我的第一个段落。</p>
-</body>
+    <head>
+	<meta charset="utf-8">
+	<title>日志查询</title>
+    </head>
+    <body>
+    <script>
+    </script>
+	<h1>Welcome!</h1>
+	<div style="height:1000px">
+	<form action="/query" method="post" target="iframe">
+	    <select name="server">
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="fiat">Fiat</option>
+		<option value="audi">Audi</option>
+	    </select>
+	     <input type="submit" value="登陆">
+	</form>
+	<iframe id="iframe" name="iframe" style="display:none;"></iframe>
+	<input type="date" value="2015-09-24"/>
+	</div>
+    </body>
 </html>

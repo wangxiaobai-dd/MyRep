@@ -1,19 +1,48 @@
 package main
 
 import (
-	//	"fmt"
+	"bytes"
+	"fmt"
 	"html/template"
+	"io/ioutil"
 	"log"
 	"net/http"
+	"net/http/httputil"
+	"net/url"
 )
 
-func showPage(w http.ResponseWriter, r *http.Request) {
+type handle struct {
+	host string
+	port string
+}
+
+func (this *handle) showPage(w http.ResponseWriter, r *http.Request) {
 	t, _ := template.ParseFiles("main.html")
 	t.Execute(w, nil)
 }
 
+func (this *handle) forward(w http.ResponseWriter, r *http.Request) {
+	remote, _ := url.Parse("http://" + this.host + ":" + this.port)
+	bodyBytes, _ := ioutil.ReadAll(r.Body)
+
+	r.Body = ioutil.NopCloser(bytes.NewBuffer(bodyBytes))
+	r.ParseForm()
+	fmt.Println("server:", r.Form["server"])
+
+	r.Body.Close() //  must close
+	r.Body = ioutil.NopCloser(bytes.NewBuffer(bodyBytes))
+
+	proxy := httputil.NewSingleHostReverseProxy(remote)
+	proxy.ServeHTTP(w, r)
+}
+
 func main() {
-	http.HandleFunc("/", showPage)
+	serverMap := make(map[string]string)
+	serverMap["volvo"] = "127.0.0.1"
+	h := &handle{host: "127.0.0.1", port: "8001"}
+
+	http.HandleFunc("/", h.showPage)
+	http.HandleFunc("/query", h.forward)
 	err := http.ListenAndServe(":8000", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe:", err)
