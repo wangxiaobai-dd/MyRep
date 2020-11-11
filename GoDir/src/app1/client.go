@@ -15,7 +15,7 @@ func queryLog(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println("Execute Command failed:" + err.Error())
 	} else {
-		fmt.Fprintf(w, "Hello astaxie!")
+		fmt.Fprintf(w, string(output))
 		fmt.Printf("finished with output:\n%s", string(output))
 	}
 }

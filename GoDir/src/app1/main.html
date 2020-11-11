@@ -3,23 +3,24 @@
     <head>
 	<meta charset="utf-8">
 	<title>日志查询</title>
-	<script type="text/javascript" charset="utf-8" src="/static/my.js"></script>
+	<script src="/static/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/static/main.js"></script>
     </head>
     <body>
 	<h1>Welcome!</h1>
 	<div style="height:1000px">
-	<form action="/query" method="post" target="iframe">
+	<form name="myform" action="/query" method="post" target="iframe">
 	    <select name="server">
-		<option value="volvo">Volvo</option>
-		<option value="saab">Saab</option>
-		<option value="fiat">Fiat</option>
+		<option value="volvo">qa68</option>
+		<option value="saab">qa67</option>
+		<option value="fiat">qa66</option>
 		<option value="audi">Audi</option>
 	    </select>
-	    <input type="button" id="btn" value="登陆" onclick="OnButton1()">
+	    <input type="button" id="btn" value="查询" onclick="OnButton1()">
 	</form>
-	<p><input id="txt" type="text"></p>
 	<iframe id="iframe" name="iframe" style="display:none;"></iframe>
-	<input type="date" value="2015-09-24">
+	<input type="date" value="2020-11-11">
+	<pre id="result"></pre>
 	</div>
     </body>
 </html>

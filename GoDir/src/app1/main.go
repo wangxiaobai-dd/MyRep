@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"encoding/json"
 	"fmt"
 	"html/template"
 	"io/ioutil"
@@ -36,9 +37,21 @@ func (this *handle) forward(w http.ResponseWriter, r *http.Request) {
 	proxy.ServeHTTP(w, r)
 }
 
+func loadConfig(m *map[string]string) {
+	data, err := ioutil.ReadAll("server.json")
+	if err != nil {
+		fmt.Println("loadConfig error")
+		return false
+	}
+	return true
+}
+
 func main() {
 	serverMap := make(map[string]string)
-	serverMap["volvo"] = "127.0.0.1"
+	if !loadConfig(serverMap) {
+		return
+	}
+
 	h := &handle{host: "127.0.0.1", port: "8001"}
 
 	http.HandleFunc("/", h.showPage)
