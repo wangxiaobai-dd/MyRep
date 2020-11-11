@@ -39,7 +39,7 @@ func (this *handle) forward(w http.ResponseWriter, r *http.Request) {
 func main() {
 	serverMap := make(map[string]string)
 	serverMap["volvo"] = "127.0.0.1"
-	h := &handle{host: "127.0.0.1", port: "8001"}
+	h := &handle{host: "175.24.189.32", port: "8001"}
 
 	http.HandleFunc("/", h.showPage)
 	http.HandleFunc("/query", h.forward)
