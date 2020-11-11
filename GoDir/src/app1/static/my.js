@@ -10,6 +10,6 @@ function OnButton1() {
 	    }   
 	}   
     };  
-    xhr.open('get', '/query', true);
+    xhr.open('post', '/query', true);
     xhr.send();
 };
