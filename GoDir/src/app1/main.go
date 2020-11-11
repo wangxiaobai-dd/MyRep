@@ -29,7 +29,7 @@ func (this *handle) forward(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	fmt.Println("server:", r.Form["server"])
 
-	r.Body.Close() //  must close
+	r.Body.Close()
 	r.Body = ioutil.NopCloser(bytes.NewBuffer(bodyBytes))
 
 	proxy := httputil.NewSingleHostReverseProxy(remote)
@@ -43,6 +43,7 @@ func main() {
 
 	http.HandleFunc("/", h.showPage)
 	http.HandleFunc("/query", h.forward)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	err := http.ListenAndServe(":8000", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe:", err)

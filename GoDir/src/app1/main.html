@@ -3,10 +3,9 @@
     <head>
 	<meta charset="utf-8">
 	<title>日志查询</title>
+	<script type="text/javascript" charset="utf-8" src="/static/my.js"></script>
     </head>
     <body>
-    <script>
-    </script>
 	<h1>Welcome!</h1>
 	<div style="height:1000px">
 	<form action="/query" method="post" target="iframe">
@@ -16,10 +15,11 @@
 		<option value="fiat">Fiat</option>
 		<option value="audi">Audi</option>
 	    </select>
-	     <input type="submit" value="登陆">
+	    <input type="button" id="btn" value="登陆" onclick="OnButton1()">
 	</form>
+	<p><input id="txt" type="text"></p>
 	<iframe id="iframe" name="iframe" style="display:none;"></iframe>
-	<input type="date" value="2015-09-24"/>
+	<input type="date" value="2015-09-24">
 	</div>
     </body>
 </html>

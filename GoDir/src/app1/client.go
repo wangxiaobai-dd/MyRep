@@ -4,11 +4,20 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os/exec"
 )
 
 func queryLog(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	fmt.Println("server:", r.Form["server"])
+	cmd := exec.Command("/bin/bash", "-c", "grep g main.go")
+	output, err := cmd.Output()
+	if err != nil {
+		fmt.Println("Execute Command failed:" + err.Error())
+	} else {
+		fmt.Fprintf(w, "Hello astaxie!")
+		fmt.Printf("finished with output:\n%s", string(output))
+	}
 }
 
 func main() {
