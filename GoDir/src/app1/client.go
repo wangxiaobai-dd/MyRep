@@ -5,6 +5,8 @@ import (
 	"log"
 	"net/http"
 	"os/exec"
+	"strconv"
+	"time"
 )
 
 func queryLog(w http.ResponseWriter, r *http.Request) {
@@ -20,8 +22,15 @@ func queryLog(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func getTime(w http.ResponseWriter, r *http.Request) {
+	timestamp := time.Now().Unix()
+	fmt.Println(timestamp)
+	fmt.Fprintf(w, strconv.FormatInt(timestamp, 10))
+}
+
 func main() {
 	http.HandleFunc("/query", queryLog)
+	http.HandleFunc("/gettime", getTime)
 	err := http.ListenAndServe(":8001", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe:", err)

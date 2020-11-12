@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"time"
 )
 
 func reflect_example(a interface{}) {
@@ -24,4 +25,6 @@ func main() {
 
 	var y string = "hello"
 	reflect_example(y)
+	t := time.Now().Unix()
+	fmt.Println(t)
 }

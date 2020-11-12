@@ -8,9 +8,10 @@
     </head>
     <body>
 	<h1>Welcome!</h1>
+	<h2 id="servertime"></h2>
 	<div style="height:1000px">
 	<form name="myform" action="/query" method="post" target="iframe">
-	    <select name="server">
+	    <select name="server" onchange="GetTime()">
 		<option value="volvo">qa68</option>
 		<option value="saab">qa67</option>
 		<option value="fiat">qa66</option>

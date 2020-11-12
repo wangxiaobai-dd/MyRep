@@ -37,7 +37,7 @@ func (this *handle) forward(w http.ResponseWriter, r *http.Request) {
 	proxy.ServeHTTP(w, r)
 }
 
-func loadConfig(m *map[string]string) {
+func loadConfig(m *map[string]string) bool {
 	data, err := ioutil.ReadAll("server.json")
 	if err != nil {
 		fmt.Println("loadConfig error")
@@ -56,6 +56,7 @@ func main() {
 
 	http.HandleFunc("/", h.showPage)
 	http.HandleFunc("/query", h.forward)
+	http.HandleFunc("/gettime", h.forward)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	err := http.ListenAndServe(":8000", nil)
 	if err != nil {
