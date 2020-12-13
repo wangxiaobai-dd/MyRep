@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/MyRep/GameCppDir/TestPropertyCalc.cpp
+iostream
+-
+bitset
+-
+variant
+-
+string
+-
+cassert
+-
+

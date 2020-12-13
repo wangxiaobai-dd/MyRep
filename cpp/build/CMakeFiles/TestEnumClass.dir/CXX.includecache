@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/MyRep/CppDir/TestEnumClass.cpp
+iostream
+-
+map
+-
+set
+-
+unordered_map
+-
+vector
+-
+functional
+-
+tuple
+-
+string
+-
+memory
+-
+pthread.h
+-
+thread
+-
+sys/types.h
+-
+sys/syscall.h
+-
+unistd.h
+-
+

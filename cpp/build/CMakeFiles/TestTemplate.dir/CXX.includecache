@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/MyRep/CppDir/TestTemplate.cpp
+iostream
+-
+map
+-
+set
+-
+unordered_map
+-
+vector
+-
+initializer_list
+-
+

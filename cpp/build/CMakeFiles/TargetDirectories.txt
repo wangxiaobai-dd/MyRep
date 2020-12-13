@@ -1,0 +1,5 @@
+/home/ubuntu/MyRep/CppDir/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/MyRep/CppDir/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestIndexSeq.dir
+/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestEnumClass.dir
+/home/ubuntu/MyRep/CppDir/build/CMakeFiles/TestTemplate.dir
