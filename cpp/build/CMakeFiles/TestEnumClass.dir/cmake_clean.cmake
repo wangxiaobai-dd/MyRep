@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TestEnumClass.dir/TestEnumClass.cpp.o"
-  "TestEnumClass.pdb"
   "TestEnumClass"
+  "TestEnumClass.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

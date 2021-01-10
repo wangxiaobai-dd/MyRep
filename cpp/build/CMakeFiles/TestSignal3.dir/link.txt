@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Werror -std=gnu++17 CMakeFiles/TestSignal3.dir/TestSignal3.cpp.o -o TestSignal3 

@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Werror -std=gnu++17 CMakeFiles/TestStaticVar.dir/TestStatic1.cpp.o CMakeFiles/TestStaticVar.dir/TestStatic2.cpp.o -o TestStaticVar 

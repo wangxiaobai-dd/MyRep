@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/CppDir/TestTemplate.cpp
+/home/ubuntu/MyRep/cpp/TestTemplate.cpp
 iostream
 -
 map

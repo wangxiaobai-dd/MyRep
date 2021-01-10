@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Werror -std=gnu++17 CMakeFiles/TestNullPtr.dir/TestNullPtr.cpp.o -o TestNullPtr 

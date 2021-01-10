@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/MyRep/cpp/TestSignal3.cpp
+setjmp.h
+-
+stdlib.h
+-
+stdarg.h
+-
+execinfo.h
+-
+stdio.h
+-
+signal.h
+-
+iostream
+-
+string.h
+-
+unistd.h
+-
+

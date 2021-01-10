@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/CppDir/TestEnumClass.cpp
+/home/ubuntu/MyRep/cpp/TestEnumClass.cpp
 iostream
 -
 map

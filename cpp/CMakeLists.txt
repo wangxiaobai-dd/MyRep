@@ -17,9 +17,12 @@ include_directories(nvwa)
 set(CMAKE_CXX_FLAGS ${DEBUG_FLAG})
 
 #link_directories(/usr/include/hiredis/)
-add_executable(TestTemplate TestTemplate.cpp)
-add_executable(TestEnumClass TestEnumClass.cpp)
-
-#target_link_libraries(TestMemoryOrder pthread)
+#add_executable(TestTemplate TestTemplate.cpp)
+#add_executable(TestEnumClass TestEnumClass.cpp)
+#add_executable(TestNullPtr TestNullPtr.cpp)
+#add_executable(TestStaticVar TestStatic1.cpp TestStatic2.cpp)
+add_executable(TestSignal TestSignal.cpp)
+add_executable(TestSignal2 TestSignal2.cpp)
+add_executable(TestSignal3 TestSignal3.cpp)
 #target_link_libraries(TestBoost PRIVATE Boost::program_options)
 
