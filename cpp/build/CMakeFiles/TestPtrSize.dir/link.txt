@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Werror -std=gnu++17 CMakeFiles/TestPtrSize.dir/TestPtrSize.cpp.o -o TestPtrSize 

@@ -1,0 +1,1 @@
+/home/ubuntu/DownDir/cmake-3.19.1-Linux-x86_64/bin/cmake -E time /usr/bin/g++ -g -Werror -std=gnu++17 CMakeFiles/TestMass.dir/TestMass.cpp.o -o TestMass 

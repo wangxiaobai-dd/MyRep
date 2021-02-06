@@ -72,9 +72,9 @@ CMAKE_BINARY_DIR = /home/ubuntu/MyRep/cpp/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/TestSignal.dir/all
-all: CMakeFiles/TestSignal2.dir/all
-all: CMakeFiles/TestSignal3.dir/all
+all: CMakeFiles/TestTemplate.dir/all
+all: CMakeFiles/TestPid.dir/all
+all: CMakeFiles/TestMass.dir/all
 
 .PHONY : all
 
@@ -84,92 +84,92 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/TestSignal.dir/clean
-clean: CMakeFiles/TestSignal2.dir/clean
-clean: CMakeFiles/TestSignal3.dir/clean
+clean: CMakeFiles/TestTemplate.dir/clean
+clean: CMakeFiles/TestPid.dir/clean
+clean: CMakeFiles/TestMass.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestSignal.dir
+# Target rules for target CMakeFiles/TestTemplate.dir
 
 # All Build rule for target.
-CMakeFiles/TestSignal.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal.dir/build.make CMakeFiles/TestSignal.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal.dir/build.make CMakeFiles/TestSignal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=1,2 "Built target TestSignal"
-.PHONY : CMakeFiles/TestSignal.dir/all
+CMakeFiles/TestTemplate.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=5,6 "Built target TestTemplate"
+.PHONY : CMakeFiles/TestTemplate.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestSignal.dir/rule: cmake_check_build_system
+CMakeFiles/TestTemplate.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestSignal.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestTemplate.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/TestSignal.dir/rule
+.PHONY : CMakeFiles/TestTemplate.dir/rule
 
 # Convenience name for target.
-TestSignal: CMakeFiles/TestSignal.dir/rule
+TestTemplate: CMakeFiles/TestTemplate.dir/rule
 
-.PHONY : TestSignal
+.PHONY : TestTemplate
 
 # clean rule for target.
-CMakeFiles/TestSignal.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal.dir/build.make CMakeFiles/TestSignal.dir/clean
-.PHONY : CMakeFiles/TestSignal.dir/clean
+CMakeFiles/TestTemplate.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/clean
+.PHONY : CMakeFiles/TestTemplate.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestSignal2.dir
+# Target rules for target CMakeFiles/TestPid.dir
 
 # All Build rule for target.
-CMakeFiles/TestSignal2.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal2.dir/build.make CMakeFiles/TestSignal2.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal2.dir/build.make CMakeFiles/TestSignal2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=3,4 "Built target TestSignal2"
-.PHONY : CMakeFiles/TestSignal2.dir/all
+CMakeFiles/TestPid.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=3,4 "Built target TestPid"
+.PHONY : CMakeFiles/TestPid.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestSignal2.dir/rule: cmake_check_build_system
+CMakeFiles/TestPid.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestSignal2.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestPid.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/TestSignal2.dir/rule
+.PHONY : CMakeFiles/TestPid.dir/rule
 
 # Convenience name for target.
-TestSignal2: CMakeFiles/TestSignal2.dir/rule
+TestPid: CMakeFiles/TestPid.dir/rule
 
-.PHONY : TestSignal2
+.PHONY : TestPid
 
 # clean rule for target.
-CMakeFiles/TestSignal2.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal2.dir/build.make CMakeFiles/TestSignal2.dir/clean
-.PHONY : CMakeFiles/TestSignal2.dir/clean
+CMakeFiles/TestPid.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/clean
+.PHONY : CMakeFiles/TestPid.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestSignal3.dir
+# Target rules for target CMakeFiles/TestMass.dir
 
 # All Build rule for target.
-CMakeFiles/TestSignal3.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal3.dir/build.make CMakeFiles/TestSignal3.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal3.dir/build.make CMakeFiles/TestSignal3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=5,6 "Built target TestSignal3"
-.PHONY : CMakeFiles/TestSignal3.dir/all
+CMakeFiles/TestMass.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=1,2 "Built target TestMass"
+.PHONY : CMakeFiles/TestMass.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestSignal3.dir/rule: cmake_check_build_system
+CMakeFiles/TestMass.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestSignal3.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestMass.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/TestSignal3.dir/rule
+.PHONY : CMakeFiles/TestMass.dir/rule
 
 # Convenience name for target.
-TestSignal3: CMakeFiles/TestSignal3.dir/rule
+TestMass: CMakeFiles/TestMass.dir/rule
 
-.PHONY : TestSignal3
+.PHONY : TestMass
 
 # clean rule for target.
-CMakeFiles/TestSignal3.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal3.dir/build.make CMakeFiles/TestSignal3.dir/clean
-.PHONY : CMakeFiles/TestSignal3.dir/clean
+CMakeFiles/TestMass.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/clean
+.PHONY : CMakeFiles/TestMass.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -130,124 +130,124 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestSignal
+# Target rules for targets named TestTemplate
 
 # Build rule for target.
-TestSignal: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestSignal
-.PHONY : TestSignal
+TestTemplate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTemplate
+.PHONY : TestTemplate
 
 # fast build rule for target.
-TestSignal/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal.dir/build.make CMakeFiles/TestSignal.dir/build
-.PHONY : TestSignal/fast
+TestTemplate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
+.PHONY : TestTemplate/fast
 
 #=============================================================================
-# Target rules for targets named TestSignal2
+# Target rules for targets named TestPid
 
 # Build rule for target.
-TestSignal2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestSignal2
-.PHONY : TestSignal2
+TestPid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestPid
+.PHONY : TestPid
 
 # fast build rule for target.
-TestSignal2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal2.dir/build.make CMakeFiles/TestSignal2.dir/build
-.PHONY : TestSignal2/fast
+TestPid/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/build
+.PHONY : TestPid/fast
 
 #=============================================================================
-# Target rules for targets named TestSignal3
+# Target rules for targets named TestMass
 
 # Build rule for target.
-TestSignal3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestSignal3
-.PHONY : TestSignal3
+TestMass: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestMass
+.PHONY : TestMass
 
 # fast build rule for target.
-TestSignal3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal3.dir/build.make CMakeFiles/TestSignal3.dir/build
-.PHONY : TestSignal3/fast
+TestMass/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/build
+.PHONY : TestMass/fast
 
-TestSignal.o: TestSignal.cpp.o
+TestMass.o: TestMass.cpp.o
 
-.PHONY : TestSignal.o
-
-# target to build an object file
-TestSignal.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal.dir/build.make CMakeFiles/TestSignal.dir/TestSignal.cpp.o
-.PHONY : TestSignal.cpp.o
-
-TestSignal.i: TestSignal.cpp.i
-
-.PHONY : TestSignal.i
-
-# target to preprocess a source file
-TestSignal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal.dir/build.make CMakeFiles/TestSignal.dir/TestSignal.cpp.i
-.PHONY : TestSignal.cpp.i
-
-TestSignal.s: TestSignal.cpp.s
-
-.PHONY : TestSignal.s
-
-# target to generate assembly for a file
-TestSignal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal.dir/build.make CMakeFiles/TestSignal.dir/TestSignal.cpp.s
-.PHONY : TestSignal.cpp.s
-
-TestSignal2.o: TestSignal2.cpp.o
-
-.PHONY : TestSignal2.o
+.PHONY : TestMass.o
 
 # target to build an object file
-TestSignal2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal2.dir/build.make CMakeFiles/TestSignal2.dir/TestSignal2.cpp.o
-.PHONY : TestSignal2.cpp.o
+TestMass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/TestMass.cpp.o
+.PHONY : TestMass.cpp.o
 
-TestSignal2.i: TestSignal2.cpp.i
+TestMass.i: TestMass.cpp.i
 
-.PHONY : TestSignal2.i
+.PHONY : TestMass.i
 
 # target to preprocess a source file
-TestSignal2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal2.dir/build.make CMakeFiles/TestSignal2.dir/TestSignal2.cpp.i
-.PHONY : TestSignal2.cpp.i
+TestMass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/TestMass.cpp.i
+.PHONY : TestMass.cpp.i
 
-TestSignal2.s: TestSignal2.cpp.s
+TestMass.s: TestMass.cpp.s
 
-.PHONY : TestSignal2.s
+.PHONY : TestMass.s
 
 # target to generate assembly for a file
-TestSignal2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal2.dir/build.make CMakeFiles/TestSignal2.dir/TestSignal2.cpp.s
-.PHONY : TestSignal2.cpp.s
+TestMass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/TestMass.cpp.s
+.PHONY : TestMass.cpp.s
 
-TestSignal3.o: TestSignal3.cpp.o
+TestPid.o: TestPid.cpp.o
 
-.PHONY : TestSignal3.o
+.PHONY : TestPid.o
 
 # target to build an object file
-TestSignal3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal3.dir/build.make CMakeFiles/TestSignal3.dir/TestSignal3.cpp.o
-.PHONY : TestSignal3.cpp.o
+TestPid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/TestPid.cpp.o
+.PHONY : TestPid.cpp.o
 
-TestSignal3.i: TestSignal3.cpp.i
+TestPid.i: TestPid.cpp.i
 
-.PHONY : TestSignal3.i
+.PHONY : TestPid.i
 
 # target to preprocess a source file
-TestSignal3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal3.dir/build.make CMakeFiles/TestSignal3.dir/TestSignal3.cpp.i
-.PHONY : TestSignal3.cpp.i
+TestPid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/TestPid.cpp.i
+.PHONY : TestPid.cpp.i
 
-TestSignal3.s: TestSignal3.cpp.s
+TestPid.s: TestPid.cpp.s
 
-.PHONY : TestSignal3.s
+.PHONY : TestPid.s
 
 # target to generate assembly for a file
-TestSignal3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSignal3.dir/build.make CMakeFiles/TestSignal3.dir/TestSignal3.cpp.s
-.PHONY : TestSignal3.cpp.s
+TestPid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/TestPid.cpp.s
+.PHONY : TestPid.cpp.s
+
+TestTemplate.o: TestTemplate.cpp.o
+
+.PHONY : TestTemplate.o
+
+# target to build an object file
+TestTemplate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.o
+.PHONY : TestTemplate.cpp.o
+
+TestTemplate.i: TestTemplate.cpp.i
+
+.PHONY : TestTemplate.i
+
+# target to preprocess a source file
+TestTemplate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.i
+.PHONY : TestTemplate.cpp.i
+
+TestTemplate.s: TestTemplate.cpp.s
+
+.PHONY : TestTemplate.s
+
+# target to generate assembly for a file
+TestTemplate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.s
+.PHONY : TestTemplate.cpp.s
 
 # Help Target
 help:
@@ -257,18 +257,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TestSignal"
-	@echo "... TestSignal2"
-	@echo "... TestSignal3"
-	@echo "... TestSignal.o"
-	@echo "... TestSignal.i"
-	@echo "... TestSignal.s"
-	@echo "... TestSignal2.o"
-	@echo "... TestSignal2.i"
-	@echo "... TestSignal2.s"
-	@echo "... TestSignal3.o"
-	@echo "... TestSignal3.i"
-	@echo "... TestSignal3.s"
+	@echo "... TestMass"
+	@echo "... TestPid"
+	@echo "... TestTemplate"
+	@echo "... TestMass.o"
+	@echo "... TestMass.i"
+	@echo "... TestMass.s"
+	@echo "... TestPid.o"
+	@echo "... TestPid.i"
+	@echo "... TestPid.s"
+	@echo "... TestTemplate.o"
+	@echo "... TestTemplate.i"
+	@echo "... TestTemplate.s"
 .PHONY : help
 
 

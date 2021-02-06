@@ -6,6 +6,11 @@
 #include <vector>
 #include <initializer_list>
 
+struct A{  int a = 0; int b = 0;};
+
+struct B : public A{};
+
+struct C { int a = 0; int b = 0; };
 
 template <typename T, typename... Ts>
 auto print3(T value, Ts... args)
@@ -52,9 +57,19 @@ void increase(int& v)
 	v++;
 }
 
+template<typename T>
+void create(T& t)
+{
+	t = T();
+}
+
 int main()
 {
 	using namespace std;
+	B b{0,0};
+
+
+	std::cout << "__cplusplus:" << __cplusplus << std::endl;
 	std::cout << type::A << std::endl;
 	double s = 1;
 //	increase(s);
@@ -65,5 +80,7 @@ int main()
 	for(auto&& i : v)
 		;
 	std::cout << v[0] << std::endl;
+	int i = 0;
+	create(i);
 	return 0;
 }

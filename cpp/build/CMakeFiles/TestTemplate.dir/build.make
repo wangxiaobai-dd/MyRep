@@ -79,7 +79,7 @@ include CMakeFiles/TestTemplate.dir/flags.make
 CMakeFiles/TestTemplate.dir/TestTemplate.cpp.o: CMakeFiles/TestTemplate.dir/flags.make
 CMakeFiles/TestTemplate.dir/TestTemplate.cpp.o: ../TestTemplate.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestTemplate.dir/TestTemplate.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestTemplate.dir/TestTemplate.cpp.o -c /home/ubuntu/MyRep/cpp/TestTemplate.cpp
+	/home/ubuntu/DownDir/cmake-3.19.1-Linux-x86_64/bin/cmake -E time /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestTemplate.dir/TestTemplate.cpp.o -c /home/ubuntu/MyRep/cpp/TestTemplate.cpp
 
 CMakeFiles/TestTemplate.dir/TestTemplate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestTemplate.dir/TestTemplate.cpp.i"

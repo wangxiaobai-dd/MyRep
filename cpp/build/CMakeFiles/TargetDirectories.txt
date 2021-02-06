@@ -1,5 +1,5 @@
 /home/ubuntu/MyRep/cpp/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestSignal.dir
-/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestSignal2.dir
-/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestSignal3.dir
+/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestTemplate.dir
+/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestPid.dir
+/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestMass.dir
 /home/ubuntu/MyRep/cpp/build/CMakeFiles/edit_cache.dir

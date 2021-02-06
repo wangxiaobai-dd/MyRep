@@ -1,1 +1,1 @@
-/usr/bin/g++ -g -Werror -std=gnu++17 CMakeFiles/TestTemplate.dir/TestTemplate.cpp.o -o TestTemplate 
+/home/ubuntu/DownDir/cmake-3.19.1-Linux-x86_64/bin/cmake -E time /usr/bin/g++ -g -Werror -std=gnu++17 CMakeFiles/TestTemplate.dir/TestTemplate.cpp.o -o TestTemplate 
