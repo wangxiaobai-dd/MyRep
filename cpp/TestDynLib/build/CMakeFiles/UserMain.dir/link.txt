@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -O0 -Wall -g -ggdb -DDEBUG -fPIC -Wno-unknown-pragmas -rdynamic CMakeFiles/UserMain.dir/UserMain.o CMakeFiles/UserMain.dir/NFDynLib.o -o UserMain   -L/home/ubuntu/MyRep/cpp/TestDynLib/build  -Wl,-rpath,/home/ubuntu/MyRep/cpp/TestDynLib/build dynlib.so -ldl 

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/MyRep/cpp/TestDynLib/DynamicTest.h
+
+/home/ubuntu/MyRep/cpp/TestDynLib/NFDynLib.h
+stdio.h
+-
+iostream
+-
+dlfcn.h
+-
+
+/home/ubuntu/MyRep/cpp/TestDynLib/UserMain.cpp
+iostream
+-
+string
+-
+DynamicTest.h
+/home/ubuntu/MyRep/cpp/TestDynLib/DynamicTest.h
+unistd.h
+-
+memory
+-
+NFDynLib.h
+/home/ubuntu/MyRep/cpp/TestDynLib/NFDynLib.h
+map
+-
+UserMain.h
+/home/ubuntu/MyRep/cpp/TestDynLib/UserMain.h
+
+/home/ubuntu/MyRep/cpp/TestDynLib/UserMain.h
+

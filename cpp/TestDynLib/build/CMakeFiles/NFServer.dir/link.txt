@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -O0 -Wall -g -ggdb -DDEBUG -fPIC -Wno-unknown-pragmas -rdynamic CMakeFiles/NFServer.dir/UserMain.o -o NFServer  -Wl,-rpath,/home/ubuntu/MyRep/cpp/TestDynLib/build libdynlib.so 

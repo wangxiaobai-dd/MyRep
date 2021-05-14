@@ -1,0 +1,4 @@
+/home/ubuntu/MyRep/cpp/TestDynLib/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/MyRep/cpp/TestDynLib/build/CMakeFiles/UserMain.dir
+/home/ubuntu/MyRep/cpp/TestDynLib/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/MyRep/cpp/TestDynLib/build/CMakeFiles/dynlib.dir
