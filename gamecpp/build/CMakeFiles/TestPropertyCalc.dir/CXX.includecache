@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/GameCppDir/TestPropertyCalc.cpp
+/home/ubuntu/MyRep/gamecpp/TestPropertyCalc.cpp
 iostream
 -
 bitset

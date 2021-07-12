@@ -130,6 +130,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named TestUnion
+
+# Build rule for target.
+TestUnion: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestUnion
+.PHONY : TestUnion
+
+# fast build rule for target.
+TestUnion/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestUnion.dir/build.make CMakeFiles/TestUnion.dir/build
+.PHONY : TestUnion/fast
+
+#=============================================================================
+# Target rules for targets named TestString
+
+# Build rule for target.
+TestString: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestString
+.PHONY : TestString
+
+# fast build rule for target.
+TestString/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/build
+.PHONY : TestString/fast
+
+#=============================================================================
 # Target rules for targets named TestTemplate
 
 # Build rule for target.
@@ -167,6 +193,46 @@ TestMass: cmake_check_build_system
 TestMass/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/build
 .PHONY : TestMass/fast
+
+#=============================================================================
+# Target rules for targets named TestBind
+
+# Build rule for target.
+TestBind: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestBind
+.PHONY : TestBind
+
+# fast build rule for target.
+TestBind/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBind.dir/build.make CMakeFiles/TestBind.dir/build
+.PHONY : TestBind/fast
+
+TestBind.o: TestBind.cpp.o
+
+.PHONY : TestBind.o
+
+# target to build an object file
+TestBind.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBind.dir/build.make CMakeFiles/TestBind.dir/TestBind.cpp.o
+.PHONY : TestBind.cpp.o
+
+TestBind.i: TestBind.cpp.i
+
+.PHONY : TestBind.i
+
+# target to preprocess a source file
+TestBind.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBind.dir/build.make CMakeFiles/TestBind.dir/TestBind.cpp.i
+.PHONY : TestBind.cpp.i
+
+TestBind.s: TestBind.cpp.s
+
+.PHONY : TestBind.s
+
+# target to generate assembly for a file
+TestBind.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBind.dir/build.make CMakeFiles/TestBind.dir/TestBind.cpp.s
+.PHONY : TestBind.cpp.s
 
 TestMass.o: TestMass.cpp.o
 
@@ -222,6 +288,33 @@ TestPid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/TestPid.cpp.s
 .PHONY : TestPid.cpp.s
 
+TestString.o: TestString.cpp.o
+
+.PHONY : TestString.o
+
+# target to build an object file
+TestString.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.o
+.PHONY : TestString.cpp.o
+
+TestString.i: TestString.cpp.i
+
+.PHONY : TestString.i
+
+# target to preprocess a source file
+TestString.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.i
+.PHONY : TestString.cpp.i
+
+TestString.s: TestString.cpp.s
+
+.PHONY : TestString.s
+
+# target to generate assembly for a file
+TestString.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.s
+.PHONY : TestString.cpp.s
+
 TestTemplate.o: TestTemplate.cpp.o
 
 .PHONY : TestTemplate.o
@@ -249,6 +342,33 @@ TestTemplate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.s
 .PHONY : TestTemplate.cpp.s
 
+TestUnion.o: TestUnion.cpp.o
+
+.PHONY : TestUnion.o
+
+# target to build an object file
+TestUnion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestUnion.dir/build.make CMakeFiles/TestUnion.dir/TestUnion.cpp.o
+.PHONY : TestUnion.cpp.o
+
+TestUnion.i: TestUnion.cpp.i
+
+.PHONY : TestUnion.i
+
+# target to preprocess a source file
+TestUnion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestUnion.dir/build.make CMakeFiles/TestUnion.dir/TestUnion.cpp.i
+.PHONY : TestUnion.cpp.i
+
+TestUnion.s: TestUnion.cpp.s
+
+.PHONY : TestUnion.s
+
+# target to generate assembly for a file
+TestUnion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestUnion.dir/build.make CMakeFiles/TestUnion.dir/TestUnion.cpp.s
+.PHONY : TestUnion.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -257,18 +377,30 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... TestBind"
 	@echo "... TestMass"
 	@echo "... TestPid"
+	@echo "... TestString"
 	@echo "... TestTemplate"
+	@echo "... TestUnion"
+	@echo "... TestBind.o"
+	@echo "... TestBind.i"
+	@echo "... TestBind.s"
 	@echo "... TestMass.o"
 	@echo "... TestMass.i"
 	@echo "... TestMass.s"
 	@echo "... TestPid.o"
 	@echo "... TestPid.i"
 	@echo "... TestPid.s"
+	@echo "... TestString.o"
+	@echo "... TestString.i"
+	@echo "... TestString.s"
 	@echo "... TestTemplate.o"
 	@echo "... TestTemplate.i"
 	@echo "... TestTemplate.s"
+	@echo "... TestUnion.o"
+	@echo "... TestUnion.i"
+	@echo "... TestUnion.s"
 .PHONY : help
 
 

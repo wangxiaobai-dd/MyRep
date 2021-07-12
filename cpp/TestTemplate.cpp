@@ -63,6 +63,14 @@ void create(T& t)
 	t = T();
 }
 
+// union模板
+template<typename T>
+union AllocChunk
+{
+	T object;
+	unsigned char bytes[sizeof(T)];
+};
+
 int main()
 {
 	using namespace std;
@@ -82,5 +90,10 @@ int main()
 	std::cout << v[0] << std::endl;
 	int i = 0;
 	create(i);
+	
+	AllocChunk<int> ch;
+	ch.object = 10;
+	ch.bytes[2] = 100;
+	cout << ch.object << endl;
 	return 0;
 }

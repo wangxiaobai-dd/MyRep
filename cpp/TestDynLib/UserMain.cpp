@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "DynamicTest.h"
+//#include "DynamicTest.h"
 #include <unistd.h>
 #include <memory>
 #include "NFDynLib.h"
@@ -11,37 +11,50 @@ using namespace std;
 
 using DLL_START_PLUGIN_FUNC = void(*)(User*);
 
-std::map<std::string, std::shared_ptr<NFDynLib>> libMap;
+struct LIB
+{
+
+static std::shared_ptr<NFDynLib> pLib;
+};
+std::shared_ptr<NFDynLib> LIB::pLib;
+//std::map<std::string, std::shared_ptr<NFDynLib>> libMap;
 void reload(std::string name)
 {
+	/*
 	auto iter = libMap.find(name);
 	if(iter != libMap.end())
 	{
 		iter->second->UnLoad();
 		libMap.erase(iter);
 	}
-	std::shared_ptr<NFDynLib> pLib = std::make_shared<NFDynLib>(name);
-	bool bLoad = pLib->Load();
+	*/
+	LIB::pLib->UnLoad();
+	LIB::pLib.reset();
+	//std::shared_ptr<NFDynLib> LIB::pLib = std::make_shared<NFDynLib>(name);
+	LIB::pLib = std::make_shared<NFDynLib>(name);
+	bool bLoad = LIB::pLib->Load();
 	if(!bLoad)
 	{
 		cout << "reload fail" << endl;
 		return;
 	}
-	libMap[name] = pLib;
+	//libMap[name] = LIB::pLib;
 }
 
 int main()
 {
 	std::string libName = "dynlib";
-	std::shared_ptr<NFDynLib> pLib = std::make_shared<NFDynLib>(libName);
-	bool bLoad = pLib->Load();
+	if(LIB::pLib)
+		cout << "init" << endl;
+	LIB::pLib = std::make_shared<NFDynLib>(libName);
+	bool bLoad = LIB::pLib->Load();
 	if(!bLoad)
 	{
 		cout << "bLoad false" <<  dlerror() << endl;
 		return 0;
 	}
-	libMap[libName] = pLib;
-	DLL_START_PLUGIN_FUNC pFunc = (DLL_START_PLUGIN_FUNC)pLib->GetSymbol("test");
+	//libMap[libName] = LIB::pLib;
+	DLL_START_PLUGIN_FUNC pFunc = (DLL_START_PLUGIN_FUNC)LIB::pLib->GetSymbol("test");
 	if(!pFunc)
 	{
 		cout << "func false" << endl;
@@ -68,7 +81,7 @@ int main()
 		if(a == 8)
 		{
 			reload(libName);
-			pFunc = (DLL_START_PLUGIN_FUNC)libMap[libName]->GetSymbol("test");
+			pFunc = (DLL_START_PLUGIN_FUNC)LIB::pLib->GetSymbol("test");
 			if(!pFunc)
 			{
 				cout << "reload pFunc fail" << endl;

@@ -24,7 +24,8 @@ func main() {
 		log.Println("qaaa") // Output: PONG <nil>
 	}
 	//ExampleClient_List()
-	ExampleClient_SortSet()
+	//ExampleClient_SortSet()
+	ExampleClient_Hash()
 }
 
 /*
@@ -104,7 +105,7 @@ func ExampleClient_Hash() {
 	}
 
 	//获取
-	rets, err := redisdb.HMGet("hash_test", "name", "sex").Result()
+	rets, err := redisdb.HMGet("hash_test", "name2", "sex").Result()
 	log.Println("rets:", rets, err)
 
 	//成员
@@ -166,6 +167,7 @@ func ExampleClient_Set() {
 	log.Println(rets, err)
 }
 
+/*
 func ExampleClient_SortSet() {
 	log.Println("ExampleClient_SortSet")
 	defer log.Println("ExampleClient_SortSet")
@@ -190,7 +192,6 @@ func ExampleClient_SortSet() {
 	Shuffle(addArgs)
 
 	//添加
-	/*
 		ret, err := redisdb.ZAddNX("sortset_test", addArgs...).Result()
 		log.Println(ret, err)
 
@@ -204,7 +205,6 @@ func ExampleClient_SortSet() {
 
 		count, err := redisdb.SCard("sortset_test").Result()
 		log.Println(count, err)
-	*/
 	ret, err := redisdb.ZAdd("sortset_test", addArgs...).Result()
 
 	//返回有序集合指定区间内的成员
@@ -219,6 +219,7 @@ func ExampleClient_SortSet() {
 	rets, err = redisdb.ZRangeByScore("sortset_test", redis.ZRangeBy{Min: "(30", Max: "(50", Offset: 1, Count: 10}).Result()
 	log.Println(rets, err)
 }
+*/
 
 //用来做基数统计的算法，HyperLogLog 的优点是，在输入元素的数量或者体积非常非常大时，计算基数所需的空间总是固定 的、并且是很小的。
 //每个 HyperLogLog 键只需要花费 12 KB 内存，就可以计算接近 2^64 个不同元素的基 数

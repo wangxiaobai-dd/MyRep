@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/MyRep/GameCppDir/TestPropertyCalc.cpp" "/home/ubuntu/MyRep/GameCppDir/build/CMakeFiles/TestPropertyCalc.dir/TestPropertyCalc.cpp.o"
+  "/home/ubuntu/MyRep/gamecpp/TestPropertyCalc.cpp" "/home/ubuntu/MyRep/gamecpp/build/CMakeFiles/TestPropertyCalc.dir/TestPropertyCalc.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

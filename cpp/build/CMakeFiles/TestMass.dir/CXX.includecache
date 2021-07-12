@@ -13,4 +13,20 @@ string
 -
 unistd.h
 -
+list
+-
+memory
+-
+map
+-
+deque
+-
+algorithm
+-
+string.h
+-
+set
+-
+sys/types.h
+-
 

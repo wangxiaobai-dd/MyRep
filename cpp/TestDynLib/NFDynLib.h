@@ -11,7 +11,8 @@ typedef struct HINSTANCE__* hInstance;
 
 #include <dlfcn.h>
 #define DYNLIB_HANDLE void*
-#define DYNLIB_LOAD( a ) dlopen( a, RTLD_LAZY | RTLD_GLOBAL)
+//#define DYNLIB_LOAD( a ) dlopen( a, RTLD_LAZY | RTLD_GLOBAL)
+#define DYNLIB_LOAD( a ) dlopen( a, RTLD_NOW | RTLD_LOCAL)
 #define DYNLIB_GETSYM( a, b ) dlsym( a, b )
 #define DYNLIB_UNLOAD( a ) dlclose( a )
 

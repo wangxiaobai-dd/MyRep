@@ -53,6 +53,7 @@ int main()
 	cout << count << endl;
 	n = 139;
 	*/
+	cout << "builtin" << __builtin_ffsll(0) << endl; // 找出最低位的1的位置 
 
 	cout << "init:" << endl;
 	unsigned long m = 0;

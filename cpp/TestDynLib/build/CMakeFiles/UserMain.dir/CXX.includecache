@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/cpp/TestDynLib/DynamicTest.h
-
 /home/ubuntu/MyRep/cpp/TestDynLib/NFDynLib.h
 stdio.h
 -
@@ -21,8 +19,6 @@ iostream
 -
 string
 -
-DynamicTest.h
-/home/ubuntu/MyRep/cpp/TestDynLib/DynamicTest.h
 unistd.h
 -
 memory
@@ -35,4 +31,6 @@ UserMain.h
 /home/ubuntu/MyRep/cpp/TestDynLib/UserMain.h
 
 /home/ubuntu/MyRep/cpp/TestDynLib/UserMain.h
+set
+-
 
