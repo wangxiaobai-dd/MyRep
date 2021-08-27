@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/ubuntu/MyRep/cpp/nvwa
 
-CXX_FLAGS = -g -Werror -std=gnu++17
+CXX_FLAGS = -g -o2 -Werror -std=gnu++17
 

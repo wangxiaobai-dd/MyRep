@@ -29,4 +29,12 @@ set
 -
 sys/types.h
 -
+arpa/inet.h
+-
+cstdio
+-
+type_traits
+-
+typeinfo
+-
 

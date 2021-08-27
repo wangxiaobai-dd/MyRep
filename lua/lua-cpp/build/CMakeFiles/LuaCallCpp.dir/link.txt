@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/LuaCallCpp.dir/Luacallcpp.o -o ../LuaCallCpp  -Wl,-Bstatic -llua -Wl,-Bdynamic -ldl 

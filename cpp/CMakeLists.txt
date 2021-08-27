@@ -9,7 +9,7 @@ set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK "${CMAKE_COMMAND} -E time")
 
 
 #set(DEBUG_FLAG "-g -Werror -std=gnu++14 -Wno-invalid-source-encoding -fdiagnostics-format=vi")
-set(DEBUG_FLAG "-g -Werror -std=gnu++17")
+set(DEBUG_FLAG "-g -o2 -Werror -std=gnu++17")
 include_directories(SYSTEM /usr/include)
 include_directories(nvwa)
 

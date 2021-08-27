@@ -9,8 +9,13 @@
 #include <string.h>
 #include <set>
 #include  <sys/types.h>
+#include <arpa/inet.h>
+#include <cstdio>
+#include <type_traits>
+#include <typeinfo>
 
 using namespace std;
+
 
 struct REMOVE
 {
@@ -33,6 +38,42 @@ struct REMOVE
 		return c > other.c;
 	}
 };
+
+struct TEST
+{
+	unsigned short a = 0;
+	unsigned short b = 0;
+	unsigned short c = 0;
+	unsigned short d = 0;
+};
+
+int test1()
+{
+	int *aa = new int;
+	cout << "*aa" << aa << endl;
+	return *aa;
+}
+
+int test2()
+{
+	int *aa = new int;
+	cout << "*aa" << aa << endl;
+	return *aa;
+}
+
+void test3()
+{
+	int a;// 乱的
+	cout << "test3:"<< &a << endl; 
+}
+
+void test4()
+{
+	int a;
+	cout << "test4:" << &a << endl; // 0x7ffd50370694
+	test3(); // 向下增长 0x7ffd50370674
+	
+}
 
 int main()
 {
@@ -113,6 +154,13 @@ int main()
 	list.insert(r5); // 那个
 	list.insert(r6); // 那个
 	list.insert(r1); // 那个
+	auto eiter = list.begin();
+	list.clear();
+	cout << (*eiter).a;
+	cout << (*eiter).a;
+	if(eiter != list.end())
+		cout << "erase" << endl;
+
 	for(auto iter = list.begin(); iter != list.end(); ++iter)
 	{
 		cout << iter->a << endl;
@@ -185,8 +233,81 @@ int main()
 	printf("data:%d\n", (*(unsigned char*)&data) & (128*1024-1));
 	printf("%d\n", (*(unsigned int*)&data) & (128*1024-1));
 
-	sleep(10);
+	//sleep(10);
 
+	std::map<int, int> testIterM;
+	testIterM[1] = 2;
+	testIterM[3] = 2;
+	auto mmIter = testIterM.begin();
+	auto mmCopy = mmIter;
+	//++mmIter;
+	//++mmCopy;
+	testIterM.erase(mmIter);
+	testIterM[4] = 2;
+	++mmCopy;
+	//testIterM[5] = 2;
+	//++mmCopy;
+	//cout << "copy" << (mmCopy)->first << mmCopy->second << endl; 
+	//删除原来迭代器 ++会有问题
+	//无意义的测试
+	cout << (mmCopy)->first << endl;
+
+	std::vector<int*> llist;
+	int* ai = new int(2);
+	int* bi = new int(3);
+	llist.push_back(ai);
+	llist.push_back(bi);
+	auto lliter = llist.begin();
+	auto copyLter = lliter; // 拷贝了地址
+	//llist.clear();
+	llist.erase(lliter);
+	//llist.shrink_to_fit();
+	//*(*lliter) = 19;
+	//*(*(++lliter)) = 20;// 不会crash
+	//*(*(copyLter))  = 20;
+	//:w
+	//cout << *(*lliter) << endl;
+	//cout << *(*(++copyLter)) << endl;
+	///cout << *(*(lliter)) << endl;
+	//cout << *(*(++copyLter)) << endl;
+	// 虽然clear 但是那块内存还在 如果fit后 指向未知
+	//
+
+	TEST t;
+	(*(unsigned int*)&t.b) = -2;
+	cout << "a: " << t.a << endl;
+	cout << "b: " << t.b << endl;
+	cout << "c: " << t.c << endl;
+	cout << "d: " << t.d << endl;
+	// a = ? , b = ? , c = ?, d = ? 
+	//
+	cout << &t << endl;
+	cout << &t.b << endl;
+	cout << &t.c << endl;  // 在一个栈帧内，局部变量是如何分布到栈帧里的（所谓栈帧布局，stack frame layout），这完全是编译器的自由
+	TEST t2;
+	cout << "t2:" << &t2 << endl;
+	short s=1;
+	if(s == htons(s))cout<<"大端"<<endl;
+	else cout<<"小端"<<endl;
+
+	int aa;
+	int bb;
+	cout << "aa:" << &aa << endl;
+	cout << "bb:" << &bb << endl;
+
+	test4();
+
+	 char c[] = {"GAME\0"}; // 6
+	 char c1[] = {"GAME"}; // 5
+	 cout << sizeof(c) << endl;
+	 cout << sizeof(c1) << endl;
+
+	 int temsp = 100; 
+
+	 temsp *= 1 + 20/100.0;
+	 cout << temsp << endl;
+
+	 cout << typeid(decltype(test4)).name() << endl;
 	return 0;
 }
 

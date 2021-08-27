@@ -1,0 +1,4 @@
+/home/ubuntu/MyRep/lua/lua-cpp/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/MyRep/lua/lua-cpp/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/MyRep/lua/lua-cpp/build/CMakeFiles/LuaCallCpp.dir
+/home/ubuntu/MyRep/lua/lua-cpp/build/CMakeFiles/CppCallLua.dir

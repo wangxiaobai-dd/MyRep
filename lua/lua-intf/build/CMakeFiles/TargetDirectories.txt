@@ -1,0 +1,3 @@
+/home/ubuntu/MyRep/lua/lua-intf/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/MyRep/lua/lua-intf/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/MyRep/lua/lua-intf/build/CMakeFiles/testIntf.dir

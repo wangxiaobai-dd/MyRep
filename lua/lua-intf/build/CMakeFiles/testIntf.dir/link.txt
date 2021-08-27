@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/testIntf.dir/CppLuaIntf.o -o ../testIntf  -Wl,-Bstatic -llua -Wl,-Bdynamic -ldl 
