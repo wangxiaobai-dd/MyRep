@@ -16,6 +16,12 @@
 
 using namespace std;
 
+typedef unsigned int DWORD;
+
+int testChangePara(...)
+{
+	return 0;
+}
 
 struct REMOVE
 {
@@ -73,6 +79,62 @@ void test4()
 	cout << "test4:" << &a << endl; // 0x7ffd50370694
 	test3(); // 向下增长 0x7ffd50370674
 	
+}
+
+class A
+{
+	public:
+	    
+
+	std::string mStr;
+
+	bool operator == (const char* s) const
+	{ 
+		return 0 == strcmp(mStr.c_str(), s);
+	}
+	operator const char* () const 
+	{
+		return mStr.c_str();
+	}
+	const int ccc = 1;
+	const static int ccc1 = 2;
+};
+
+class sortItem
+{
+	public:
+		std::string name;
+		int score;
+		sortItem(const std::string& name, const int& score = 0)
+		{
+			this->name = name;
+			this->score = score;
+		}
+		bool operator == (const sortItem& rhs) const
+		{
+			return this->name == rhs.name;
+		}
+		bool operator < (const sortItem& rhs) const
+		{
+			return score > rhs.score;
+		}
+};
+#define safe_delete(x) { if(x) {delete [](x); (x) = NULL;}}
+
+void testItem(unsigned char **data)
+{
+	*data = new unsigned char[100000];
+	bzero(*data, 100000);
+	safe_delete(*data);
+//*data = NULL;
+}
+
+
+void testHanZi(const char* newName)
+{
+	// 8 指针大小
+	// 不是数组大小
+	cout << "testhanzi" << sizeof(newName) << endl;
 }
 
 int main()
@@ -301,6 +363,7 @@ int main()
 	 char c1[] = {"GAME"}; // 5
 	 cout << sizeof(c) << endl;
 	 cout << sizeof(c1) << endl;
+	 
 
 	 int temsp = 100; 
 
@@ -308,6 +371,88 @@ int main()
 	 cout << temsp << endl;
 
 	 cout << typeid(decltype(test4)).name() << endl;
-	return 0;
+	 std::function<void(int)> fuc;
+	 if(fuc)
+	 fuc(3);
+	 fuc = std::function<void(int)>();
+	 if(fuc)
+	 fuc(3);
+
+	 A testA;
+	 if(testA == "") 
+		 cout << "1" << endl;
+
+	 if("" == testA)
+		 cout << "2" << endl;
+
+	 std::set<sortItem> sortSet = std::set<sortItem>();
+	 sortSet.insert({"AAA", 63});
+	 sortSet.insert({"BBB", 98});
+	 sortSet.insert({"CCC", 89});
+	 sortSet.insert({"DDD", 100});
+		 cout << "test" << endl;
+	 {
+		 auto sIter = sortSet.find({"BBB"});
+		 if(sIter != sortSet.end())
+			 cout << "1 " <<  sIter->score << endl;
+	 }
+
+	 for(auto sIter = sortSet.begin(); sIter != sortSet.end(); ++sIter)
+	 {
+		 if(*sIter == sortItem{"BBB"})
+		 {
+			 cout << "2 " << sIter->score << endl;
+			 break;
+		 }
+	 }
+	 {
+		 auto sIter = std::find(sortSet.begin(), sortSet.end(), sortItem{"BBB"});
+		 if(sIter != sortSet.end())
+			 cout << "3 " << sIter->score << endl;
+	 }
+	 for(auto sIter = sortSet.begin(); sIter != sortSet.end(); ++sIter)
+	 {
+		 if(sIter->name == "BBB")
+		 {
+			 cout << "4 " << sIter->score << endl;
+			 break;
+		 }
+	 }
+	auto mmIterbegin = testIterM.begin();
+	auto mmco = mmIterbegin;
+	--mmco;
+	if(mmco == testIterM.end())
+		cout << "end" << endl;
+
+
+	sortItem *item;
+	testItem((unsigned char**)&item);
+	if(item)
+		cout << "item " << endl;
+	safe_delete(item);
+
+	DWORD one = 10;
+	DWORD two = 20;
+	int three = one - two;
+	if(three > 0)
+		cout << three << endl;
+	else
+		cout << "negative " << endl;
+
+	 char hanzi[1000]={1,1,1,4,0};
+	 //bzero(hanzi, sizeof(hanzi));
+	 //strncpy(hanzi, "呵", 2);
+	 //cout << strlen(hanzi) << endl;
+	 //cout << sizeof(hanzi) << endl;
+	 //cout << hanzi << endl;
+	 //cout << "呵呵额额" <<endl;
+	 testHanZi(hanzi);
+
+	 std::string testStrncpy;
+	 strncpy(hanzi, testStrncpy.c_str(), 1000);
+	 cout << strlen(hanzi) << endl;
+	 cout << hanzi[0] << endl;
+	
+	 return 0;
 }
 

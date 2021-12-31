@@ -130,56 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestUnion
+# Target rules for targets named TestDecltype
 
 # Build rule for target.
-TestUnion: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestUnion
-.PHONY : TestUnion
+TestDecltype: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestDecltype
+.PHONY : TestDecltype
 
 # fast build rule for target.
-TestUnion/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestUnion.dir/build.make CMakeFiles/TestUnion.dir/build
-.PHONY : TestUnion/fast
-
-#=============================================================================
-# Target rules for targets named TestString
-
-# Build rule for target.
-TestString: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestString
-.PHONY : TestString
-
-# fast build rule for target.
-TestString/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/build
-.PHONY : TestString/fast
-
-#=============================================================================
-# Target rules for targets named TestTemplate
-
-# Build rule for target.
-TestTemplate: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTemplate
-.PHONY : TestTemplate
-
-# fast build rule for target.
-TestTemplate/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
-.PHONY : TestTemplate/fast
-
-#=============================================================================
-# Target rules for targets named TestPid
-
-# Build rule for target.
-TestPid: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestPid
-.PHONY : TestPid
-
-# fast build rule for target.
-TestPid/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/build
-.PHONY : TestPid/fast
+TestDecltype/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDecltype.dir/build.make CMakeFiles/TestDecltype.dir/build
+.PHONY : TestDecltype/fast
 
 #=============================================================================
 # Target rules for targets named TestMass
@@ -194,45 +155,32 @@ TestMass/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/build
 .PHONY : TestMass/fast
 
-#=============================================================================
-# Target rules for targets named TestBind
+TestDecltype.o: TestDecltype.cpp.o
 
-# Build rule for target.
-TestBind: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestBind
-.PHONY : TestBind
-
-# fast build rule for target.
-TestBind/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBind.dir/build.make CMakeFiles/TestBind.dir/build
-.PHONY : TestBind/fast
-
-TestBind.o: TestBind.cpp.o
-
-.PHONY : TestBind.o
+.PHONY : TestDecltype.o
 
 # target to build an object file
-TestBind.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBind.dir/build.make CMakeFiles/TestBind.dir/TestBind.cpp.o
-.PHONY : TestBind.cpp.o
+TestDecltype.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDecltype.dir/build.make CMakeFiles/TestDecltype.dir/TestDecltype.cpp.o
+.PHONY : TestDecltype.cpp.o
 
-TestBind.i: TestBind.cpp.i
+TestDecltype.i: TestDecltype.cpp.i
 
-.PHONY : TestBind.i
+.PHONY : TestDecltype.i
 
 # target to preprocess a source file
-TestBind.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBind.dir/build.make CMakeFiles/TestBind.dir/TestBind.cpp.i
-.PHONY : TestBind.cpp.i
+TestDecltype.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDecltype.dir/build.make CMakeFiles/TestDecltype.dir/TestDecltype.cpp.i
+.PHONY : TestDecltype.cpp.i
 
-TestBind.s: TestBind.cpp.s
+TestDecltype.s: TestDecltype.cpp.s
 
-.PHONY : TestBind.s
+.PHONY : TestDecltype.s
 
 # target to generate assembly for a file
-TestBind.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBind.dir/build.make CMakeFiles/TestBind.dir/TestBind.cpp.s
-.PHONY : TestBind.cpp.s
+TestDecltype.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDecltype.dir/build.make CMakeFiles/TestDecltype.dir/TestDecltype.cpp.s
+.PHONY : TestDecltype.cpp.s
 
 TestMass.o: TestMass.cpp.o
 
@@ -261,114 +209,6 @@ TestMass.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/TestMass.cpp.s
 .PHONY : TestMass.cpp.s
 
-TestPid.o: TestPid.cpp.o
-
-.PHONY : TestPid.o
-
-# target to build an object file
-TestPid.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/TestPid.cpp.o
-.PHONY : TestPid.cpp.o
-
-TestPid.i: TestPid.cpp.i
-
-.PHONY : TestPid.i
-
-# target to preprocess a source file
-TestPid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/TestPid.cpp.i
-.PHONY : TestPid.cpp.i
-
-TestPid.s: TestPid.cpp.s
-
-.PHONY : TestPid.s
-
-# target to generate assembly for a file
-TestPid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPid.dir/build.make CMakeFiles/TestPid.dir/TestPid.cpp.s
-.PHONY : TestPid.cpp.s
-
-TestString.o: TestString.cpp.o
-
-.PHONY : TestString.o
-
-# target to build an object file
-TestString.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.o
-.PHONY : TestString.cpp.o
-
-TestString.i: TestString.cpp.i
-
-.PHONY : TestString.i
-
-# target to preprocess a source file
-TestString.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.i
-.PHONY : TestString.cpp.i
-
-TestString.s: TestString.cpp.s
-
-.PHONY : TestString.s
-
-# target to generate assembly for a file
-TestString.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.s
-.PHONY : TestString.cpp.s
-
-TestTemplate.o: TestTemplate.cpp.o
-
-.PHONY : TestTemplate.o
-
-# target to build an object file
-TestTemplate.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.o
-.PHONY : TestTemplate.cpp.o
-
-TestTemplate.i: TestTemplate.cpp.i
-
-.PHONY : TestTemplate.i
-
-# target to preprocess a source file
-TestTemplate.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.i
-.PHONY : TestTemplate.cpp.i
-
-TestTemplate.s: TestTemplate.cpp.s
-
-.PHONY : TestTemplate.s
-
-# target to generate assembly for a file
-TestTemplate.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.s
-.PHONY : TestTemplate.cpp.s
-
-TestUnion.o: TestUnion.cpp.o
-
-.PHONY : TestUnion.o
-
-# target to build an object file
-TestUnion.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestUnion.dir/build.make CMakeFiles/TestUnion.dir/TestUnion.cpp.o
-.PHONY : TestUnion.cpp.o
-
-TestUnion.i: TestUnion.cpp.i
-
-.PHONY : TestUnion.i
-
-# target to preprocess a source file
-TestUnion.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestUnion.dir/build.make CMakeFiles/TestUnion.dir/TestUnion.cpp.i
-.PHONY : TestUnion.cpp.i
-
-TestUnion.s: TestUnion.cpp.s
-
-.PHONY : TestUnion.s
-
-# target to generate assembly for a file
-TestUnion.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestUnion.dir/build.make CMakeFiles/TestUnion.dir/TestUnion.cpp.s
-.PHONY : TestUnion.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -377,30 +217,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TestBind"
+	@echo "... TestDecltype"
 	@echo "... TestMass"
-	@echo "... TestPid"
-	@echo "... TestString"
-	@echo "... TestTemplate"
-	@echo "... TestUnion"
-	@echo "... TestBind.o"
-	@echo "... TestBind.i"
-	@echo "... TestBind.s"
+	@echo "... TestDecltype.o"
+	@echo "... TestDecltype.i"
+	@echo "... TestDecltype.s"
 	@echo "... TestMass.o"
 	@echo "... TestMass.i"
 	@echo "... TestMass.s"
-	@echo "... TestPid.o"
-	@echo "... TestPid.i"
-	@echo "... TestPid.s"
-	@echo "... TestString.o"
-	@echo "... TestString.i"
-	@echo "... TestString.s"
-	@echo "... TestTemplate.o"
-	@echo "... TestTemplate.i"
-	@echo "... TestTemplate.s"
-	@echo "... TestUnion.o"
-	@echo "... TestUnion.i"
-	@echo "... TestUnion.s"
 .PHONY : help
 
 
