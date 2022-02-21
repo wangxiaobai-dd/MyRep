@@ -9,7 +9,7 @@ set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK "${CMAKE_COMMAND} -E time")
 
 
 #set(DEBUG_FLAG "-g -Werror -std=gnu++14 -Wno-invalid-source-encoding -fdiagnostics-format=vi")
-set(DEBUG_FLAG "-g -o2 -Werror -std=gnu++17")
+set(DEBUG_FLAG "-g -o2 -fpermissive -std=gnu++2a")
 include_directories(SYSTEM /usr/include)
 include_directories(nvwa)
 
@@ -20,12 +20,15 @@ include_directories(nvwa)
 set(CMAKE_CXX_FLAGS ${DEBUG_FLAG})
 
 #link_directories(/usr/include/hiredis/)
+add_executable(TestBitZone TestBitZone.cpp)
+add_executable(TestBcopy TestBcopy.cpp)
+#add_executable(TestConcept TestConcept.cpp)
 #add_executable(TestTemplate TestTemplate.cpp)
 #add_executable(TestEnumClass TestEnumClass.cpp)
 #add_executable(TestNullPtr TestNullPtr.cpp)
 #add_executable(TestStaticVar TestStatic1.cpp TestStatic2.cpp)
-add_executable(TestMass TestMass.cpp)
-add_executable(TestDecltype TestDecltype.cpp)
+#add_executable(TestMass TestMass.cpp)
+#add_executable(TestDecltype TestDecltype.cpp)
 #add_executable(TestDynamicCast TestDynamicCast.cpp)
 #target_link_libraries(TestBoost PRIVATE Boost::program_options)
 

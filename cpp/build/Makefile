@@ -130,84 +130,124 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestDecltype
+# Target rules for targets named TestBitZone
 
 # Build rule for target.
-TestDecltype: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestDecltype
-.PHONY : TestDecltype
+TestBitZone: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestBitZone
+.PHONY : TestBitZone
 
 # fast build rule for target.
-TestDecltype/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDecltype.dir/build.make CMakeFiles/TestDecltype.dir/build
-.PHONY : TestDecltype/fast
+TestBitZone/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/build
+.PHONY : TestBitZone/fast
 
 #=============================================================================
-# Target rules for targets named TestMass
+# Target rules for targets named TestBcopy
 
 # Build rule for target.
-TestMass: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestMass
-.PHONY : TestMass
+TestBcopy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestBcopy
+.PHONY : TestBcopy
 
 # fast build rule for target.
-TestMass/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/build
-.PHONY : TestMass/fast
+TestBcopy/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/build
+.PHONY : TestBcopy/fast
 
-TestDecltype.o: TestDecltype.cpp.o
+#=============================================================================
+# Target rules for targets named TestConcept
 
-.PHONY : TestDecltype.o
+# Build rule for target.
+TestConcept: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestConcept
+.PHONY : TestConcept
 
-# target to build an object file
-TestDecltype.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDecltype.dir/build.make CMakeFiles/TestDecltype.dir/TestDecltype.cpp.o
-.PHONY : TestDecltype.cpp.o
+# fast build rule for target.
+TestConcept/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/build
+.PHONY : TestConcept/fast
 
-TestDecltype.i: TestDecltype.cpp.i
+TestBcopy.o: TestBcopy.cpp.o
 
-.PHONY : TestDecltype.i
-
-# target to preprocess a source file
-TestDecltype.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDecltype.dir/build.make CMakeFiles/TestDecltype.dir/TestDecltype.cpp.i
-.PHONY : TestDecltype.cpp.i
-
-TestDecltype.s: TestDecltype.cpp.s
-
-.PHONY : TestDecltype.s
-
-# target to generate assembly for a file
-TestDecltype.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDecltype.dir/build.make CMakeFiles/TestDecltype.dir/TestDecltype.cpp.s
-.PHONY : TestDecltype.cpp.s
-
-TestMass.o: TestMass.cpp.o
-
-.PHONY : TestMass.o
+.PHONY : TestBcopy.o
 
 # target to build an object file
-TestMass.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/TestMass.cpp.o
-.PHONY : TestMass.cpp.o
+TestBcopy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/TestBcopy.cpp.o
+.PHONY : TestBcopy.cpp.o
 
-TestMass.i: TestMass.cpp.i
+TestBcopy.i: TestBcopy.cpp.i
 
-.PHONY : TestMass.i
+.PHONY : TestBcopy.i
 
 # target to preprocess a source file
-TestMass.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/TestMass.cpp.i
-.PHONY : TestMass.cpp.i
+TestBcopy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/TestBcopy.cpp.i
+.PHONY : TestBcopy.cpp.i
 
-TestMass.s: TestMass.cpp.s
+TestBcopy.s: TestBcopy.cpp.s
 
-.PHONY : TestMass.s
+.PHONY : TestBcopy.s
 
 # target to generate assembly for a file
-TestMass.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMass.dir/build.make CMakeFiles/TestMass.dir/TestMass.cpp.s
-.PHONY : TestMass.cpp.s
+TestBcopy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/TestBcopy.cpp.s
+.PHONY : TestBcopy.cpp.s
+
+TestBitZone.o: TestBitZone.cpp.o
+
+.PHONY : TestBitZone.o
+
+# target to build an object file
+TestBitZone.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/TestBitZone.cpp.o
+.PHONY : TestBitZone.cpp.o
+
+TestBitZone.i: TestBitZone.cpp.i
+
+.PHONY : TestBitZone.i
+
+# target to preprocess a source file
+TestBitZone.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/TestBitZone.cpp.i
+.PHONY : TestBitZone.cpp.i
+
+TestBitZone.s: TestBitZone.cpp.s
+
+.PHONY : TestBitZone.s
+
+# target to generate assembly for a file
+TestBitZone.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/TestBitZone.cpp.s
+.PHONY : TestBitZone.cpp.s
+
+TestConcept.o: TestConcept.cpp.o
+
+.PHONY : TestConcept.o
+
+# target to build an object file
+TestConcept.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/TestConcept.cpp.o
+.PHONY : TestConcept.cpp.o
+
+TestConcept.i: TestConcept.cpp.i
+
+.PHONY : TestConcept.i
+
+# target to preprocess a source file
+TestConcept.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/TestConcept.cpp.i
+.PHONY : TestConcept.cpp.i
+
+TestConcept.s: TestConcept.cpp.s
+
+.PHONY : TestConcept.s
+
+# target to generate assembly for a file
+TestConcept.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/TestConcept.cpp.s
+.PHONY : TestConcept.cpp.s
 
 # Help Target
 help:
@@ -217,14 +257,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TestDecltype"
-	@echo "... TestMass"
-	@echo "... TestDecltype.o"
-	@echo "... TestDecltype.i"
-	@echo "... TestDecltype.s"
-	@echo "... TestMass.o"
-	@echo "... TestMass.i"
-	@echo "... TestMass.s"
+	@echo "... TestBcopy"
+	@echo "... TestBitZone"
+	@echo "... TestConcept"
+	@echo "... TestBcopy.o"
+	@echo "... TestBcopy.i"
+	@echo "... TestBcopy.s"
+	@echo "... TestBitZone.o"
+	@echo "... TestBitZone.i"
+	@echo "... TestBitZone.s"
+	@echo "... TestConcept.o"
+	@echo "... TestConcept.i"
+	@echo "... TestConcept.s"
 .PHONY : help
 
 
