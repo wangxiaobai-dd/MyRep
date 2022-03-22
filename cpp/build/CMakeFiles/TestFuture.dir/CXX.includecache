@@ -6,19 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/cpp/TestTemplate.cpp
+/home/ubuntu/MyRep/cpp/TestFuture.cpp
+thread
+-
 iostream
 -
-map
+future
 -
-set
--
-unordered_map
--
-vector
--
-initializer_list
--
-typeinfo
+chrono
 -
 

@@ -5,6 +5,37 @@
 #include <unordered_map>
 #include <vector>
 #include <initializer_list>
+#include <typeinfo>
+
+// ODR
+class Decider
+{
+	virtual ~Decider(){}
+};
+
+extern Decider odr;
+
+// 依赖型基类
+template <typename T>
+class BBB{
+	public:
+		//enum E {e1 = 6, e2 = 7};
+		//virtual void zero(E e = e1){ std::cout << "zero" <<std::endl;}
+		void one(int ){}
+};
+
+template <typename T>
+class DDD : public BBB<T>
+{
+	public:
+		void f()
+		{
+			//typename DDD<T>::E e;
+			//zero();
+			this->one(1); // 依赖型名称实例化时查找
+		}
+
+};
 
 struct A{  int a = 0; int b = 0;};
 
@@ -95,5 +126,15 @@ int main()
 	ch.object = 10;
 	ch.bytes[2] = 100;
 	cout << ch.object << endl;
+
+	// 依赖型基类
+	cout << "依赖型基类 "<< endl;
+	DDD<int> d; // undefined reference
+	d.f();
+
+	// ODR
+	const char* name = typeid(odr).name();
+	return sizeof(odr);
+	
 	return 0;
 }

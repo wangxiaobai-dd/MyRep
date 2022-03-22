@@ -130,124 +130,124 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestBitZone
+# Target rules for targets named TestFuture
 
 # Build rule for target.
-TestBitZone: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestBitZone
-.PHONY : TestBitZone
+TestFuture: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestFuture
+.PHONY : TestFuture
 
 # fast build rule for target.
-TestBitZone/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/build
-.PHONY : TestBitZone/fast
+TestFuture/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/build
+.PHONY : TestFuture/fast
 
 #=============================================================================
-# Target rules for targets named TestBcopy
+# Target rules for targets named TestTemplate
 
 # Build rule for target.
-TestBcopy: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestBcopy
-.PHONY : TestBcopy
+TestTemplate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTemplate
+.PHONY : TestTemplate
 
 # fast build rule for target.
-TestBcopy/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/build
-.PHONY : TestBcopy/fast
+TestTemplate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
+.PHONY : TestTemplate/fast
 
 #=============================================================================
-# Target rules for targets named TestConcept
+# Target rules for targets named TestIndexSeq
 
 # Build rule for target.
-TestConcept: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestConcept
-.PHONY : TestConcept
+TestIndexSeq: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestIndexSeq
+.PHONY : TestIndexSeq
 
 # fast build rule for target.
-TestConcept/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/build
-.PHONY : TestConcept/fast
+TestIndexSeq/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/build
+.PHONY : TestIndexSeq/fast
 
-TestBcopy.o: TestBcopy.cpp.o
+TestFuture.o: TestFuture.cpp.o
 
-.PHONY : TestBcopy.o
-
-# target to build an object file
-TestBcopy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/TestBcopy.cpp.o
-.PHONY : TestBcopy.cpp.o
-
-TestBcopy.i: TestBcopy.cpp.i
-
-.PHONY : TestBcopy.i
-
-# target to preprocess a source file
-TestBcopy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/TestBcopy.cpp.i
-.PHONY : TestBcopy.cpp.i
-
-TestBcopy.s: TestBcopy.cpp.s
-
-.PHONY : TestBcopy.s
-
-# target to generate assembly for a file
-TestBcopy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/TestBcopy.cpp.s
-.PHONY : TestBcopy.cpp.s
-
-TestBitZone.o: TestBitZone.cpp.o
-
-.PHONY : TestBitZone.o
+.PHONY : TestFuture.o
 
 # target to build an object file
-TestBitZone.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/TestBitZone.cpp.o
-.PHONY : TestBitZone.cpp.o
+TestFuture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/TestFuture.cpp.o
+.PHONY : TestFuture.cpp.o
 
-TestBitZone.i: TestBitZone.cpp.i
+TestFuture.i: TestFuture.cpp.i
 
-.PHONY : TestBitZone.i
+.PHONY : TestFuture.i
 
 # target to preprocess a source file
-TestBitZone.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/TestBitZone.cpp.i
-.PHONY : TestBitZone.cpp.i
+TestFuture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/TestFuture.cpp.i
+.PHONY : TestFuture.cpp.i
 
-TestBitZone.s: TestBitZone.cpp.s
+TestFuture.s: TestFuture.cpp.s
 
-.PHONY : TestBitZone.s
+.PHONY : TestFuture.s
 
 # target to generate assembly for a file
-TestBitZone.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/TestBitZone.cpp.s
-.PHONY : TestBitZone.cpp.s
+TestFuture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/TestFuture.cpp.s
+.PHONY : TestFuture.cpp.s
 
-TestConcept.o: TestConcept.cpp.o
+TestIndexSeq.o: TestIndexSeq.cpp.o
 
-.PHONY : TestConcept.o
+.PHONY : TestIndexSeq.o
 
 # target to build an object file
-TestConcept.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/TestConcept.cpp.o
-.PHONY : TestConcept.cpp.o
+TestIndexSeq.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/TestIndexSeq.cpp.o
+.PHONY : TestIndexSeq.cpp.o
 
-TestConcept.i: TestConcept.cpp.i
+TestIndexSeq.i: TestIndexSeq.cpp.i
 
-.PHONY : TestConcept.i
+.PHONY : TestIndexSeq.i
 
 # target to preprocess a source file
-TestConcept.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/TestConcept.cpp.i
-.PHONY : TestConcept.cpp.i
+TestIndexSeq.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/TestIndexSeq.cpp.i
+.PHONY : TestIndexSeq.cpp.i
 
-TestConcept.s: TestConcept.cpp.s
+TestIndexSeq.s: TestIndexSeq.cpp.s
 
-.PHONY : TestConcept.s
+.PHONY : TestIndexSeq.s
 
 # target to generate assembly for a file
-TestConcept.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/TestConcept.cpp.s
-.PHONY : TestConcept.cpp.s
+TestIndexSeq.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/TestIndexSeq.cpp.s
+.PHONY : TestIndexSeq.cpp.s
+
+TestTemplate.o: TestTemplate.cpp.o
+
+.PHONY : TestTemplate.o
+
+# target to build an object file
+TestTemplate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.o
+.PHONY : TestTemplate.cpp.o
+
+TestTemplate.i: TestTemplate.cpp.i
+
+.PHONY : TestTemplate.i
+
+# target to preprocess a source file
+TestTemplate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.i
+.PHONY : TestTemplate.cpp.i
+
+TestTemplate.s: TestTemplate.cpp.s
+
+.PHONY : TestTemplate.s
+
+# target to generate assembly for a file
+TestTemplate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.s
+.PHONY : TestTemplate.cpp.s
 
 # Help Target
 help:
@@ -257,18 +257,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TestBcopy"
-	@echo "... TestBitZone"
-	@echo "... TestConcept"
-	@echo "... TestBcopy.o"
-	@echo "... TestBcopy.i"
-	@echo "... TestBcopy.s"
-	@echo "... TestBitZone.o"
-	@echo "... TestBitZone.i"
-	@echo "... TestBitZone.s"
-	@echo "... TestConcept.o"
-	@echo "... TestConcept.i"
-	@echo "... TestConcept.s"
+	@echo "... TestFuture"
+	@echo "... TestIndexSeq"
+	@echo "... TestTemplate"
+	@echo "... TestFuture.o"
+	@echo "... TestFuture.i"
+	@echo "... TestFuture.s"
+	@echo "... TestIndexSeq.o"
+	@echo "... TestIndexSeq.i"
+	@echo "... TestIndexSeq.s"
+	@echo "... TestTemplate.o"
+	@echo "... TestTemplate.i"
+	@echo "... TestTemplate.s"
 .PHONY : help
 
 

@@ -72,9 +72,9 @@ CMAKE_BINARY_DIR = /home/ubuntu/MyRep/cpp/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/TestBitZone.dir/all
-all: CMakeFiles/TestBcopy.dir/all
-all: CMakeFiles/TestConcept.dir/all
+all: CMakeFiles/TestFuture.dir/all
+all: CMakeFiles/TestTemplate.dir/all
+all: CMakeFiles/TestIndexSeq.dir/all
 
 .PHONY : all
 
@@ -84,92 +84,92 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/TestBitZone.dir/clean
-clean: CMakeFiles/TestBcopy.dir/clean
-clean: CMakeFiles/TestConcept.dir/clean
+clean: CMakeFiles/TestFuture.dir/clean
+clean: CMakeFiles/TestTemplate.dir/clean
+clean: CMakeFiles/TestIndexSeq.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestBitZone.dir
+# Target rules for target CMakeFiles/TestFuture.dir
 
 # All Build rule for target.
-CMakeFiles/TestBitZone.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=3,4 "Built target TestBitZone"
-.PHONY : CMakeFiles/TestBitZone.dir/all
+CMakeFiles/TestFuture.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=1,2 "Built target TestFuture"
+.PHONY : CMakeFiles/TestFuture.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestBitZone.dir/rule: cmake_check_build_system
+CMakeFiles/TestFuture.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestBitZone.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestFuture.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/TestBitZone.dir/rule
+.PHONY : CMakeFiles/TestFuture.dir/rule
 
 # Convenience name for target.
-TestBitZone: CMakeFiles/TestBitZone.dir/rule
+TestFuture: CMakeFiles/TestFuture.dir/rule
 
-.PHONY : TestBitZone
+.PHONY : TestFuture
 
 # clean rule for target.
-CMakeFiles/TestBitZone.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBitZone.dir/build.make CMakeFiles/TestBitZone.dir/clean
-.PHONY : CMakeFiles/TestBitZone.dir/clean
+CMakeFiles/TestFuture.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/clean
+.PHONY : CMakeFiles/TestFuture.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestBcopy.dir
+# Target rules for target CMakeFiles/TestTemplate.dir
 
 # All Build rule for target.
-CMakeFiles/TestBcopy.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=1,2 "Built target TestBcopy"
-.PHONY : CMakeFiles/TestBcopy.dir/all
+CMakeFiles/TestTemplate.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=5,6 "Built target TestTemplate"
+.PHONY : CMakeFiles/TestTemplate.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestBcopy.dir/rule: cmake_check_build_system
+CMakeFiles/TestTemplate.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestBcopy.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestTemplate.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/TestBcopy.dir/rule
+.PHONY : CMakeFiles/TestTemplate.dir/rule
 
 # Convenience name for target.
-TestBcopy: CMakeFiles/TestBcopy.dir/rule
+TestTemplate: CMakeFiles/TestTemplate.dir/rule
 
-.PHONY : TestBcopy
+.PHONY : TestTemplate
 
 # clean rule for target.
-CMakeFiles/TestBcopy.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBcopy.dir/build.make CMakeFiles/TestBcopy.dir/clean
-.PHONY : CMakeFiles/TestBcopy.dir/clean
+CMakeFiles/TestTemplate.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/clean
+.PHONY : CMakeFiles/TestTemplate.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestConcept.dir
+# Target rules for target CMakeFiles/TestIndexSeq.dir
 
 # All Build rule for target.
-CMakeFiles/TestConcept.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=5,6 "Built target TestConcept"
-.PHONY : CMakeFiles/TestConcept.dir/all
+CMakeFiles/TestIndexSeq.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=3,4 "Built target TestIndexSeq"
+.PHONY : CMakeFiles/TestIndexSeq.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestConcept.dir/rule: cmake_check_build_system
+CMakeFiles/TestIndexSeq.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestConcept.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestIndexSeq.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/TestConcept.dir/rule
+.PHONY : CMakeFiles/TestIndexSeq.dir/rule
 
 # Convenience name for target.
-TestConcept: CMakeFiles/TestConcept.dir/rule
+TestIndexSeq: CMakeFiles/TestIndexSeq.dir/rule
 
-.PHONY : TestConcept
+.PHONY : TestIndexSeq
 
 # clean rule for target.
-CMakeFiles/TestConcept.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestConcept.dir/build.make CMakeFiles/TestConcept.dir/clean
-.PHONY : CMakeFiles/TestConcept.dir/clean
+CMakeFiles/TestIndexSeq.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/clean
+.PHONY : CMakeFiles/TestIndexSeq.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

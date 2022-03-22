@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/cpp/TestTemplate.cpp
+/home/ubuntu/MyRep/cpp/TestIndexSeq.cpp
 iostream
 -
-map
+string
 -
-set
--
-unordered_map
--
-vector
--
-initializer_list
--
-typeinfo
+tuple
 -
 

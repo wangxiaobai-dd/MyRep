@@ -1,5 +1,5 @@
 /home/ubuntu/MyRep/cpp/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestBitZone.dir
-/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestBcopy.dir
+/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestFuture.dir
+/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestTemplate.dir
+/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestIndexSeq.dir
 /home/ubuntu/MyRep/cpp/build/CMakeFiles/edit_cache.dir
-/home/ubuntu/MyRep/cpp/build/CMakeFiles/TestConcept.dir

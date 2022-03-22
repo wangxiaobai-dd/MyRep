@@ -6,19 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/cpp/TestTemplate.cpp
+/home/ubuntu/MyRep/cpp/TestBitand.cpp
 iostream
 -
-map
--
-set
--
-unordered_map
--
-vector
--
-initializer_list
--
-typeinfo
+string
 -
 
