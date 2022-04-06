@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named TestVariant.cpp
+
+# Build rule for target.
+TestVariant.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestVariant.cpp
+.PHONY : TestVariant.cpp
+
+# fast build rule for target.
+TestVariant.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/build
+.PHONY : TestVariant.cpp/fast
+
+#=============================================================================
 # Target rules for targets named TestFuture
 
 # Build rule for target.
@@ -143,17 +156,17 @@ TestFuture/fast:
 .PHONY : TestFuture/fast
 
 #=============================================================================
-# Target rules for targets named TestTemplate
+# Target rules for targets named TestString
 
 # Build rule for target.
-TestTemplate: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTemplate
-.PHONY : TestTemplate
+TestString: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestString
+.PHONY : TestString
 
 # fast build rule for target.
-TestTemplate/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
-.PHONY : TestTemplate/fast
+TestString/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/build
+.PHONY : TestString/fast
 
 #=============================================================================
 # Target rules for targets named TestIndexSeq
@@ -167,6 +180,19 @@ TestIndexSeq: cmake_check_build_system
 TestIndexSeq/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/build
 .PHONY : TestIndexSeq/fast
+
+#=============================================================================
+# Target rules for targets named TestTemplate
+
+# Build rule for target.
+TestTemplate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTemplate
+.PHONY : TestTemplate
+
+# fast build rule for target.
+TestTemplate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
+.PHONY : TestTemplate/fast
 
 TestFuture.o: TestFuture.cpp.o
 
@@ -222,6 +248,33 @@ TestIndexSeq.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/TestIndexSeq.cpp.s
 .PHONY : TestIndexSeq.cpp.s
 
+TestString.o: TestString.cpp.o
+
+.PHONY : TestString.o
+
+# target to build an object file
+TestString.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.o
+.PHONY : TestString.cpp.o
+
+TestString.i: TestString.cpp.i
+
+.PHONY : TestString.i
+
+# target to preprocess a source file
+TestString.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.i
+.PHONY : TestString.cpp.i
+
+TestString.s: TestString.cpp.s
+
+.PHONY : TestString.s
+
+# target to generate assembly for a file
+TestString.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.s
+.PHONY : TestString.cpp.s
+
 TestTemplate.o: TestTemplate.cpp.o
 
 .PHONY : TestTemplate.o
@@ -249,6 +302,33 @@ TestTemplate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.s
 .PHONY : TestTemplate.cpp.s
 
+TestVariant.o: TestVariant.cpp.o
+
+.PHONY : TestVariant.o
+
+# target to build an object file
+TestVariant.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/TestVariant.cpp.o
+.PHONY : TestVariant.cpp.o
+
+TestVariant.i: TestVariant.cpp.i
+
+.PHONY : TestVariant.i
+
+# target to preprocess a source file
+TestVariant.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/TestVariant.cpp.i
+.PHONY : TestVariant.cpp.i
+
+TestVariant.s: TestVariant.cpp.s
+
+.PHONY : TestVariant.s
+
+# target to generate assembly for a file
+TestVariant.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/TestVariant.cpp.s
+.PHONY : TestVariant.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -259,16 +339,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... TestFuture"
 	@echo "... TestIndexSeq"
+	@echo "... TestString"
 	@echo "... TestTemplate"
+	@echo "... TestVariant.cpp"
 	@echo "... TestFuture.o"
 	@echo "... TestFuture.i"
 	@echo "... TestFuture.s"
 	@echo "... TestIndexSeq.o"
 	@echo "... TestIndexSeq.i"
 	@echo "... TestIndexSeq.s"
+	@echo "... TestString.o"
+	@echo "... TestString.i"
+	@echo "... TestString.s"
 	@echo "... TestTemplate.o"
 	@echo "... TestTemplate.i"
 	@echo "... TestTemplate.s"
+	@echo "... TestVariant.o"
+	@echo "... TestVariant.i"
+	@echo "... TestVariant.s"
 .PHONY : help
 
 

@@ -72,9 +72,11 @@ CMAKE_BINARY_DIR = /home/ubuntu/MyRep/cpp/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/TestVariant.cpp.dir/all
 all: CMakeFiles/TestFuture.dir/all
-all: CMakeFiles/TestTemplate.dir/all
+all: CMakeFiles/TestString.dir/all
 all: CMakeFiles/TestIndexSeq.dir/all
+all: CMakeFiles/TestTemplate.dir/all
 
 .PHONY : all
 
@@ -84,11 +86,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/TestVariant.cpp.dir/clean
 clean: CMakeFiles/TestFuture.dir/clean
-clean: CMakeFiles/TestTemplate.dir/clean
+clean: CMakeFiles/TestString.dir/clean
 clean: CMakeFiles/TestIndexSeq.dir/clean
+clean: CMakeFiles/TestTemplate.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/TestVariant.cpp.dir
+
+# All Build rule for target.
+CMakeFiles/TestVariant.cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=9,10 "Built target TestVariant.cpp"
+.PHONY : CMakeFiles/TestVariant.cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TestVariant.cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestVariant.cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/TestVariant.cpp.dir/rule
+
+# Convenience name for target.
+TestVariant.cpp: CMakeFiles/TestVariant.cpp.dir/rule
+
+.PHONY : TestVariant.cpp
+
+# clean rule for target.
+CMakeFiles/TestVariant.cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/clean
+.PHONY : CMakeFiles/TestVariant.cpp.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/TestFuture.dir
@@ -118,31 +149,31 @@ CMakeFiles/TestFuture.dir/clean:
 .PHONY : CMakeFiles/TestFuture.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestTemplate.dir
+# Target rules for target CMakeFiles/TestString.dir
 
 # All Build rule for target.
-CMakeFiles/TestTemplate.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=5,6 "Built target TestTemplate"
-.PHONY : CMakeFiles/TestTemplate.dir/all
+CMakeFiles/TestString.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=5,6 "Built target TestString"
+.PHONY : CMakeFiles/TestString.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestTemplate.dir/rule: cmake_check_build_system
+CMakeFiles/TestString.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestTemplate.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestString.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/TestTemplate.dir/rule
+.PHONY : CMakeFiles/TestString.dir/rule
 
 # Convenience name for target.
-TestTemplate: CMakeFiles/TestTemplate.dir/rule
+TestString: CMakeFiles/TestString.dir/rule
 
-.PHONY : TestTemplate
+.PHONY : TestString
 
 # clean rule for target.
-CMakeFiles/TestTemplate.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/clean
-.PHONY : CMakeFiles/TestTemplate.dir/clean
+CMakeFiles/TestString.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/clean
+.PHONY : CMakeFiles/TestString.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/TestIndexSeq.dir
@@ -170,6 +201,33 @@ TestIndexSeq: CMakeFiles/TestIndexSeq.dir/rule
 CMakeFiles/TestIndexSeq.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/clean
 .PHONY : CMakeFiles/TestIndexSeq.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/TestTemplate.dir
+
+# All Build rule for target.
+CMakeFiles/TestTemplate.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/MyRep/cpp/build/CMakeFiles --progress-num=7,8 "Built target TestTemplate"
+.PHONY : CMakeFiles/TestTemplate.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TestTemplate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestTemplate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/MyRep/cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/TestTemplate.dir/rule
+
+# Convenience name for target.
+TestTemplate: CMakeFiles/TestTemplate.dir/rule
+
+.PHONY : TestTemplate
+
+# clean rule for target.
+CMakeFiles/TestTemplate.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/clean
+.PHONY : CMakeFiles/TestTemplate.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

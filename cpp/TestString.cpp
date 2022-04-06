@@ -23,6 +23,10 @@ int main()
 	printf("%p\n", str.c_str());
 	delete aptr;
 	printf("%p\n", str.data());
+
+	string endwith = {"dir/"};
+	cout << endwith.ends_with("/") << endl;
+	
 	return 0;
 }
 
