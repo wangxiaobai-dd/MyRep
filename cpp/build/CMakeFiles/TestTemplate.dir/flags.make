@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/ubuntu/MyRep/cpp/nvwa
 
-CXX_FLAGS = -g -o2 -fpermissive -std=gnu++2a
+CXX_FLAGS = -g -o2 -fpermissive -std=gnu++2a -D_ALL_SUPER_GM
 

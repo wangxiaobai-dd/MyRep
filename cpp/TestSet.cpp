@@ -53,5 +53,19 @@ int main()
 	testSet.insert(st2);
 	for(const auto& item : vec)
 		std::cout << item.index << std::endl;
+
+	std::set<int> eraseSet;
+	eraseSet.insert(1);
+	eraseSet.insert(2);
+	eraseSet.insert(3);
+	eraseSet.insert(4);
+	eraseSet.insert(5);
+
+	std::set<int> targetSet;
+	targetSet.insert(2);
+	targetSet.insert(3);
+
+	std::set<int> s{1};
+
 }
 	     

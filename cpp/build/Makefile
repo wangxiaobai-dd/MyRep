@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = /home/ubuntu/MyRep/cpp/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/ubuntu/DownDir/cmake-3.19.1-Linux-x86_64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -96,6 +85,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/ubuntu/DownDir/cmake-3.19.1-Linux-x86_64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,56 +130,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestVariant.cpp
+# Target rules for targets named TestExtern
 
 # Build rule for target.
-TestVariant.cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestVariant.cpp
-.PHONY : TestVariant.cpp
+TestExtern: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestExtern
+.PHONY : TestExtern
 
 # fast build rule for target.
-TestVariant.cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/build
-.PHONY : TestVariant.cpp/fast
+TestExtern/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExtern.dir/build.make CMakeFiles/TestExtern.dir/build
+.PHONY : TestExtern/fast
 
 #=============================================================================
-# Target rules for targets named TestFuture
+# Target rules for targets named TestDownCast
 
 # Build rule for target.
-TestFuture: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestFuture
-.PHONY : TestFuture
+TestDownCast: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestDownCast
+.PHONY : TestDownCast
 
 # fast build rule for target.
-TestFuture/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/build
-.PHONY : TestFuture/fast
-
-#=============================================================================
-# Target rules for targets named TestString
-
-# Build rule for target.
-TestString: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestString
-.PHONY : TestString
-
-# fast build rule for target.
-TestString/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/build
-.PHONY : TestString/fast
-
-#=============================================================================
-# Target rules for targets named TestIndexSeq
-
-# Build rule for target.
-TestIndexSeq: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestIndexSeq
-.PHONY : TestIndexSeq
-
-# fast build rule for target.
-TestIndexSeq/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/build
-.PHONY : TestIndexSeq/fast
+TestDownCast/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDownCast.dir/build.make CMakeFiles/TestDownCast.dir/build
+.PHONY : TestDownCast/fast
 
 #=============================================================================
 # Target rules for targets named TestTemplate
@@ -194,86 +168,179 @@ TestTemplate/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
 .PHONY : TestTemplate/fast
 
-TestFuture.o: TestFuture.cpp.o
+#=============================================================================
+# Target rules for targets named TestSet
 
-.PHONY : TestFuture.o
+# Build rule for target.
+TestSet: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestSet
+.PHONY : TestSet
 
-# target to build an object file
-TestFuture.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/TestFuture.cpp.o
-.PHONY : TestFuture.cpp.o
+# fast build rule for target.
+TestSet/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSet.dir/build.make CMakeFiles/TestSet.dir/build
+.PHONY : TestSet/fast
 
-TestFuture.i: TestFuture.cpp.i
+#=============================================================================
+# Target rules for targets named TestVector
 
-.PHONY : TestFuture.i
+# Build rule for target.
+TestVector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestVector
+.PHONY : TestVector
 
-# target to preprocess a source file
-TestFuture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/TestFuture.cpp.i
-.PHONY : TestFuture.cpp.i
+# fast build rule for target.
+TestVector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVector.dir/build.make CMakeFiles/TestVector.dir/build
+.PHONY : TestVector/fast
 
-TestFuture.s: TestFuture.cpp.s
+#=============================================================================
+# Target rules for targets named TestSharedPtr
 
-.PHONY : TestFuture.s
+# Build rule for target.
+TestSharedPtr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestSharedPtr
+.PHONY : TestSharedPtr
 
-# target to generate assembly for a file
-TestFuture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFuture.dir/build.make CMakeFiles/TestFuture.dir/TestFuture.cpp.s
-.PHONY : TestFuture.cpp.s
+# fast build rule for target.
+TestSharedPtr/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSharedPtr.dir/build.make CMakeFiles/TestSharedPtr.dir/build
+.PHONY : TestSharedPtr/fast
 
-TestIndexSeq.o: TestIndexSeq.cpp.o
+TestDownCast.o: TestDownCast.cpp.o
 
-.PHONY : TestIndexSeq.o
-
-# target to build an object file
-TestIndexSeq.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/TestIndexSeq.cpp.o
-.PHONY : TestIndexSeq.cpp.o
-
-TestIndexSeq.i: TestIndexSeq.cpp.i
-
-.PHONY : TestIndexSeq.i
-
-# target to preprocess a source file
-TestIndexSeq.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/TestIndexSeq.cpp.i
-.PHONY : TestIndexSeq.cpp.i
-
-TestIndexSeq.s: TestIndexSeq.cpp.s
-
-.PHONY : TestIndexSeq.s
-
-# target to generate assembly for a file
-TestIndexSeq.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestIndexSeq.dir/build.make CMakeFiles/TestIndexSeq.dir/TestIndexSeq.cpp.s
-.PHONY : TestIndexSeq.cpp.s
-
-TestString.o: TestString.cpp.o
-
-.PHONY : TestString.o
+.PHONY : TestDownCast.o
 
 # target to build an object file
-TestString.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.o
-.PHONY : TestString.cpp.o
+TestDownCast.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDownCast.dir/build.make CMakeFiles/TestDownCast.dir/TestDownCast.cpp.o
+.PHONY : TestDownCast.cpp.o
 
-TestString.i: TestString.cpp.i
+TestDownCast.i: TestDownCast.cpp.i
 
-.PHONY : TestString.i
+.PHONY : TestDownCast.i
 
 # target to preprocess a source file
-TestString.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.i
-.PHONY : TestString.cpp.i
+TestDownCast.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDownCast.dir/build.make CMakeFiles/TestDownCast.dir/TestDownCast.cpp.i
+.PHONY : TestDownCast.cpp.i
 
-TestString.s: TestString.cpp.s
+TestDownCast.s: TestDownCast.cpp.s
 
-.PHONY : TestString.s
+.PHONY : TestDownCast.s
 
 # target to generate assembly for a file
-TestString.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/TestString.cpp.s
-.PHONY : TestString.cpp.s
+TestDownCast.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestDownCast.dir/build.make CMakeFiles/TestDownCast.dir/TestDownCast.cpp.s
+.PHONY : TestDownCast.cpp.s
+
+TestExtern.o: TestExtern.cpp.o
+
+.PHONY : TestExtern.o
+
+# target to build an object file
+TestExtern.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExtern.dir/build.make CMakeFiles/TestExtern.dir/TestExtern.cpp.o
+.PHONY : TestExtern.cpp.o
+
+TestExtern.i: TestExtern.cpp.i
+
+.PHONY : TestExtern.i
+
+# target to preprocess a source file
+TestExtern.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExtern.dir/build.make CMakeFiles/TestExtern.dir/TestExtern.cpp.i
+.PHONY : TestExtern.cpp.i
+
+TestExtern.s: TestExtern.cpp.s
+
+.PHONY : TestExtern.s
+
+# target to generate assembly for a file
+TestExtern.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExtern.dir/build.make CMakeFiles/TestExtern.dir/TestExtern.cpp.s
+.PHONY : TestExtern.cpp.s
+
+TestExtern2.o: TestExtern2.cpp.o
+
+.PHONY : TestExtern2.o
+
+# target to build an object file
+TestExtern2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExtern.dir/build.make CMakeFiles/TestExtern.dir/TestExtern2.cpp.o
+.PHONY : TestExtern2.cpp.o
+
+TestExtern2.i: TestExtern2.cpp.i
+
+.PHONY : TestExtern2.i
+
+# target to preprocess a source file
+TestExtern2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExtern.dir/build.make CMakeFiles/TestExtern.dir/TestExtern2.cpp.i
+.PHONY : TestExtern2.cpp.i
+
+TestExtern2.s: TestExtern2.cpp.s
+
+.PHONY : TestExtern2.s
+
+# target to generate assembly for a file
+TestExtern2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExtern.dir/build.make CMakeFiles/TestExtern.dir/TestExtern2.cpp.s
+.PHONY : TestExtern2.cpp.s
+
+TestSet.o: TestSet.cpp.o
+
+.PHONY : TestSet.o
+
+# target to build an object file
+TestSet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSet.dir/build.make CMakeFiles/TestSet.dir/TestSet.cpp.o
+.PHONY : TestSet.cpp.o
+
+TestSet.i: TestSet.cpp.i
+
+.PHONY : TestSet.i
+
+# target to preprocess a source file
+TestSet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSet.dir/build.make CMakeFiles/TestSet.dir/TestSet.cpp.i
+.PHONY : TestSet.cpp.i
+
+TestSet.s: TestSet.cpp.s
+
+.PHONY : TestSet.s
+
+# target to generate assembly for a file
+TestSet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSet.dir/build.make CMakeFiles/TestSet.dir/TestSet.cpp.s
+.PHONY : TestSet.cpp.s
+
+TestSharedPtr.o: TestSharedPtr.cpp.o
+
+.PHONY : TestSharedPtr.o
+
+# target to build an object file
+TestSharedPtr.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSharedPtr.dir/build.make CMakeFiles/TestSharedPtr.dir/TestSharedPtr.cpp.o
+.PHONY : TestSharedPtr.cpp.o
+
+TestSharedPtr.i: TestSharedPtr.cpp.i
+
+.PHONY : TestSharedPtr.i
+
+# target to preprocess a source file
+TestSharedPtr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSharedPtr.dir/build.make CMakeFiles/TestSharedPtr.dir/TestSharedPtr.cpp.i
+.PHONY : TestSharedPtr.cpp.i
+
+TestSharedPtr.s: TestSharedPtr.cpp.s
+
+.PHONY : TestSharedPtr.s
+
+# target to generate assembly for a file
+TestSharedPtr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSharedPtr.dir/build.make CMakeFiles/TestSharedPtr.dir/TestSharedPtr.cpp.s
+.PHONY : TestSharedPtr.cpp.s
 
 TestTemplate.o: TestTemplate.cpp.o
 
@@ -302,32 +369,32 @@ TestTemplate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/TestTemplate.cpp.s
 .PHONY : TestTemplate.cpp.s
 
-TestVariant.o: TestVariant.cpp.o
+TestVector.o: TestVector.cpp.o
 
-.PHONY : TestVariant.o
+.PHONY : TestVector.o
 
 # target to build an object file
-TestVariant.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/TestVariant.cpp.o
-.PHONY : TestVariant.cpp.o
+TestVector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVector.dir/build.make CMakeFiles/TestVector.dir/TestVector.cpp.o
+.PHONY : TestVector.cpp.o
 
-TestVariant.i: TestVariant.cpp.i
+TestVector.i: TestVector.cpp.i
 
-.PHONY : TestVariant.i
+.PHONY : TestVector.i
 
 # target to preprocess a source file
-TestVariant.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/TestVariant.cpp.i
-.PHONY : TestVariant.cpp.i
+TestVector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVector.dir/build.make CMakeFiles/TestVector.dir/TestVector.cpp.i
+.PHONY : TestVector.cpp.i
 
-TestVariant.s: TestVariant.cpp.s
+TestVector.s: TestVector.cpp.s
 
-.PHONY : TestVariant.s
+.PHONY : TestVector.s
 
 # target to generate assembly for a file
-TestVariant.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVariant.cpp.dir/build.make CMakeFiles/TestVariant.cpp.dir/TestVariant.cpp.s
-.PHONY : TestVariant.cpp.s
+TestVector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVector.dir/build.make CMakeFiles/TestVector.dir/TestVector.cpp.s
+.PHONY : TestVector.cpp.s
 
 # Help Target
 help:
@@ -337,26 +404,33 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TestFuture"
-	@echo "... TestIndexSeq"
-	@echo "... TestString"
+	@echo "... TestDownCast"
+	@echo "... TestExtern"
+	@echo "... TestSet"
+	@echo "... TestSharedPtr"
 	@echo "... TestTemplate"
-	@echo "... TestVariant.cpp"
-	@echo "... TestFuture.o"
-	@echo "... TestFuture.i"
-	@echo "... TestFuture.s"
-	@echo "... TestIndexSeq.o"
-	@echo "... TestIndexSeq.i"
-	@echo "... TestIndexSeq.s"
-	@echo "... TestString.o"
-	@echo "... TestString.i"
-	@echo "... TestString.s"
+	@echo "... TestVector"
+	@echo "... TestDownCast.o"
+	@echo "... TestDownCast.i"
+	@echo "... TestDownCast.s"
+	@echo "... TestExtern.o"
+	@echo "... TestExtern.i"
+	@echo "... TestExtern.s"
+	@echo "... TestExtern2.o"
+	@echo "... TestExtern2.i"
+	@echo "... TestExtern2.s"
+	@echo "... TestSet.o"
+	@echo "... TestSet.i"
+	@echo "... TestSet.s"
+	@echo "... TestSharedPtr.o"
+	@echo "... TestSharedPtr.i"
+	@echo "... TestSharedPtr.s"
 	@echo "... TestTemplate.o"
 	@echo "... TestTemplate.i"
 	@echo "... TestTemplate.s"
-	@echo "... TestVariant.o"
-	@echo "... TestVariant.i"
-	@echo "... TestVariant.s"
+	@echo "... TestVector.o"
+	@echo "... TestVector.i"
+	@echo "... TestVector.s"
 .PHONY : help
 
 
