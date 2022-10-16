@@ -26,6 +26,14 @@ int main()
 
 	string endwith = {"dir/"};
 	cout << endwith.ends_with("/") << endl;
+
+	unsigned char buf[5] = {0};
+	buf[1] = 'a';
+	std::string strs;
+	strs.assign(std::begin(buf), std::end(buf)-1);
+
+	char buf2[5];
+	strs.assign(buf2, 5);
 	
 	return 0;
 }

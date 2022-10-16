@@ -16,8 +16,19 @@
 
 using namespace std;
 
+struct B
+{
+	struct A
+	{
+		std::vector<int> v;
+	}Aa;
+};
+
+
 int main()
 {
+	B Bb;
+	std::cout << Bb.Aa.v.size() << std::endl;
 	vector<int> a(10);
 	//a.resize(2);
 	//a.resize(1);
@@ -43,6 +54,9 @@ int main()
 	cout << s2.use_count() << endl;
 	b.resize(1);
 	cout << s2.use_count() << endl;
+
+	int aa[3];
+	cout << sizeof(aa) << endl;
 	return 0;
 }
 

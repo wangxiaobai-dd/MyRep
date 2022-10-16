@@ -1,1 +1,1 @@
-/home/ubuntu/DownDir/cmake-3.19.1-Linux-x86_64/bin/cmake -E time /usr/bin/g++ -g -o2 -fpermissive -std=gnu++2a CMakeFiles/TestString.dir/TestString.cpp.o -o TestString 
+/home/ubuntu/DownDir/cmake-3.19.1-Linux-x86_64/bin/cmake -E time /usr/bin/g++ -g -o2 -fpermissive -std=gnu++2a -D_ALL_SUPER_GM CMakeFiles/TestString.dir/TestString.cpp.o -o TestString 

@@ -25,4 +25,6 @@ namespace ser{
 	}
 
 	void A::test(){ aa->a; }
+
 }
+extern int const aaaa = 4;

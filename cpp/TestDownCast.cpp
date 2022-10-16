@@ -80,6 +80,8 @@ struct B : public A{};
 
 int main()
 {
+	throw std::runtime_error("message");
+	/*
 	ScenePk* p = new SceneUser();
 	SceneUser* user = down_cast<SceneUser*>(p);
 	cout << user->type << endl;
@@ -89,6 +91,7 @@ int main()
 
 	A* a = new B();
 	down_cast<B*>(a);
+	*/
 
 	return 0;
 }

@@ -12,7 +12,9 @@ int main()
 {
 	//aa.test();
 	ser::init();
+	extern int aaaa;
 	std::cout << ser::aa->a << std::endl;
+	std::cout << aaaa << std::endl;
 	return 0;
 }
 

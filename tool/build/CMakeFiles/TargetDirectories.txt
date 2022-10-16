@@ -1,8 +1,3 @@
-/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/EventLoop.dir
-/home/ubuntu/MyRep/ToolDir/build/CMakeFiles/edit_cache.dir
-/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/edit_cache.dir
-/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/desset.dir
-/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/PBTest3.dir
-/home/ubuntu/MyRep/ToolDir/build/proto/CMakeFiles/ctags.dir
+/home/ubuntu/MyRep/tool/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/MyRep/tool/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/MyRep/tool/build/CMakeFiles/BitMove.dir

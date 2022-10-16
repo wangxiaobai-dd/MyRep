@@ -1,1 +1,0 @@
-/usr/bin/clang++  -g -Werror -std=gnu++14 -Wno-invalid-source-encoding -fdiagnostics-format=vi   CMakeFiles/PBTest2.dir/ProtoTest2.cpp.o  -o PBTest2  -L/usr/local/lib -Wl,-rpath,/usr/local/lib /usr/local/lib/libprotobuf.so -lpthread 

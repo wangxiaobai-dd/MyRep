@@ -37,9 +37,17 @@ class DDD : public BBB<T>
 
 };
 
-struct A{  int a = 0; int b = 0;};
+struct A{  int a = 0; int b = 0;
 
-struct B : public A{};
+	template <typename T>
+	void send(){ std::cout << "send : a" << std::endl;}
+
+};
+
+struct B : public A{
+	template <typename T>
+		void send(){ std::cout << "send : b" << std::endl;}
+};
 
 struct C { int a = 0; int b = 0; };
 
@@ -134,7 +142,10 @@ int main()
 
 	// ODR
 	const char* name = typeid(odr).name();
-	return sizeof(odr);
+	//return sizeof(odr);
+
+	A* bbbb = new B();
+	bbbb->send<int>(); // aaa
 	
 	return 0;
 }

@@ -23,14 +23,40 @@ struct Foo {
 	}
 	int data = 10;
 };
-using namespace std;
+//using namespace std;
 
-int main()
+#include <iostream>
+#include <type_traits>
+#include <functional>
+void test(int a)
 {
-	using namespace std::placeholders;  // for _1, _2, _3...
-	std::shared_ptr<Foo> foo = std::make_shared<Foo>();
-	auto f3 = std::bind(&Foo::print_sum, &foo, 95, _1);
-	cout << foo.use_count() << endl;
-	return 0;
+	std::cout << a ;
+}
+
+
+template <typename Function, typename... Args>
+	static std::enable_if_t<std::is_void_v<std::invoke_result_t<Function, Args...>>>
+call( Function func)
+{
+	std::cout << "invoke return void" << std::endl;
+	func();
+}
+
+
+template <typename Function, typename... Args>
+	static std::enable_if_t<!std::is_void_v<std::invoke_result_t<Function, Args...>>>
+call( Function func)
+{
+	std::cout << "invoke return non-void" << std::endl;
+	func();
+}
+
+int main() 
+{
+
+	auto f = std::bind(test, 1);
+
+	call(f);
+
 }
 
