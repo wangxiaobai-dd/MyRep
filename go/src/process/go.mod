@@ -3,6 +3,8 @@ module process
 go 1.15
 
 require (
-	github.com/shirou/gopsutil v3.20.12+incompatible // indirect
-	golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c // indirect
+	github.com/StackExchange/wmi v1.2.1 // indirect
+	github.com/shirou/gopsutil v3.20.12+incompatible
+	github.com/stretchr/testify v1.8.1 // indirect
+	golang.org/x/sys v0.1.0 // indirect
 )
