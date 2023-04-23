@@ -13,6 +13,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <list>
 
 using namespace std;
 
@@ -22,13 +23,14 @@ struct B
 	{
 		std::vector<int> v;
 	}Aa;
+	~B(){ std::cout << "~b" << std::endl;}
 };
 
 
 int main()
 {
-	B Bb;
-	std::cout << Bb.Aa.v.size() << std::endl;
+	//B Bb;
+	//std::cout << Bb.Aa.v.size() << std::endl;
 	vector<int> a(10);
 	//a.resize(2);
 	//a.resize(1);
@@ -57,6 +59,22 @@ int main()
 
 	int aa[3];
 	cout << sizeof(aa) << endl;
+
+	std::list<B*> bVec;
+	B* bb1 = new B();
+	bVec.push_back(bb1);
+	bVec.erase(bVec.begin());
+	//delete(bb1);
+	//
+	int aint = 0;
+	unsigned int bint = 1;
+	aint = aint - bint;
+	cout << aint << endl;
+
+	string str;
+	str.starts_with("");
+	while(true);
+	
 	return 0;
 }
 

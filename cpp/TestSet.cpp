@@ -15,7 +15,8 @@ struct sortSt
 	// 相同对象不能返回true
 	bool operator < (const sortSt& info) const
 	{
-		return this->index > info.index;
+		return this->index < info.index;
+		//return false;
 	}
 	/*friend bool operator < (const sortSt& lhs, const sortSt& rhs)
 	{
@@ -40,7 +41,7 @@ int main()
 	sortSt st1;
 	st1.index = 1;
 	sortSt st2;
-	st2.index = 1;
+	st2.index = 0;
 	std::vector<sortSt> vec;
 
 	// 扩展容量 会调用拷贝构造函数
@@ -51,8 +52,8 @@ int main()
 	std::set<sortSt> testSet;
 	testSet.insert(st1);
 	testSet.insert(st2);
-	for(const auto& item : vec)
-		std::cout << item.index << std::endl;
+	for(const auto& item : testSet)
+		std::cout << "set:" << item.index << std::endl;
 
 	std::set<int> eraseSet;
 	eraseSet.insert(1);

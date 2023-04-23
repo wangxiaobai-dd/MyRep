@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <string>
+#include <memory>
 
 using namespace std;
 
@@ -51,11 +52,33 @@ struct C : public A
 	void test4(){ cout << "C" << endl;};
 };
 
+template <typename T>
+struct D
+{
+	using ptrT = std::shared_ptr<T>;
+
+	ptrT find();
+};
+
+struct E : public D<int>
+{
+	ptrT a;
+};
+
+template <typename T>
+D<T>::ptrT find()
+{}
+
 int main()
 {
 	A* obj = new B();
 	((C*)obj)->test();
 	((C*)obj)->test4();
+
+	E e;
+	cout << e.a << endl;
+
+
 	
 	return 0;
 }

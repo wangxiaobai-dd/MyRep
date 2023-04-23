@@ -4,9 +4,9 @@
 
 using namespace std;
 
-void test()
+void test(const void *a, int size)
 {
-
+	std::string str(reinterpret_cast<const char*>(a), size);
 }
 
 struct A
@@ -34,7 +34,16 @@ int main()
 
 	char buf2[5];
 	strs.assign(buf2, 5);
-	
+
+	A send;
+	test(&send, sizeof(send));
+	cout << (unsigned long)-1 << endl;
+
+	string connect;
+	unsigned int a = 1111;
+	connect += a/2 + "a";
+	cout << "connnect:" << connect << endl;
+
 	return 0;
 }
 

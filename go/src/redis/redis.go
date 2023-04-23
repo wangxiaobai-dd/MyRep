@@ -23,9 +23,9 @@ func main() {
 	if strings.HasPrefix("1qaaa", "qa") {
 		log.Println("qaaa") // Output: PONG <nil>
 	}
-	//ExampleClient_List()
+	ExampleClient_List()
 	//ExampleClient_SortSet()
-	ExampleClient_Hash()
+	//	ExampleClient_Hash()
 }
 
 /*
@@ -66,15 +66,15 @@ func ExampleClient_List() {
 	defer log.Println("ExampleClient_List")
 
 	//添加
-	log.Println(redisdb.RPush("list_test", "message1").Err())
-	log.Println(redisdb.RPush("list_test", "message2").Err())
+	log.Println(redisdb.RPush("list_test", "message1").Result())
+	log.Println(redisdb.RPush("list_test", "message2").Result())
 
 	//设置
 	log.Println(redisdb.LSet("list_test", 2, "message set").Err())
 
 	//remove
 	ret, err := redisdb.LRem("list_test", 3, "message1").Result()
-	log.Println(ret, err)
+	log.Println("remove:", ret, err)
 
 	rLen, err := redisdb.LLen("list_test").Result()
 	log.Println(rLen, err)
