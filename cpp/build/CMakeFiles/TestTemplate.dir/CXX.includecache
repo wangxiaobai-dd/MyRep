@@ -6,19 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/cpp/TestTemplate.cpp
-iostream
--
-map
--
-set
--
-unordered_map
--
-vector
--
-initializer_list
--
-typeinfo
--
-

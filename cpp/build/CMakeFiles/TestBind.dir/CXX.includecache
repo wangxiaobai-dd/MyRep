@@ -6,23 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/cpp/TestBind.cpp
-iostream
--
-string
--
-random
--
-iostream
--
-memory
--
-functional
--
-iostream
--
-type_traits
--
-functional
--
-

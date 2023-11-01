@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <string>
+#include <map>
 
 using namespace std;
 
@@ -54,6 +55,9 @@ int main()
 {
 	//A<1> a;
 	B<3> b;
+
+	std::map<int, int> mapp;
+	cout << sizeof(mapp) << endl;
 
 	while(true);
 	return 0;

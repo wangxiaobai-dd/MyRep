@@ -1,18 +1,51 @@
+#include <concepts>
 #include <iostream>
-#include <string>
 
-using namespace std;
-
-template <typename T> concept HasSize = requires (T x){ 
-	{x.size()} -> std::convertible_to<std::size_t>; 
+class BaseClass {
+public:
+    int getValue() const {
+        return 1;
+    }
 };
 
-template<typename T> 
-requires Incrementable<T> && Decrementable<T> 
-void Foo(T t); 
+class DerivedClass: public BaseClass {
+public:
+    int getValue() const {
+        return 2;
+    }
+};
 
-int main()
-{
-	return 0;
+class NonDerivedClass {
+public:
+    int getValue() const {
+        return 3;
+    }
+};
+
+template<class T>
+concept DerivedOfBaseClass = std::is_base_of_v<BaseClass, T>;
+
+template <DerivedOfBaseClass T>
+void doGetValue(const T& a) {
+    std::cout << "Get value:" << a.getValue() << std::endl;
 }
 
+int c2() {
+    DerivedClass d;
+    doGetValue(d);
+
+    BaseClass b;
+    doGetValue(b);
+
+    // 解除注释会引发错误
+    // NonDerivedClass n;
+    // doGetValue(n);
+
+    return 0;
+}
+
+int main() {
+    c2();
+
+    return 0;
+}

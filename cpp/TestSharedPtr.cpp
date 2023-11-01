@@ -159,6 +159,10 @@ int main()
 		C* c = new C(1);
 		c->test3();
 
+		std::shared_ptr<B> bPtr;
+		if(!bPtr)
+			cout << "null bPtr" << endl;
+
 		while(true);
 
 		//cout << ref2.use_count() << endl;

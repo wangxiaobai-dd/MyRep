@@ -5,6 +5,7 @@
 #include <typeinfo>
 #include <map>
 #include <vector>
+#include <memory>
 using namespace std;
  
 struct sortSt
@@ -24,6 +25,23 @@ struct sortSt
 	}
 	*/
 };
+
+struct event
+{
+	int time = 0;
+	int tableID = 0;
+};
+
+struct com
+{
+	bool operator ()(const std::shared_ptr<event> e1, const std::shared_ptr<event> e2) const
+	{
+		if(e1->time != e2->time)
+			return e1->time < e2->time;
+		return e1->tableID < e2->tableID;
+	}
+};
+
 int main()
 {
 	//std::set<int> coll;
@@ -68,5 +86,52 @@ int main()
 
 	std::set<int> s{1};
 
+
+	cout << "test event" << endl;
+	set<std::shared_ptr<event>, com> eventSet, eventSet2;
+	auto e1 = std::make_shared<event>();
+	e1->time = 1;
+	e1->tableID = 1;
+
+	auto e2 = std::make_shared<event>();
+	e2->time = 2;
+	e2->tableID = 2;
+
+	auto e3  = std::make_shared<event>();
+	e3->time = 4;
+	e3->tableID = 4;
+	auto e4  = std::make_shared<event>();
+
+	eventSet.insert(e2);
+	eventSet.insert(e1);
+
+
+	eventSet2.insert(e3);
+	
+	
+	/*
+	auto ptr = *eventSet.begin();
+	ptr->time = 3;
+	*/
+
+	//eventSet.insert(e3);
+	for(auto p : eventSet)
+		cout << "set:" <<  p->time << "table:" << p->tableID << endl;
+
+	auto nh = eventSet.extract(e4);
+	if(!nh.empty())
+	{
+		cout << "nh" << endl;
+		nh.value()->time = 100;
+		eventSet.insert(std::move(nh));
+		cout << typeid(nh).name() << endl;
+	}
+	else
+		cout << "no nh" << endl;
+
+	cout << "size:" << eventSet.size() << endl;
+
+	for(auto p : eventSet)
+		cout << "set:" <<  p->time << "table:" << p->tableID << endl;
 }
 	     

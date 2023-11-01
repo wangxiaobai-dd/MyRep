@@ -9,6 +9,7 @@
  */
 
 #include<iostream>
+#include <string.h>
 using namespace std;
 
 template<class T>
@@ -30,6 +31,16 @@ int main()
     //cout << end(arr) << endl;
     //cout << begin(arr) << endl;
     cout << "数组的长度为：" << end(arr)-begin(arr) << endl;
-    system("pause");
+
+	int i = 3;
+	unsigned short brr[2][2] = {0};
+	brr[1][1] = 3;
+	cout << *(brr[0] + i) << endl; 
+	cout << brr[0][1] << endl;
+	cout << brr[1][1] << endl;
+
+	bzero(brr, sizeof(brr));
+	cout << sizeof(brr) << endl;
+
     return 0;
 }

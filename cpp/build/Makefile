@@ -143,199 +143,30 @@ TestRand/fast:
 .PHONY : TestRand/fast
 
 #=============================================================================
-# Target rules for targets named TestThread
+# Target rules for targets named TestFunctionTraits
 
 # Build rule for target.
-TestThread: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestThread
-.PHONY : TestThread
+TestFunctionTraits: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestFunctionTraits
+.PHONY : TestFunctionTraits
 
 # fast build rule for target.
-TestThread/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestThread.dir/build.make CMakeFiles/TestThread.dir/build
-.PHONY : TestThread/fast
+TestFunctionTraits/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFunctionTraits.dir/build.make CMakeFiles/TestFunctionTraits.dir/build
+.PHONY : TestFunctionTraits/fast
 
 #=============================================================================
-# Target rules for targets named TestTruncation
+# Target rules for targets named TestLibXml
 
 # Build rule for target.
-TestTruncation: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTruncation
-.PHONY : TestTruncation
+TestLibXml: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestLibXml
+.PHONY : TestLibXml
 
 # fast build rule for target.
-TestTruncation/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTruncation.dir/build.make CMakeFiles/TestTruncation.dir/build
-.PHONY : TestTruncation/fast
-
-#=============================================================================
-# Target rules for targets named TestTemplate
-
-# Build rule for target.
-TestTemplate: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTemplate
-.PHONY : TestTemplate
-
-# fast build rule for target.
-TestTemplate/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
-.PHONY : TestTemplate/fast
-
-#=============================================================================
-# Target rules for targets named TestInheracy
-
-# Build rule for target.
-TestInheracy: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestInheracy
-.PHONY : TestInheracy
-
-# fast build rule for target.
-TestInheracy/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestInheracy.dir/build.make CMakeFiles/TestInheracy.dir/build
-.PHONY : TestInheracy/fast
-
-#=============================================================================
-# Target rules for targets named TestExtern
-
-# Build rule for target.
-TestExtern: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestExtern
-.PHONY : TestExtern
-
-# fast build rule for target.
-TestExtern/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExtern.dir/build.make CMakeFiles/TestExtern.dir/build
-.PHONY : TestExtern/fast
-
-#=============================================================================
-# Target rules for targets named TestMemoryCopy
-
-# Build rule for target.
-TestMemoryCopy: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestMemoryCopy
-.PHONY : TestMemoryCopy
-
-# fast build rule for target.
-TestMemoryCopy/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMemoryCopy.dir/build.make CMakeFiles/TestMemoryCopy.dir/build
-.PHONY : TestMemoryCopy/fast
-
-#=============================================================================
-# Target rules for targets named TestString
-
-# Build rule for target.
-TestString: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestString
-.PHONY : TestString
-
-# fast build rule for target.
-TestString/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/build
-.PHONY : TestString/fast
-
-#=============================================================================
-# Target rules for targets named TestBind
-
-# Build rule for target.
-TestBind: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestBind
-.PHONY : TestBind
-
-# fast build rule for target.
-TestBind/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBind.dir/build.make CMakeFiles/TestBind.dir/build
-.PHONY : TestBind/fast
-
-#=============================================================================
-# Target rules for targets named TestTypedef
-
-# Build rule for target.
-TestTypedef: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTypedef
-.PHONY : TestTypedef
-
-# fast build rule for target.
-TestTypedef/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTypedef.dir/build.make CMakeFiles/TestTypedef.dir/build
-.PHONY : TestTypedef/fast
-
-#=============================================================================
-# Target rules for targets named TestMakeHeap
-
-# Build rule for target.
-TestMakeHeap: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestMakeHeap
-.PHONY : TestMakeHeap
-
-# fast build rule for target.
-TestMakeHeap/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMakeHeap.dir/build.make CMakeFiles/TestMakeHeap.dir/build
-.PHONY : TestMakeHeap/fast
-
-#=============================================================================
-# Target rules for targets named TestOverride
-
-# Build rule for target.
-TestOverride: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestOverride
-.PHONY : TestOverride
-
-# fast build rule for target.
-TestOverride/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestOverride.dir/build.make CMakeFiles/TestOverride.dir/build
-.PHONY : TestOverride/fast
-
-#=============================================================================
-# Target rules for targets named TestTuple
-
-# Build rule for target.
-TestTuple: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTuple
-.PHONY : TestTuple
-
-# fast build rule for target.
-TestTuple/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTuple.dir/build.make CMakeFiles/TestTuple.dir/build
-.PHONY : TestTuple/fast
-
-#=============================================================================
-# Target rules for targets named TestUnsigned
-
-# Build rule for target.
-TestUnsigned: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestUnsigned
-.PHONY : TestUnsigned
-
-# fast build rule for target.
-TestUnsigned/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestUnsigned.dir/build.make CMakeFiles/TestUnsigned.dir/build
-.PHONY : TestUnsigned/fast
-
-#=============================================================================
-# Target rules for targets named TestSharedPtr
-
-# Build rule for target.
-TestSharedPtr: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestSharedPtr
-.PHONY : TestSharedPtr
-
-# fast build rule for target.
-TestSharedPtr/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSharedPtr.dir/build.make CMakeFiles/TestSharedPtr.dir/build
-.PHONY : TestSharedPtr/fast
-
-#=============================================================================
-# Target rules for targets named TestVector
-
-# Build rule for target.
-TestVector: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestVector
-.PHONY : TestVector
-
-# fast build rule for target.
-TestVector/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVector.dir/build.make CMakeFiles/TestVector.dir/build
-.PHONY : TestVector/fast
+TestLibXml/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLibXml.dir/build.make CMakeFiles/TestLibXml.dir/build
+.PHONY : TestLibXml/fast
 
 #=============================================================================
 # Target rules for targets named TestConstruct
@@ -351,30 +182,17 @@ TestConstruct/fast:
 .PHONY : TestConstruct/fast
 
 #=============================================================================
-# Target rules for targets named TestMetaProgram
+# Target rules for targets named TestUnsigned
 
 # Build rule for target.
-TestMetaProgram: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestMetaProgram
-.PHONY : TestMetaProgram
+TestUnsigned: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestUnsigned
+.PHONY : TestUnsigned
 
 # fast build rule for target.
-TestMetaProgram/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMetaProgram.dir/build.make CMakeFiles/TestMetaProgram.dir/build
-.PHONY : TestMetaProgram/fast
-
-#=============================================================================
-# Target rules for targets named TestFunctionTraits
-
-# Build rule for target.
-TestFunctionTraits: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestFunctionTraits
-.PHONY : TestFunctionTraits
-
-# fast build rule for target.
-TestFunctionTraits/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFunctionTraits.dir/build.make CMakeFiles/TestFunctionTraits.dir/build
-.PHONY : TestFunctionTraits/fast
+TestUnsigned/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestUnsigned.dir/build.make CMakeFiles/TestUnsigned.dir/build
+.PHONY : TestUnsigned/fast
 
 #=============================================================================
 # Target rules for targets named TestSet
@@ -388,6 +206,267 @@ TestSet: cmake_check_build_system
 TestSet/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSet.dir/build.make CMakeFiles/TestSet.dir/build
 .PHONY : TestSet/fast
+
+#=============================================================================
+# Target rules for targets named TestMacro
+
+# Build rule for target.
+TestMacro: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestMacro
+.PHONY : TestMacro
+
+# fast build rule for target.
+TestMacro/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMacro.dir/build.make CMakeFiles/TestMacro.dir/build
+.PHONY : TestMacro/fast
+
+#=============================================================================
+# Target rules for targets named TestMetaProgram
+
+# Build rule for target.
+TestMetaProgram: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestMetaProgram
+.PHONY : TestMetaProgram
+
+# fast build rule for target.
+TestMetaProgram/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMetaProgram.dir/build.make CMakeFiles/TestMetaProgram.dir/build
+.PHONY : TestMetaProgram/fast
+
+#=============================================================================
+# Target rules for targets named TestTuple
+
+# Build rule for target.
+TestTuple: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTuple
+.PHONY : TestTuple
+
+# fast build rule for target.
+TestTuple/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTuple.dir/build.make CMakeFiles/TestTuple.dir/build
+.PHONY : TestTuple/fast
+
+#=============================================================================
+# Target rules for targets named TestOverride
+
+# Build rule for target.
+TestOverride: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestOverride
+.PHONY : TestOverride
+
+# fast build rule for target.
+TestOverride/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestOverride.dir/build.make CMakeFiles/TestOverride.dir/build
+.PHONY : TestOverride/fast
+
+#=============================================================================
+# Target rules for targets named TestMakeHeap
+
+# Build rule for target.
+TestMakeHeap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestMakeHeap
+.PHONY : TestMakeHeap
+
+# fast build rule for target.
+TestMakeHeap/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMakeHeap.dir/build.make CMakeFiles/TestMakeHeap.dir/build
+.PHONY : TestMakeHeap/fast
+
+#=============================================================================
+# Target rules for targets named TestTypedef
+
+# Build rule for target.
+TestTypedef: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTypedef
+.PHONY : TestTypedef
+
+# fast build rule for target.
+TestTypedef/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTypedef.dir/build.make CMakeFiles/TestTypedef.dir/build
+.PHONY : TestTypedef/fast
+
+#=============================================================================
+# Target rules for targets named TestPointer
+
+# Build rule for target.
+TestPointer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestPointer
+.PHONY : TestPointer
+
+# fast build rule for target.
+TestPointer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPointer.dir/build.make CMakeFiles/TestPointer.dir/build
+.PHONY : TestPointer/fast
+
+#=============================================================================
+# Target rules for targets named TestBind
+
+# Build rule for target.
+TestBind: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestBind
+.PHONY : TestBind
+
+# fast build rule for target.
+TestBind/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestBind.dir/build.make CMakeFiles/TestBind.dir/build
+.PHONY : TestBind/fast
+
+#=============================================================================
+# Target rules for targets named TestString
+
+# Build rule for target.
+TestString: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestString
+.PHONY : TestString
+
+# fast build rule for target.
+TestString/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestString.dir/build.make CMakeFiles/TestString.dir/build
+.PHONY : TestString/fast
+
+#=============================================================================
+# Target rules for targets named TestMemoryCopy
+
+# Build rule for target.
+TestMemoryCopy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestMemoryCopy
+.PHONY : TestMemoryCopy
+
+# fast build rule for target.
+TestMemoryCopy/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMemoryCopy.dir/build.make CMakeFiles/TestMemoryCopy.dir/build
+.PHONY : TestMemoryCopy/fast
+
+#=============================================================================
+# Target rules for targets named TestArrayLen
+
+# Build rule for target.
+TestArrayLen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestArrayLen
+.PHONY : TestArrayLen
+
+# fast build rule for target.
+TestArrayLen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestArrayLen.dir/build.make CMakeFiles/TestArrayLen.dir/build
+.PHONY : TestArrayLen/fast
+
+#=============================================================================
+# Target rules for targets named TestExtern
+
+# Build rule for target.
+TestExtern: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestExtern
+.PHONY : TestExtern
+
+# fast build rule for target.
+TestExtern/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExtern.dir/build.make CMakeFiles/TestExtern.dir/build
+.PHONY : TestExtern/fast
+
+#=============================================================================
+# Target rules for targets named TestInheracy
+
+# Build rule for target.
+TestInheracy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestInheracy
+.PHONY : TestInheracy
+
+# fast build rule for target.
+TestInheracy/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestInheracy.dir/build.make CMakeFiles/TestInheracy.dir/build
+.PHONY : TestInheracy/fast
+
+#=============================================================================
+# Target rules for targets named TestTemplate
+
+# Build rule for target.
+TestTemplate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTemplate
+.PHONY : TestTemplate
+
+# fast build rule for target.
+TestTemplate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTemplate.dir/build.make CMakeFiles/TestTemplate.dir/build
+.PHONY : TestTemplate/fast
+
+#=============================================================================
+# Target rules for targets named TestVector
+
+# Build rule for target.
+TestVector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestVector
+.PHONY : TestVector
+
+# fast build rule for target.
+TestVector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestVector.dir/build.make CMakeFiles/TestVector.dir/build
+.PHONY : TestVector/fast
+
+#=============================================================================
+# Target rules for targets named TestSharedPtr
+
+# Build rule for target.
+TestSharedPtr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestSharedPtr
+.PHONY : TestSharedPtr
+
+# fast build rule for target.
+TestSharedPtr/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestSharedPtr.dir/build.make CMakeFiles/TestSharedPtr.dir/build
+.PHONY : TestSharedPtr/fast
+
+#=============================================================================
+# Target rules for targets named TestTruncation
+
+# Build rule for target.
+TestTruncation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestTruncation
+.PHONY : TestTruncation
+
+# fast build rule for target.
+TestTruncation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestTruncation.dir/build.make CMakeFiles/TestTruncation.dir/build
+.PHONY : TestTruncation/fast
+
+#=============================================================================
+# Target rules for targets named TestThread
+
+# Build rule for target.
+TestThread: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestThread
+.PHONY : TestThread
+
+# fast build rule for target.
+TestThread/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestThread.dir/build.make CMakeFiles/TestThread.dir/build
+.PHONY : TestThread/fast
+
+TestArrayLen.o: TestArrayLen.cpp.o
+
+.PHONY : TestArrayLen.o
+
+# target to build an object file
+TestArrayLen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestArrayLen.dir/build.make CMakeFiles/TestArrayLen.dir/TestArrayLen.cpp.o
+.PHONY : TestArrayLen.cpp.o
+
+TestArrayLen.i: TestArrayLen.cpp.i
+
+.PHONY : TestArrayLen.i
+
+# target to preprocess a source file
+TestArrayLen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestArrayLen.dir/build.make CMakeFiles/TestArrayLen.dir/TestArrayLen.cpp.i
+.PHONY : TestArrayLen.cpp.i
+
+TestArrayLen.s: TestArrayLen.cpp.s
+
+.PHONY : TestArrayLen.s
+
+# target to generate assembly for a file
+TestArrayLen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestArrayLen.dir/build.make CMakeFiles/TestArrayLen.dir/TestArrayLen.cpp.s
+.PHONY : TestArrayLen.cpp.s
 
 TestBind.o: TestBind.cpp.o
 
@@ -551,6 +630,60 @@ TestInheracy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestInheracy.dir/build.make CMakeFiles/TestInheracy.dir/TestInheracy.cpp.s
 .PHONY : TestInheracy.cpp.s
 
+TestLibXml.o: TestLibXml.cpp.o
+
+.PHONY : TestLibXml.o
+
+# target to build an object file
+TestLibXml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLibXml.dir/build.make CMakeFiles/TestLibXml.dir/TestLibXml.cpp.o
+.PHONY : TestLibXml.cpp.o
+
+TestLibXml.i: TestLibXml.cpp.i
+
+.PHONY : TestLibXml.i
+
+# target to preprocess a source file
+TestLibXml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLibXml.dir/build.make CMakeFiles/TestLibXml.dir/TestLibXml.cpp.i
+.PHONY : TestLibXml.cpp.i
+
+TestLibXml.s: TestLibXml.cpp.s
+
+.PHONY : TestLibXml.s
+
+# target to generate assembly for a file
+TestLibXml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestLibXml.dir/build.make CMakeFiles/TestLibXml.dir/TestLibXml.cpp.s
+.PHONY : TestLibXml.cpp.s
+
+TestMacro.o: TestMacro.cpp.o
+
+.PHONY : TestMacro.o
+
+# target to build an object file
+TestMacro.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMacro.dir/build.make CMakeFiles/TestMacro.dir/TestMacro.cpp.o
+.PHONY : TestMacro.cpp.o
+
+TestMacro.i: TestMacro.cpp.i
+
+.PHONY : TestMacro.i
+
+# target to preprocess a source file
+TestMacro.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMacro.dir/build.make CMakeFiles/TestMacro.dir/TestMacro.cpp.i
+.PHONY : TestMacro.cpp.i
+
+TestMacro.s: TestMacro.cpp.s
+
+.PHONY : TestMacro.s
+
+# target to generate assembly for a file
+TestMacro.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestMacro.dir/build.make CMakeFiles/TestMacro.dir/TestMacro.cpp.s
+.PHONY : TestMacro.cpp.s
+
 TestMakeHeap.o: TestMakeHeap.cpp.o
 
 .PHONY : TestMakeHeap.o
@@ -658,6 +791,33 @@ TestOverride.s: TestOverride.cpp.s
 TestOverride.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestOverride.dir/build.make CMakeFiles/TestOverride.dir/TestOverride.cpp.s
 .PHONY : TestOverride.cpp.s
+
+TestPointer.o: TestPointer.cpp.o
+
+.PHONY : TestPointer.o
+
+# target to build an object file
+TestPointer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPointer.dir/build.make CMakeFiles/TestPointer.dir/TestPointer.cpp.o
+.PHONY : TestPointer.cpp.o
+
+TestPointer.i: TestPointer.cpp.i
+
+.PHONY : TestPointer.i
+
+# target to preprocess a source file
+TestPointer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPointer.dir/build.make CMakeFiles/TestPointer.dir/TestPointer.cpp.i
+.PHONY : TestPointer.cpp.i
+
+TestPointer.s: TestPointer.cpp.s
+
+.PHONY : TestPointer.s
+
+# target to generate assembly for a file
+TestPointer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestPointer.dir/build.make CMakeFiles/TestPointer.dir/TestPointer.cpp.s
+.PHONY : TestPointer.cpp.s
 
 TestRand.o: TestRand.cpp.o
 
@@ -964,15 +1124,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... TestArrayLen"
 	@echo "... TestBind"
 	@echo "... TestConstruct"
 	@echo "... TestExtern"
 	@echo "... TestFunctionTraits"
 	@echo "... TestInheracy"
+	@echo "... TestLibXml"
+	@echo "... TestMacro"
 	@echo "... TestMakeHeap"
 	@echo "... TestMemoryCopy"
 	@echo "... TestMetaProgram"
 	@echo "... TestOverride"
+	@echo "... TestPointer"
 	@echo "... TestRand"
 	@echo "... TestSet"
 	@echo "... TestSharedPtr"
@@ -984,6 +1148,9 @@ help:
 	@echo "... TestTypedef"
 	@echo "... TestUnsigned"
 	@echo "... TestVector"
+	@echo "... TestArrayLen.o"
+	@echo "... TestArrayLen.i"
+	@echo "... TestArrayLen.s"
 	@echo "... TestBind.o"
 	@echo "... TestBind.i"
 	@echo "... TestBind.s"
@@ -1002,6 +1169,12 @@ help:
 	@echo "... TestInheracy.o"
 	@echo "... TestInheracy.i"
 	@echo "... TestInheracy.s"
+	@echo "... TestLibXml.o"
+	@echo "... TestLibXml.i"
+	@echo "... TestLibXml.s"
+	@echo "... TestMacro.o"
+	@echo "... TestMacro.i"
+	@echo "... TestMacro.s"
 	@echo "... TestMakeHeap.o"
 	@echo "... TestMakeHeap.i"
 	@echo "... TestMakeHeap.s"
@@ -1014,6 +1187,9 @@ help:
 	@echo "... TestOverride.o"
 	@echo "... TestOverride.i"
 	@echo "... TestOverride.s"
+	@echo "... TestPointer.o"
+	@echo "... TestPointer.i"
+	@echo "... TestPointer.s"
 	@echo "... TestRand.o"
 	@echo "... TestRand.i"
 	@echo "... TestRand.s"

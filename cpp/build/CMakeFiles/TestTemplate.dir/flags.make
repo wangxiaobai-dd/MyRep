@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ubuntu/MyRep/cpp/nvwa
+CXX_INCLUDES = -I/usr/local/include/libxml2 -I/home/ubuntu/MyRep/cpp/nvwa
 
 CXX_FLAGS = -g -o2 -fpermissive -std=gnu++2a -D_ALL_SUPER_GM
 

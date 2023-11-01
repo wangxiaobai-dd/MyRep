@@ -6,11 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/MyRep/cpp/TestString.cpp
-iostream
--
-string
--
-cstring
--
-
