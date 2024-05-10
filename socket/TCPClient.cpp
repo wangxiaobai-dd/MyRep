@@ -69,8 +69,8 @@ class TCPClient
 					{
 						char buf[100];
 						bzero(buf, sizeof(buf));
-						::read(STDIN_FILENO, buf, sizeof(buf));
-						::write(sockfd, buf, sizeof(buf));
+						::read(STDIN_FILENO, buf, sizeof(buf) - 1);
+						::write(sockfd, buf, strlen(buf));
 					}
 				}
 				if(::epoll_wait(epfd_2, &ev2, 1, 0) > 0)
@@ -79,8 +79,14 @@ class TCPClient
 					{
 						char buf[200];
 						bzero(buf, sizeof(buf));
-						::recv(sockfd, buf, sizeof(buf), MSG_NOSIGNAL);
-						printf("%s", buf);
+						int ret = ::recv(sockfd, buf, sizeof(buf), MSG_NOSIGNAL);
+						if(ret == 0)
+						{
+							std::cout << "server close me" << std::endl;
+							::shutdown(sockfd, SHUT_RDWR);
+							close(sockfd);
+							exit(1);
+						}
 					}
 				}
 			}
@@ -110,7 +116,7 @@ int main(int agrc, char** argv)
 	std::unique_ptr<TCPClient> client = std::make_unique<TCPClient>("BowClient");
 	if(!client)
 		return 0;
-	if(!client->connect("127.0.0.1", 8800))
+	if(!client->connect("122.51.106.92", 8500))
 	{
 		std::cout << strerror(errno) << std::endl;
 		return 0;

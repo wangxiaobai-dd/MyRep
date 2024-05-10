@@ -1,1 +1,1 @@
-/usr/bin/clang++  -g -Werror -std=gnu++14 -Wno-invalid-source-encoding -fdiagnostics-format=vi   CMakeFiles/TCPClient.dir/TCPClient.cpp.o  -o TCPClient 
+/usr/bin/g++  -std=gnu++2a -Wall -Wextra -g -O0 -rdynamic CMakeFiles/TCPClient.dir/TCPClient.cpp.o -o TCPClient
